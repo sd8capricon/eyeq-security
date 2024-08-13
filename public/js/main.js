@@ -1,12 +1,3 @@
-import $ from "jquery";
-import WOW from "wow.js";
-import counterUp from "counterup2";
-// import "../lib/owlcarousel/owl.carousel"
-
-
-// Initiate the wowjs
-new WOW().init();
-
 (function ($) {
     "use strict";
 
@@ -20,13 +11,16 @@ new WOW().init();
     };
     spinner();
 
+
+    // Initiate the wowjs
+    new WOW().init();
+
+
     // Sticky Navbar
-    $(window).on("scroll", function () {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 45) {
             $('.navbar').addClass('sticky-top shadow-sm');
         } else {
-            console.log("REmoved");
-
             $('.navbar').removeClass('sticky-top shadow-sm');
         }
     });
@@ -39,7 +33,7 @@ new WOW().init();
 
     $(window).on("load resize", function () {
         if (this.matchMedia("(min-width: 992px)").matches) {
-            $dropdown.on("hover",
+            $dropdown.hover(
                 function () {
                     const $this = $(this);
                     $this.addClass(showClass);
@@ -60,13 +54,10 @@ new WOW().init();
 
 
     // Facts counter
-    const facts = document.querySelectorAll('[data-toggle="counter-up"]')
-    facts.forEach((el) => {
-        counterUp(el, {
-            duration: 2000,
-            delay: 10
-        })
-    })
+    $('[data-toggle="counter-up"]').counterUp({
+        delay: 10,
+        time: 2000
+    });
 
 
     // Back to top button
@@ -131,5 +122,5 @@ new WOW().init();
         }
     });
 
-})($);
+})(jQuery);
 
