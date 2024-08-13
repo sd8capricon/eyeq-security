@@ -1,3 +1,4 @@
+import $ from "jquery";
 import WOW from "wow.js";
 import counterUp from "counterup2";
 
@@ -17,9 +18,8 @@ new WOW().init();
     };
     spinner();
 
-
     // Sticky Navbar
-    $(window).scroll(function () {
+    $(window).on("scroll", function () {
         if ($(this).scrollTop() > 45) {
             $('.navbar').addClass('sticky-top shadow-sm');
         } else {
@@ -37,7 +37,7 @@ new WOW().init();
 
     $(window).on("load resize", function () {
         if (this.matchMedia("(min-width: 992px)").matches) {
-            $dropdown.hover(
+            $dropdown.on("hover",
                 function () {
                     const $this = $(this);
                     $this.addClass(showClass);
@@ -129,5 +129,5 @@ new WOW().init();
         }
     });
 
-})(jQuery);
+})($);
 
