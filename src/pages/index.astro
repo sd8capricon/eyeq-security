@@ -12,8 +12,6 @@ import Team from "../components/Team/Team.astro";
 <Layout>
     <!-- Carousel Start -->
     <div class="container-fluid position-relative p-0">
-        <!-- Navbar -->
-        <!-- Navbar end -->
         <div
             id="header-carousel"
             class="carousel slide carousel-fade"
@@ -802,7 +800,9 @@ import Team from "../components/Team/Team.astro";
     <!-- Testimonial End -->
 
     <!-- Team Start -->
-    <Team />
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <Team />
+    </div>
     <!-- Team End -->
 
     <!-- Blog Start -->
