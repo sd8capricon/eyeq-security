@@ -1,0 +1,32 @@
+---
+interface Props {
+    variant?: "light" | "dark";
+    title: string;
+    value: number;
+    icon: string;
+}
+
+const props = Astro.props as Props;
+
+if (!props.variant) props.variant = "dark";
+---
+
+<div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+    <div
+        class={"bg-primary shadow d-flex align-items-center justify-content-center p-4" +
+            (props.variant == "dark" ? " bg-primary" : " bg-cosmic-latte")}
+        style="height: 150px;"
+    >
+        <div
+            class="bg-black d-flex align-items-center justify-content-center rounded mb-2"
+            style="width: 60px; height: 60px;"
+        >
+            <i class={`fa ${props.icon} text-white`}></i>
+            <!-- <i class="fa fa-users text-white"></i> -->
+        </div>
+        <div class="ps-4">
+            <h5 class="mb-0">{props.title}</h5>
+            <h1 class="mb-0" data-toggle="counter-up">{props.value}</h1>
+        </div>
+    </div>
+</div>
