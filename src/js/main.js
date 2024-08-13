@@ -1,4 +1,5 @@
-import WOW from "wow.js"
+import WOW from "wow.js";
+import counterUp from "counterup2";
 
 // Initiate the wowjs
 new WOW().init();
@@ -57,10 +58,13 @@ new WOW().init();
 
 
     // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
-    });
+    const facts = document.querySelectorAll('[data-toggle="counter-up"]')
+    facts.forEach((el) => {
+        counterUp(el, {
+            duration: 2000,
+            delay: 10
+        })
+    })
 
 
     // Back to top button
