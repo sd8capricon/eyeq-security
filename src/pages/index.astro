@@ -5,6 +5,7 @@ import HeroImage1 from "../assets/img/carousel-1.jpg";
 import HeroImage2 from "../assets/img/carousel-2.jpg";
 
 // Components
+import Button from "../components/Layout/Button.astro";
 import FactCard from "../components/Home/FactCard.astro";
 import Team from "../components/Team/Team.astro";
 ---
@@ -34,16 +35,10 @@ import Team from "../components/Team/Team.astro";
                             >
                                 Creative & Innovative Digital Solution
                             </h1>
-                            <a
-                                href="quote.html"
-                                class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft"
-                                >Free Quote</a
-                            >
-                            <a
-                                href=""
-                                class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight"
-                                >Contact Us</a
-                            >
+                            <Button href="/contact">Request A Quote</Button>
+                            <Button variant="outline-light" href="/contact">
+                                Contact Us
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -216,11 +211,10 @@ import Team from "../components/Team/Team.astro";
                             <h4 class="text-primary mb-0">+012 345 6789</h4>
                         </div>
                     </div>
-                    <a
-                        href="quote.html"
-                        class="btn btn-primary py-3 px-5 mt-3 wow zoomIn"
-                        data-wow-delay="0.9s">Request A Quote</a
-                    >
+                    <Button href="/contact">Request A Quote</Button>
+                    <Button href="/about" variant="outline-dark">
+                        Read More
+                    </Button>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">

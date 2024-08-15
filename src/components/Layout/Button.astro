@@ -1,0 +1,17 @@
+---
+interface Props {
+    href: string;
+    variant?: "outline-light" | "primary" | "outline-dark";
+}
+
+const props = Astro.props as Props;
+
+if (!props.variant) props.variant = "primary";
+---
+
+<a
+    href={props.href}
+    class={`btn btn-${props.variant} py-md-3 px-md-5 me-3 animated slideInLeft`}
+>
+    <slot />
+</a>
