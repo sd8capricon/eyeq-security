@@ -1,5 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
+// Layout
+import RootLayout from "../layouts/RootLayout.astro";
 
 // Components
 import SectionTitle from "../components/Layout/SectionTitle.astro";
@@ -8,12 +9,13 @@ import Button from "../components/Layout/Button.astro";
 import FactCard from "../components/Home/FactCard.astro";
 import Feature from "../components/Home/Feature.astro";
 // Sections
+import FullScreenSearch from "../components/Layout/FullScreenSearch.astro";
 import Testimonial from "../components/Testimonial/Testimonial.astro";
 import Quote from "../components/Layout/Quote.astro";
 import BlogRow from "../components/Layout/BlogRow.astro";
 ---
 
-<Layout>
+<RootLayout>
     <style>
         .hero .hero-left {
             text-transform: capitalize;
@@ -44,33 +46,7 @@ import BlogRow from "../components/Layout/BlogRow.astro";
     <!-- Hero End -->
 
     <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button
-                        type="button"
-                        class="btn bg-white btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div
-                    class="modal-body d-flex align-items-center justify-content-center"
-                >
-                    <div class="input-group" style="max-width: 600px;">
-                        <input
-                            type="text"
-                            class="form-control bg-transparent border-primary p-3"
-                            placeholder="Type search keyword"
-                        />
-                        <button class="btn btn-primary px-4"
-                            ><i class="bi bi-search"></i></button
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <FullScreenSearch />
     <!-- Full Screen Search End -->
 
     <!-- Facts Start -->
@@ -379,4 +355,4 @@ import BlogRow from "../components/Layout/BlogRow.astro";
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"
         ><i class="bi bi-arrow-up"></i></a
     >
-</Layout>
+</RootLayout>
