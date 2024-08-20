@@ -1,0 +1,27 @@
+---
+import { string } from "astro/zod";
+
+interface Props {
+    img_src: string;
+    client_name: string;
+    profession: string;
+    content: string;
+}
+
+const props = Astro.props as Props;
+---
+
+<div class="testimonial-item bg-cosmic-latte my-4">
+    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+        <img
+            class="img-fluid rounded"
+            src={props.img_src}
+            style="width: 60px; height: 60px;"
+        />
+        <div class="ps-4">
+            <h4 class="text-primary mb-1">{props.client_name}</h4>
+            <small class="text-uppercase">{props.profession}</small>
+        </div>
+    </div>
+    <div class="pt-4 pb-5 px-5">{props.content}</div>
+</div>

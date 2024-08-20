@@ -2,13 +2,15 @@
 interface Props {
     top: string;
     main: string;
+    offset?: boolean;
 }
 
 const props = Astro.props as Props;
 ---
 
 <div
-    class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+    class={"section-title position-relative pb-3 mb-5" +
+        (props.offset ? "" : " text-center mx-auto")}
     style="max-width: 600px;"
 >
     <h5 class="fw-bold text-primary text-uppercase">{props.top}</h5>

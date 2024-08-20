@@ -1,0 +1,26 @@
+---
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"div"> {
+    data_wow_delay: string;
+    icon: string;
+    description: string;
+}
+const props = Astro.props as Props;
+---
+
+<div
+    class={"col-12 wow zoomIn" + ` ${props.class}`}
+    data-wow-delay={props.data_wow_delay}
+>
+    <div
+        class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
+        style="width: 60px; height: 60px;"
+    >
+        <i class=`fa ${props.icon} text-black`></i>
+    </div>
+    <h4>Best In Industry</h4>
+    <p class="mb-0">
+        {props.description}
+    </p>
+</div>

@@ -3,6 +3,7 @@
     --primary: #f2c202;
     --secondary: #34AD54;
     --light: #EEF9FF;
+    --raisin-black: #2e2c2f;
     --dark: #000000;
 }
 
@@ -152,7 +153,7 @@ h6,
 }
 
 .navbar-dark .navbar-brand h1 {
-    color: #FFFFFF;
+    color: var(--primary);
 }
 
 .navbar-dark .navbar-toggler {
