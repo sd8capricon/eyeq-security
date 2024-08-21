@@ -19,6 +19,7 @@
     --bs-black: #000;
     --bs-raisin-black: #2e2c2f;
     --bs-gray: #6c757d;
+    --bs-gray-bg: #F7F7F7;
     --bs-gray-dark: #343a40;
     --bs-primary: #f2c202;
     --bs-primary-contrast: #caa202;
@@ -8357,6 +8358,10 @@ fieldset:disabled .btn {
 
 .bg-raisin-black {
     background-color: var(--bs-raisin-black) !important;
+}
+
+.bg-gray {
+    background-color: var(--bs-gray-bg) !important;
 }
 
 .bg-secondary {

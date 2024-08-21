@@ -4,6 +4,7 @@ import RootLayout from "../layouts/RootLayout.astro";
 
 // Components
 import SectionTitle from "../components/Layout/SectionTitle.astro";
+import SecttionTitleAlternate from "../components/Layout/SectionTitleAlternate.astro";
 import Section from "../layouts/Section.astro";
 import Button from "../components/Layout/Button.astro";
 import FactCard from "../components/Home/FactCard.astro";
@@ -98,22 +99,42 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                 <div class="row g-0 mb-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                         <h5 class="mb-3">
-                            <i class="fa fa-check text-primary me-3"></i>Award
-                            Winning
+                            <div class="row g-0">
+                                <i class="col-1 fa fa-check text-primary me-2"
+                                ></i>
+                                <span class="col-10">
+                                    Offering Top-Notch Quality Services
+                                </span>
+                            </div>
                         </h5>
                         <h5 class="mb-3">
-                            <i class="fa fa-check text-primary me-3"
-                            ></i>Professional Staff
+                            <div class="row g-0">
+                                <i class="col-1 fa fa-check text-primary me-2"
+                                ></i>
+                                <span class="col-10">
+                                    Friendly security- That keep your business
+                                    safe
+                                </span>
+                            </div>
                         </h5>
                     </div>
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
                         <h5 class="mb-3">
-                            <i class="fa fa-check text-primary me-3"></i>24/7
-                            Support
+                            <div class="row g-0">
+                                <i class="col-1 fa fa-check text-primary me-2"
+                                ></i>
+                                <span class="col-10"
+                                    >Safeguarding the interests of our
+                                    Stakeholders</span
+                                >
+                            </div>
                         </h5>
                         <h5 class="mb-3">
-                            <i class="fa fa-check text-primary me-3"></i>Fair
-                            Prices
+                            <div class="row g-0">
+                                <i class="col-1 fa fa-check text-primary me-2"
+                                ></i>
+                                <span class="col-10"> Fair Prices </span>
+                            </div>
                         </h5>
                     </div>
                 </div>
@@ -153,6 +174,7 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
 
     <!-- Features Start -->
     <Section
+        class="bg-gray"
         title_top="Why Choose Us"
         title_main="We Are Here to Grow Your Business Exponentially"
     >
@@ -225,7 +247,11 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
     <Section class="services bg-primary" data_wow_delay="0.1s">
         <div class="row">
             <div class="col-12 col-md-4 services-left">
-                <h2>Our Top Notch Security Services</h2>
+                <!-- SectionTitle -->
+                <SecttionTitleAlternate
+                    top="Our Services"
+                    main="Our Top Notch Security Services"
+                />
             </div>
             <div class="col-12 col-md-8 services-right">
                 <div class="row gx-5">

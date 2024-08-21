@@ -1,0 +1,40 @@
+---
+interface Props {
+    top: string;
+    main: string;
+}
+
+const props = Astro.props as Props;
+---
+
+<style>
+    .section-title.white-bar::before {
+        position: absolute;
+        content: "";
+        width: 150px;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        background: var(--light);
+        border-radius: 2px;
+    }
+
+    .section-title.white-bar::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 5px;
+        bottom: 0px;
+        background: var(--primary);
+        -webkit-animation: section-title-run 5s infinite linear;
+        animation: section-title-run 5s infinite linear;
+    }
+</style>
+
+<div
+    class="section-title white-bar position-relative pb-3 mb-5"
+    style="max-width: 600px;"
+>
+    <h5 class="fw-bold text-white text-uppercase">{props.top}</h5>
+    <h1 class="mb-0">{props.main}</h1>
+</div>
