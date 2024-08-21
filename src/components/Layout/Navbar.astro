@@ -1,3 +1,12 @@
+---
+import { type Page } from "../../types";
+interface Props {
+    active: Page;
+}
+
+const { active } = Astro.props as Props;
+---
+
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0">
@@ -15,9 +24,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a
+                    href="index.html"
+                    class={"nav-item nav-link" +
+                        (active === "home" ? " active" : "")}>Home</a
+                >
+                <a
+                    href="about.html"
+                    class={"nav-item nav-link" +
+                        (active === "about" ? " active" : "")}>About</a
+                >
+                <a
+                    href="service.html"
+                    class={"nav-item nav-link" +
+                        (active === "services" ? " active" : "")}>Services</a
+                >
                 <div class="nav-item dropdown">
                     <a
                         href="#"
@@ -54,7 +75,16 @@
                         >
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a
+                    href="contact.html"
+                    class={"nav-item nav-link" +
+                        (active === "contact_us" ? " active" : "")}>Contact</a
+                >
+                <a
+                    href="contact.html"
+                    class={"nav-item nav-link" +
+                        (active === "careers" ? " active" : "")}>Careers</a
+                >
             </div>
             <!-- <button
                 type="button"
