@@ -2,6 +2,9 @@
 // types
 import { type LayoutProps } from "../types";
 
+// utils
+import { capitalizeFirstLetter } from "../utils";
+
 // import OwlCarousel
 import "../lib/owlcarousel/assets/owl.carousel.min.css";
 // import animate.js
@@ -20,10 +23,6 @@ import Footer from "../components/Layout/Footer.astro";
 interface Props extends LayoutProps {}
 
 const { page_title, page_description } = Astro.props as Props;
-
-const capitalizeFirstLetter = (str: string) => {
-	return str.charAt(0).toUpperCase() + str.slice(1);
-};
 ---
 
 <!doctype html>
