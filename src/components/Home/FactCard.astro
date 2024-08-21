@@ -1,6 +1,7 @@
 ---
 interface Props {
     variant?: "light" | "dark";
+    suffix?: string;
     title: string;
     value: number;
     icon: string;
@@ -25,7 +26,14 @@ if (!props.variant) props.variant = "dark";
         </div>
         <div class="ps-4">
             <h6 class="mb-0" set:html={props.title} />
-            <h2 class="mb-0" data-toggle="counter-up" set:html={props.value} />
+            <div class="d-flex">
+                <h2
+                    class="mb-0"
+                    data-toggle="counter-up"
+                    set:html={props.value}
+                />
+                <h2>&nbsp;{props.suffix}</h2>
+            </div>
         </div>
     </div>
 </div>
