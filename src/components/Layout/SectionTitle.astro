@@ -8,6 +8,12 @@ interface Props {
 const props = Astro.props as Props;
 ---
 
+<style>
+    .section-title h1 {
+        text-transform: capitalize;
+    }
+</style>
+
 <div
     class={"section-title position-relative pb-3 mb-5" +
         (props.offset ? "" : " text-center mx-auto")}
