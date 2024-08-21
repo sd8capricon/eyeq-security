@@ -1,0 +1,30 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import SectionTitle from "../components/Layout/SectionTitle.astro";
+
+interface Props extends HTMLAttributes<"section"> {
+    title_top?: string;
+    title_main?: string;
+    title_offset?: boolean;
+    data_wow_delay?: "0.1s" | string;
+}
+
+const props = Astro.props as Props;
+if (!props.title_offset) props.title_offset = false;
+---
+
+<section
+    class={"container-fluid p-0 wow fadeInUp" + ` ${props.class}`}
+    data-wow-delay={props.data_wow_delay}
+>
+    {
+        props.title_main && props.title_top && (
+            <SectionTitle
+                main={props.title_main}
+                top={props.title_top}
+                offset={props.title_offset}
+            />
+        )
+    }
+    <slot />
+</section>

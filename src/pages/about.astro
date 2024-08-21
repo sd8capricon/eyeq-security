@@ -1,5 +1,10 @@
 ---
+// Layout
 import PageLayout from "../layouts/PageLayout.astro";
+
+// Components
+import SectionFluid from "../layouts/SectionFluid.astro";
+import SectionTitle from "../components/Layout/SectionTitle.astro";
 
 // Background Header Image
 import TitleImage from "../assets/img/carousel-1.jpg";
@@ -10,5 +15,40 @@ import TitleImage from "../assets/img/carousel-1.jpg";
     page_description="some description"
     background_image={TitleImage}
 >
-    <h1>Hello</h1>
+    <SectionFluid>
+        <div class="row w-100 m-0">
+            <div class="col-xl-6 p-0">
+                <img
+                    src="https://picsum.photos/seed/idk/800/600"
+                    alt=""
+                    class="img-fluid w-100"
+                />
+            </div>
+            <div
+                class="col-xl-6 px-5 d-flex align-items-center justify-content-center"
+            >
+                <div>
+                    <SectionTitle
+                        top="Our Goal"
+                        main="Your Trusted Partneer for all Security"
+                        offset
+                    />
+                    <p>
+                        We have the highest standards of integrity and
+                        excellence at every level. To us, integrity and
+                        professionalism are of utmost importance. As an
+                        organization committed to excellence, we maintain the
+                        highest industry standards for security officer's
+                        training, honor, loyalty, and character. All of our
+                        security officers are highly trained and are subject to
+                        constant site supervision and random inspections to meet
+                        the demands of the market, effectively. Our security
+                        officers are skilled and able to assist in undertaking
+                        additional duties such as reception, customer service,
+                        and dispute management.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </SectionFluid>
 </PageLayout>
