@@ -1,19 +1,46 @@
-<div class="service-card w-100 mb-4">
+---
+interface Props {
+    title: string;
+    description: string;
+}
+
+const props = Astro.props as Props;
+---
+
+<style>
+    .service-card {
+        margin-bottom: 3rem;
+    }
+    img {
+        margin-bottom: 2rem;
+        border-radius: 10px;
+    }
+    h4 {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        position: relative;
+        padding-left: 15px;
+    }
+    h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #f2c202;
+    }
+</style>
+
+<div class="service-card w-100">
     <img
-        class="img-fluid mb-3"
+        class="img-fluid"
         src="https://picsum.photos/seed/idk/1280/720"
         alt="Security Service 1"
     />
-    <h3>General Security</h3>
+    <h4>{props.title}</h4>
     <p>
-        Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum
-        dolore sed
+        {props.description}
     </p>
     <a class="btn btn-outline-dark">Read More</a>
 </div>
-
-<style>
-    img {
-        border-radius: 10px;
-    }
-</style>

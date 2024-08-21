@@ -354,10 +354,45 @@ h6,
 
 
 /*** Service ***/
-.services .services-right .row>* {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    border-left: 1px solid;
+.services .services-left ul {
+    padding-left: 1rem;
+}
+
+/* .services .services-left li::marker {
+    color: var(--primary);
+} */
+
+.services .services-right {
+    margin-top: 2rem;
+}
+
+@media screen and (min-width:768px) and (max-width: 1023px) {
+    .services .services-right .row>* {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .services .services-right .row>:nth-child(odd) {
+        border-top: none;
+        border-right: 1px solid;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .services .services-right {
+        margin-top: 0;
+    }
+
+    .services .services-right .row>* {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-top: none;
+        border-left: 1px solid;
+    }
+
+    .services .services-right .row>:nth-last-child(2) .service-card {
+        margin-bottom: 0;
+    }
 }
 
 /*** Testimonial ***/
