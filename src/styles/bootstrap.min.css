@@ -50,7 +50,7 @@
 
 body {
     margin: 0;
-    font-family: "Rubik", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -86,7 +86,7 @@ h6,
 .h6 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Nunito", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
     color: #091E3E
@@ -6250,7 +6250,7 @@ fieldset:disabled .btn {
     z-index: 1080;
     display: block;
     margin: 0;
-    font-family: "Rubik", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6377,7 +6377,7 @@ fieldset:disabled .btn {
     z-index: 1070;
     display: block;
     max-width: 276px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
