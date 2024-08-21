@@ -9,7 +9,7 @@ const { active } = Astro.props as Props;
 
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class={"m-0" + (active === "home" ? " text-primary" : "")}>
                 <i class="fa fa-user-tie me-2"></i>EyeQ Security
             </h1>
@@ -25,12 +25,12 @@ const { active } = Astro.props as Props;
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
                 <a
-                    href="index.html"
+                    href="/"
                     class={"nav-item nav-link" +
                         (active === "home" ? " active" : "")}>Home</a
                 >
                 <a
-                    href="about.html"
+                    href="/about"
                     class={"nav-item nav-link" +
                         (active === "about" ? " active" : "")}>About</a
                 >
