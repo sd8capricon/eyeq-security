@@ -57,7 +57,7 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                 <FactCard
                     icon="fa-users"
                     title="Happy Customers"
-                    value={1235}
+                    value={12345}
                 />
                 <FactCard
                     icon="fa-check"
@@ -160,11 +160,19 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
             <div class="col-lg-4">
                 <div class="row g-5">
                     <Feature
+                        feature_title="Clients First"
                         icon="fa-cubes"
-                        description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
+                        description="Forever. We understand the way your facilities are managed is the way the world perceives you. Your requirements are our immediate priority. You come before anything else."
                         data_wow_delay="0.2s"
                     />
                     <Feature
+                        feature_title="Integrity"
+                        icon="fa-award"
+                        description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
+                        data_wow_delay="0.6s"
+                    />
+                    <Feature
+                        feature_title="Customer Satisfaction"
                         icon="fa-award"
                         description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
                         data_wow_delay="0.6s"
@@ -177,10 +185,11 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                 style="min-height: 350px;"
             >
                 <div class="position-relative h-100">
+                    <!-- Implement srcset for 800x800 -->
                     <img
                         class="position-absolute w-100 h-100 rounded wow zoomIn"
                         data-wow-delay="0.1s"
-                        src="https://picsum.photos/800/800"
+                        src="https://picsum.photos/seed/123/720/1280"
                         style="object-fit: cover;"
                     />
                 </div>
@@ -188,11 +197,19 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
             <div class="col-lg-4">
                 <div class="row g-5">
                     <Feature
+                        feature_title="Employee Management"
                         icon="fa-users-cog"
                         description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
                         data_wow_delay="0.4s"
                     />
                     <Feature
+                        feature_title="Innovation"
+                        icon="fa-phone-alt"
+                        description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
+                        data_wow_delay="0.8s"
+                    />
+                    <Feature
+                        feature_title="Sustainablity"
                         icon="fa-phone-alt"
                         description="Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor"
                         data_wow_delay="0.8s"
