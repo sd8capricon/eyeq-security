@@ -12,7 +12,7 @@ import Feature from "../components/Home/Feature.astro";
 // Sections
 import FullScreenSearch from "../components/Layout/FullScreenSearch.astro";
 import Testimonial from "../components/Testimonial/Testimonial.astro";
-import Quote from "../components/Layout/Quote.astro";
+import QuoteDark from "../components/Layout/QuoteDark.astro";
 import BlogRow from "../components/Layout/BlogRow.astro";
 import ServiceCard from "../components/Home/ServiceCard.astro";
 ---
@@ -91,10 +91,15 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                     main="EyeQ Security Services"
                     offset
                 />
-                <p class="mb-4">
+                <p class="mb-1">
                     We are a 24-hour security & protection company that strives
                     to achieve client safety and protection, as well as to
                     protect your property and lives from threats and dangers.
+                </p>
+                <p class="mb-4">
+                    EyeQ Security Services is committed to protecting the
+                    personal data in its control that which is provided by
+                    individuals to ensure compliance with the PIPEDA.
                 </p>
                 <div class="row g-0 mb-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
@@ -133,7 +138,7 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                             <div class="row g-0">
                                 <i class="col-1 fa fa-check text-primary me-2"
                                 ></i>
-                                <span class="col-10"> Fair Prices </span>
+                                <span class="col-10">PIPEDA Compliant</span>
                             </div>
                         </h5>
                     </div>
@@ -319,31 +324,7 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
     </Section>
     <!-- Service End -->
 
-    <!-- Quote Start -->
-    <Section>
-        <Quote />
-    </Section>
-    <!-- Quote End -->
-
-    <!-- Testimonial Start -->
-    <Section
-        title_top="Testimonial"
-        title_main="What Our Clients Say About Our Digital Services"
-    >
-        <Testimonial />
-    </Section>
-    <!-- Testimonial End -->
-
-    <!-- Blog Start -->
-    <Section
-        title_top="Latest Blog"
-        title_main="Read The Latest Articles from Our Blog Post"
-    >
-        <BlogRow />
-    </Section>
-    <!-- Blog Start -->
-
-    <!-- Vendor Start -->
+    <!-- Clients Start -->
     <Section title_top="Our Clients" title_main=" Businesses That Rely On Us">
         <div class="bg-white mt-5">
             <div class="owl-carousel vendor-carousel">
@@ -359,7 +340,32 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
             </div>
         </div>
     </Section>
-    <!-- Vendor End -->
+    <!-- Clients End -->
+
+    <!-- Testimonial Start -->
+    <Section
+        class="bg-gray"
+        title_top="Testimonial"
+        title_main="What Our Clients Say About Our Digital Services"
+    >
+        <Testimonial />
+    </Section>
+    <!-- Testimonial End -->
+
+    <!-- Quote Start -->
+    <Section class="bg-raisin-black">
+        <QuoteDark />
+    </Section>
+    <!-- Quote End -->
+
+    <!-- Blog Start -->
+    <Section
+        title_top="Latest Blog"
+        title_main="Read The Latest Articles from Our Blog Post"
+    >
+        <BlogRow />
+    </Section>
+    <!-- Blog Start -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"

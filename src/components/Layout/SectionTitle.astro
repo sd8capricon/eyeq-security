@@ -2,6 +2,7 @@
 interface Props {
     top: string;
     main: string;
+    light?: boolean;
     offset?: boolean;
 }
 
@@ -20,5 +21,7 @@ const props = Astro.props as Props;
     style="max-width: 600px;"
 >
     <h5 class="fw-bold text-primary text-uppercase">{props.top}</h5>
-    <h1 class="mb-0">{props.main}</h1>
+    <h1 class={`mb-0` + (props.light ? " text-white" : "")}>
+        {props.main}
+    </h1>
 </div>
