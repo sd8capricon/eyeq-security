@@ -6,6 +6,7 @@ import PageLayout from "../../layouts/PageLayout.astro";
 import Section from "../../layouts/Section.astro";
 import ServiceButton from "../../components/Service/ServiceButton.astro";
 import ServiceTabPane from "../../components/Service/ServiceTabPane.astro";
+import QuoteLight from "../../components/Layout/QuoteLight.astro";
 
 // Assets
 import TitleImage from "../../assets/img/carousel-1.jpg";
@@ -17,6 +18,7 @@ import TestImage from "../../assets/img/service/719-1280x720.jpg";
     page_description="some description"
     background_image={TitleImage}
 >
+    <!-- Service Selector Start -->
     <Section
         title_top="Our Services"
         title_main="Our Top Notch Security Services"
@@ -160,4 +162,11 @@ import TestImage from "../../assets/img/service/719-1280x720.jpg";
             </div>
         </div>
     </Section>
+    <!-- Service Selector Start -->
+
+    <!-- Quote Start -->
+    <Section class="bg-gray">
+        <QuoteLight />
+    </Section>
+    <!-- Quote End -->
 </PageLayout>
