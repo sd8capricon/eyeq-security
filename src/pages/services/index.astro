@@ -9,7 +9,7 @@ import ServiceTabPane from "../../components/Service/ServiceTabPane.astro";
 
 // Assets
 import TitleImage from "../../assets/img/carousel-1.jpg";
-import TestImage from "../../assets/img/about.jpg";
+import TestImage from "../../assets/img/service/719-1280x720.jpg";
 ---
 
 <PageLayout
@@ -26,38 +26,38 @@ import TestImage from "../../assets/img/about.jpg";
             <div class="col-6 col-lg-3 order-1 order-lg-1">
                 <div class="nav nav-pills w-100 me-4">
                     <ServiceButton
-                        target="#tab-pane-1"
+                        target="#general"
                         icon="fa-car-side"
                         service="General"
                         active
                     />
                     <ServiceButton
-                        target="#tab-pane-2"
+                        target="#high-profile-vip"
                         icon="fa-car"
                         service="High Profile VIP"
                     />
                     <ServiceButton
-                        target="#tab-pane-3"
+                        target="#hospital-health"
                         icon="fa-cog"
-                        service="Hospital Health Care"
+                        service="Hospital & Health Care"
                     />
                     <ServiceButton
-                        target="#tab-pane-4"
+                        target="#hotel"
                         icon="fa-oil-can"
                         service="Hotel"
                     />
                     <ServiceButton
-                        target="#tab-pane-5"
+                        target="#event"
                         icon="fa-oil-can"
                         service="Event"
                     />
                     <ServiceButton
-                        target="#tab-pane-6"
+                        target="#school"
                         icon="fa-oil-can"
                         service="School"
                     />
                     <ServiceButton
-                        target="#tab-pane-7"
+                        target="#retail"
                         icon="fa-car-side"
                         service="Retail Shop"
                     />
@@ -65,28 +65,61 @@ import TestImage from "../../assets/img/about.jpg";
             </div>
             <div class="col-12 col-lg-6 order-3 order-lg-2">
                 <div class="tab-content w-100">
-                    <ServiceTabPane id="tab-pane-1" image={TestImage} active>
+                    <ServiceTabPane
+                        active
+                        id="general"
+                        image={TestImage}
+                        service="General Security Services"
+                    >
                         1
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-2" image={TestImage}>
+                    <ServiceTabPane
+                        id="high-profile-vip"
+                        image={TestImage}
+                        service="High Profile VIP Security Services"
+                    >
                         2
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-3" image={TestImage}>
+                    <ServiceTabPane
+                        id="hospital-health"
+                        image={TestImage}
+                        service="Hospital and Health Care Secuirty Services"
+                    >
                         3
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-4" image={TestImage}>
+                    <ServiceTabPane
+                        id="hotel"
+                        image={TestImage}
+                        service="Hotel Security Services"
+                    >
                         4
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-5" image={TestImage}>
+                    <ServiceTabPane
+                        id="event"
+                        image={TestImage}
+                        service="Event Security Services"
+                    >
                         5
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-6" image={TestImage}>
+                    <ServiceTabPane
+                        id="school"
+                        image={TestImage}
+                        service="School Security Services"
+                    >
                         6
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-7" image={TestImage}>
+                    <ServiceTabPane
+                        id="retail"
+                        image={TestImage}
+                        service="Retail Shop Security"
+                    >
                         7
                     </ServiceTabPane>
-                    <ServiceTabPane id="tab-pane-8" image={TestImage}>
+                    <ServiceTabPane
+                        id="mall"
+                        image={TestImage}
+                        service="Mall Security"
+                    >
                         8
                     </ServiceTabPane>
                 </div>
@@ -94,7 +127,7 @@ import TestImage from "../../assets/img/about.jpg";
             <div class="col-6 col-lg-3 order-2 order-lg-3">
                 <div class="nav nav-pills w-100 me-4">
                     <ServiceButton
-                        target="#tab-pane-8"
+                        target="#mall"
                         icon="fa-car"
                         service="Mall"
                     />
