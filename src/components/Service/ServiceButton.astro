@@ -1,0 +1,48 @@
+---
+interface Props {
+    target: string;
+    icon: string;
+    service: string;
+    active?: boolean;
+}
+
+const { target, icon, service, active } = Astro.props as Props;
+---
+
+<style>
+    /* .nav-link.active i {
+        color: #000;
+    } */
+    @media screen and (max-width: 768px) {
+        h5 {
+            font-size: 1rem;
+        }
+        .fa-2x {
+            font-size: 1.33333em;
+            line-height: 0.75em;
+            vertical-align: -0.0667em;
+        }
+    }
+</style>
+
+<button
+    class={"nav-link w-100 d-flex align-items-center text-start p-3 p-md-4 mb-4" +
+        (active ? " active" : "")}
+    type="button"
+    data-bs-toggle="pill"
+    data-bs-target={target}
+>
+    <i class=`fa ${icon} fa-2x me-3`></i>
+    <h5 class="m-0">{service}</h5>
+</button>
+
+<script>
+    const navLinks = document.querySelectorAll<HTMLButtonElement>(".nav-link");
+
+    navLinks.forEach((navLink: HTMLButtonElement) => {
+        navLink.addEventListener("click", () => {
+            navLinks.forEach((navLink) => navLink.classList.remove("active"));
+            navLink.classList.add("active");
+        });
+    });
+</script>

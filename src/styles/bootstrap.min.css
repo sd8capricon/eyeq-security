@@ -4334,7 +4334,7 @@ fieldset:disabled .btn {
 .nav-link {
     display: block;
     padding: .5rem 1rem;
-    color: #06A3DA;
+    color: var(--bs-primary);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out
 }
 
@@ -4346,7 +4346,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-    color: #0582ae
+    color: var(--bs-primary-contrast);
 }
 
 .nav-link.disabled {
@@ -4393,7 +4393,8 @@ fieldset:disabled .btn {
 }
 
 .nav-pills .nav-link {
-    background: none;
+    /* background: none; */
+    background-color: var(--bs-gray-bg);
     border: 0;
     border-radius: 2px
 }
@@ -4401,7 +4402,7 @@ fieldset:disabled .btn {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #06A3DA
+    background-color: var(--bs-primary);
 }
 
 .nav-fill>.nav-link,

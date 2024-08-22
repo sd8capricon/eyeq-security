@@ -1,8 +1,15 @@
 ---
+// Layout
 import PageLayout from "../../layouts/PageLayout.astro";
+
+// Components
+import Section from "../../layouts/Section.astro";
+import ServiceButton from "../../components/Service/ServiceButton.astro";
+import ServiceTabPane from "../../components/Service/ServiceTabPane.astro";
 
 // Assets
 import TitleImage from "../../assets/img/carousel-1.jpg";
+import TestImage from "../../assets/img/about.jpg";
 ---
 
 <PageLayout
@@ -10,5 +17,114 @@ import TitleImage from "../../assets/img/carousel-1.jpg";
     page_description="some description"
     background_image={TitleImage}
 >
-    <h1>Services</h1>
+    <Section
+        title_top="Our Services"
+        title_main="Our Top Notch Security Services"
+    >
+        <!-- 13 -->
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-6 col-lg-3 order-1 order-lg-1">
+                <div class="nav nav-pills w-100 me-4">
+                    <ServiceButton
+                        target="#tab-pane-1"
+                        icon="fa-car-side"
+                        service="General"
+                        active
+                    />
+                    <ServiceButton
+                        target="#tab-pane-2"
+                        icon="fa-car"
+                        service="High Profile VIP"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-3"
+                        icon="fa-cog"
+                        service="Hospital Health Care"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-4"
+                        icon="fa-oil-can"
+                        service="Hotel"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-5"
+                        icon="fa-oil-can"
+                        service="Event"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-6"
+                        icon="fa-oil-can"
+                        service="School"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-7"
+                        icon="fa-car-side"
+                        service="Retail Shop"
+                    />
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 order-3 order-lg-2">
+                <div class="tab-content w-100">
+                    <ServiceTabPane id="tab-pane-1" image={TestImage} active>
+                        1
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-2" image={TestImage}>
+                        2
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-3" image={TestImage}>
+                        3
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-4" image={TestImage}>
+                        4
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-5" image={TestImage}>
+                        5
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-6" image={TestImage}>
+                        6
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-7" image={TestImage}>
+                        7
+                    </ServiceTabPane>
+                    <ServiceTabPane id="tab-pane-8" image={TestImage}>
+                        8
+                    </ServiceTabPane>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 order-2 order-lg-3">
+                <div class="nav nav-pills w-100 me-4">
+                    <ServiceButton
+                        target="#tab-pane-8"
+                        icon="fa-car"
+                        service="Mall"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-9"
+                        icon="fa-cog"
+                        service="Construction"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-10"
+                        icon="fa-oil-can"
+                        service="Corporate & Property"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-11"
+                        icon="fa-oil-can"
+                        service="55+ Senior Living Center"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-12"
+                        icon="fa-oil-can"
+                        service="Mobile Patrol"
+                    />
+                    <ServiceButton
+                        target="#tab-pane-13"
+                        icon="fa-oil-can"
+                        service="Crisis and Eviction Mangement"
+                    />
+                </div>
+            </div>
+        </div>
+    </Section>
 </PageLayout>
