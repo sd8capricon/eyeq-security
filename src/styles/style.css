@@ -362,6 +362,15 @@ h6,
     padding-left: 1rem;
 }
 
+.services .explore-more {
+    display: inline-block;
+    transition: ease-in-out 500ms;
+}
+
+.services .explore-more:hover {
+    transform: translateX(10px);
+}
+
 /* .services .services-left li::marker {
     color: var(--primary);
 } */
@@ -381,7 +390,7 @@ h6,
 }
 
 @media screen and (min-width: 1024px) {
-    .services .services-right .row>* {
+    .services .services-right>.row>* {
         border-top: none;
         border-left: 1px solid;
     }
