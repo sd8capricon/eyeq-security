@@ -15,9 +15,54 @@ import ValuesImage from "../assets/img/about/values.jpg";
 ---
 
 <style>
+    .rounded {
+        border-radius: 10px !important;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        position: relative;
+        padding-left: 15px;
+    }
+    h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #f2c202;
+    }
+
+    .about .about-right img {
+        border: 3px solid #f2c202; /* Optional: adds a border around the inset image */
+    }
+
+    .about .about-right .main-img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about .about-right .inset-img {
+        position: absolute;
+        bottom: -40px;
+        right: -40px;
+        border: 2px solid #f2c202; /* Optional: adds a border around the inset image */
+    }
+
     @media screen and (max-width: 900px) {
         .values .values-right ul {
             padding-left: 0;
+        }
+        .about .about-right .main-img {
+            width: 300px;
+        }
+
+        .about .about-right .inset-img {
+            /* Adjust the size of the inset image */
+            width: 200px;
         }
     }
 </style>
@@ -27,6 +72,61 @@ import ValuesImage from "../assets/img/about/values.jpg";
     page_description="some description"
     background_image={TitleImage}
 >
+    <!-- About Start -->
+    <Section>
+        <div
+            class="row gx-5 rounded bg-cosmic-latte px-3 py-5 p-md-5 shadow-lg about"
+        >
+            <div class="col-12 col-lg-6 about-left">
+                <SectionTitle top="About Us" main="Security Services" offset />
+                <p>
+                    We are a 24-hour security protection company that strives to
+                    achieve client safety and protection, as well as to protect
+                    your property and lives from threats and dangers.
+                </p>
+                <h4>PIPEDA Compliance</h4>
+                <p>
+                    EyeQ Security Services is committed to protecting the
+                    personal data in its control that which is provided by
+                    individuals to ensure compliance with the PIPEDA. EyeQ
+                    Security Services, will collect, use, or disclose of the
+                    personal data for purposes consented by individuals mainly
+                    in employment activities and security services rendering. If
+                    you have any queries or comment pertaining to your Personal
+                    Data or would like to withdraw your consent to any use of
+                    your Personal Data; or would like to obtain access and make
+                    corrections to your Personal Data, please contact us by
+                    e-mail to <a
+                        class="text-black"
+                        style="text-decoration: underline;"
+                        href="mailto:admin@eyeqsecurity.ca"
+                        >admin@eyeqsecurity.ca</a
+                    > or direct to 1608-72 Donald Street, Winnipeg, MB, Canada R3C1L7.
+                    Due to your personal data security, we will require you to complete
+                    the necessary request Forms that verifies your identity before
+                    we can respond significantly to your request.
+                </p>
+            </div>
+            <div
+                class="col-12 col-lg-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-center about-right"
+            >
+                <div class="position-relative">
+                    <img
+                        src="https://picsum.photos/seed/back/640/400"
+                        alt=""
+                        class="main-img rounded shadow-lg"
+                    />
+                    <img
+                        src="https://picsum.photos/seed/bbno$/320/200"
+                        alt=""
+                        class="inset-img rounded shadow-lg"
+                    />
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- About End -->
+
     <!-- Goal Start -->
     <SectionFluid class="bg-gray">
         <div class="row w-100 m-0 goal">
