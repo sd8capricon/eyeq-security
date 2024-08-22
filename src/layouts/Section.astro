@@ -6,15 +6,40 @@ interface Props extends HTMLAttributes<"section"> {
     title_top?: string;
     title_main?: string;
     title_offset?: boolean;
+    background_image?: ImageMetadata;
     data_wow_delay?: "0.1s" | string;
 }
 
 const props = Astro.props as Props;
 if (!props.title_offset) props.title_offset = false;
+
+let bgImage = "";
+
+if (props.background_image) {
+    // bgImage = `url("${props.background_image.src}")`;
+    bgImage = `url(https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`;
+}
 ---
 
+<style define:vars={{ bgImage }}>
+    :root {
+        --bg-overlay: rgba(0, 0, 0, 0.5);
+    }
+
+    .bg {
+        background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+            var(--bgImage);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
 <section
-    class={"container-fluid py-5 wow fadeInUp" + ` ${props.class}`}
+    class={"container-fluid py-5 wow fadeInUp" +
+        ` ${props.class}` +
+        (props.background_image ? " bg" : "")}
     data-wow-delay={props.data_wow_delay}
 >
     <div class="container py5">

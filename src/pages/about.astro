@@ -6,11 +6,20 @@ import PageLayout from "../layouts/PageLayout.astro";
 import Section from "../layouts/Section.astro";
 import SectionFluid from "../layouts/SectionFluid.astro";
 import SectionTitle from "../components/Layout/SectionTitle.astro";
+import ValueItem from "../components/Values/ValueItem.astro";
 import Team from "../components/Team/Team.astro";
 
 // Background Header Image
 import TitleImage from "../assets/img/carousel-1.jpg";
 ---
+
+<style>
+    @media screen and (max-width: 900px) {
+        .values .values-right ul {
+            padding-left: 0;
+        }
+    }
+</style>
 
 <PageLayout
     page_title="about"
@@ -88,6 +97,39 @@ import TitleImage from "../assets/img/carousel-1.jpg";
         </div>
     </SectionFluid>
     <!-- Vision & Mission End -->
+
+    <!-- Values Start -->
+    <!-- bg image src https://www.pexels.com/photo/sunlight-on-floor-62693/ -->
+    <Section background_image={TitleImage}>
+        <div class="row gx-5 py-5 justify-content-between values">
+            <div class="col-12 col-lg-5 text-white values-left">
+                <SectionTitle
+                    top="Our Values"
+                    main="Principles We Stand By"
+                    offset
+                    light
+                />
+                Cubilia scelerisque ultricies at cras tempus phasellus primis habitant.
+                Penatibus pulvinar at vel cursus dignissim sem condimentum molestie.
+                Lobortis hac aenean posuere justo letius laoreet augue.
+            </div>
+            <!-- col-lg-6 if only title else col-lg-7 with description -->
+            <!-- ps-0 -->
+            <div class="col-12 col-lg-6 mt-4 mt-lg-0 text-white values-right">
+                <ul class="h-100 d-flex flex-column justify-content-evenly">
+                    <ValueItem value="Clients First" />
+                    <ValueItem value="Integrity" />
+                    <ValueItem value="Responsiveness & Reliability" />
+                    <ValueItem value="Relationships" />
+                    <ValueItem value="Sustainability" />
+                    <ValueItem value="Teamwork" />
+                    <ValueItem value="Quality" />
+                    <ValueItem value="Leadership" />
+                </ul>
+            </div>
+        </div>
+    </Section>
+    <!-- Values End -->
 
     <!-- Team Start -->
     <Section

@@ -8293,6 +8293,10 @@ fieldset:disabled .btn {
     color: var(--bs-primary) !important
 }
 
+.text-cosmic-latte {
+    color: var(--bs-cosmic-latte) !important;
+}
+
 .text-secondary {
     color: #34AD54 !important
 }
