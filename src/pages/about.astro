@@ -15,17 +15,18 @@ import ValuesImage from "../assets/img/about/values.jpg";
 ---
 
 <style>
+    /*** About Section ***/
     .rounded {
         border-radius: 10px !important;
     }
 
-    h4 {
+    h4.sidebar {
         margin-bottom: 1rem;
         text-transform: capitalize;
         position: relative;
         padding-left: 15px;
     }
-    h4::before {
+    h4.sidebar::before {
         content: "";
         position: absolute;
         left: 0;
@@ -52,6 +53,7 @@ import ValuesImage from "../assets/img/about/values.jpg";
         border: 2px solid #f2c202; /* Optional: adds a border around the inset image */
     }
 
+    /*** Values and Mission ***/
     @media screen and (max-width: 900px) {
         .values .values-right ul {
             padding-left: 0;
@@ -63,6 +65,30 @@ import ValuesImage from "../assets/img/about/values.jpg";
         .about .about-right .inset-img {
             /* Adjust the size of the inset image */
             width: 200px;
+        }
+    }
+
+    /* Expertise Section */
+    .expertise .expertise-card {
+        margin-bottom: 3rem;
+    }
+    .expertise .expertise-card p {
+        margin-bottom: 1rem;
+    }
+    .expertise .expertise-card i {
+        color: #f2c202;
+    }
+    .expertise .expertise-card h4 {
+        margin-bottom: 1rem;
+    }
+    @media screen and (min-width: 768px) {
+        .expertise .expertise-card {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+        }
+        .expertise .expertise-card:nth-child(2) {
+            border-left: 1px solid #000;
+            border-right: 1px solid #000;
         }
     }
 </style>
@@ -84,7 +110,7 @@ import ValuesImage from "../assets/img/about/values.jpg";
                     achieve client safety and protection, as well as to protect
                     your property and lives from threats and dangers.
                 </p>
-                <h4>PIPEDA Compliance</h4>
+                <h4 class="sidebar">PIPEDA Compliance</h4>
                 <p>
                     EyeQ Security Services is committed to protecting the
                     personal data in its control that which is provided by
@@ -249,4 +275,51 @@ import ValuesImage from "../assets/img/about/values.jpg";
         <Team />
     </Section>
     <!-- Team End -->
+
+    <!-- Expertise Start -->
+    <Section title_top="Our Expertise" title_main="Experience The Best With Us">
+        <div class="expertise">
+            <p class="mb-5 text-center">
+                We provide top notch security services with industry best
+                expertise to leave yourself, business, and important assets
+                protected and safe.
+            </p>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 expertise-card">
+                    <h4 class="sidebar">Personal Security</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas leo tortor, elementum non rhoncus eget,
+                        ultrices at quam. Phasellus sit amet nisl id ex
+                        consectetur elementum non a purus. Etiam tempus nibh et
+                        luctus lacinia.
+                    </p>
+                    <i class="fa fa-users fa-3x"></i>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 expertise-card">
+                    <h4 class="sidebar">Commercial Security</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas leo tortor, elementum non rhoncus eget,
+                        ultrices at quam. Phasellus sit amet nisl id ex
+                        consectetur elementum non a purus. Etiam tempus nibh et
+                        luctus lacinia.
+                    </p>
+                    <i class="fa fa-warehouse fa-3x"></i>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 expertise-card">
+                    <h4 class="sidebar">Security Consulting</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Maecenas leo tortor, elementum non rhoncus eget,
+                        ultrices at quam. Phasellus sit amet nisl id ex
+                        consectetur elementum non a purus. Etiam tempus nibh et
+                        luctus lacinia.
+                    </p>
+                    <i class="fa fa-hands-helping fa-3x"></i>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Expertise End -->
 </PageLayout>
