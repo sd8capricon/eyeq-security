@@ -90,7 +90,7 @@ h6,
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
-    color: #091E3E
+    color: var(--bs-black)
 }
 
 h1,
