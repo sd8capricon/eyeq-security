@@ -15,10 +15,7 @@ if (!props.title_offset) props.title_offset = false;
 
 let bgImage = "";
 
-if (props.background_image) {
-    // bgImage = `url("${props.background_image.src}")`;
-    bgImage = `url(https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)`;
-}
+if (props.background_image) bgImage = `url("${props.background_image.src}")`;
 ---
 
 <style define:vars={{ bgImage }}>
