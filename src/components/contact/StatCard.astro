@@ -1,0 +1,30 @@
+---
+interface Props {
+    value: number;
+    stat: string;
+}
+
+const { value, stat } = Astro.props as Props;
+---
+
+<style>
+    .stat-card {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        padding: 0.75rem;
+    }
+    @media screen and (min-width: 768px) {
+        .stat-card {
+            margin-right: 20px;
+            padding: 1rem 1.5rem;
+        }
+    }
+</style>
+
+<div class="bg-gray border stat-card">
+    <h3 class="text-jet">
+        <span data-toggle="counter-up">{value}</span>+
+    </h3>
+    <h6>{stat}</h6>
+</div>

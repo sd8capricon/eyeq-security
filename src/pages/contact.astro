@@ -1,8 +1,17 @@
 ---
+// Layout
 import PageLayout from "../layouts/PageLayout.astro";
+
+// Components
+import Section from "../layouts/Section.astro";
+import SectionTitle from "../components/Layout/SectionTitle.astro";
+import StatCard from "../components/contact/StatCard.astro";
+import Location from "../components/contact/Location.astro";
+import QuoteLight from "../components/Layout/QuoteLight.astro";
 
 // Assets
 import TitleImage from "../assets/img/carousel-1.jpg";
+import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
 ---
 
 <PageLayout
@@ -10,5 +19,229 @@ import TitleImage from "../assets/img/carousel-1.jpg";
     page_description="some description"
     background_image={TitleImage}
 >
-    <h1>Contact</h1>
+    <Section>
+        <div class="row">
+            <div class="col-lg-6">
+                <SectionTitle
+                    top="top-title"
+                    main="We Are Spread Across Canada"
+                    offset
+                />
+                <p class="mb-4">
+                    Laoreet lorem consectetuer hendrerit dictumst curae volutpat
+                    cubilia elit velit natoque. Eleifend diam volutpat lectus
+                    aliquam aenean. Dolor sed orci scelerisque taciti sodales
+                    tortor.
+                </p>
+                <div class="d-flex">
+                    <StatCard stat="Years of Experience" value={10} />
+                    <StatCard stat="Offices in Canada" value={10} />
+                    <StatCard stat="Workers Employed" value={10} />
+                </div>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0 d-flex align-items-center">
+                <img class="img-fluid" src={PixelMap.src} alt="" />
+            </div>
+        </div>
+    </Section>
+
+    <!-- Offices Start -->
+    <Section
+        title_top="Contact Us"
+        title_main="If You Have Any Query Feel Free To Contact Us"
+    >
+        <!-- Manitoba Start -->
+        <h2 class="location-title">Manitoba</h2>
+        <div class="row g-5 manitoba mb-5">
+            <div class="col-lg-6 p-1">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <Location
+                            position={1}
+                            city="Winnipeg, MB"
+                            address="Corporate Headquarters: 1479 Buffalo Pl, unit 105, Winnipeg, Manitoba"
+                            phone="+204 202-7287, +204 881-1947"
+                            email="info@eyeqsecurity.ca"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <Location
+                            position={2}
+                            city="Brandon, MB"
+                            address="229 12 St #2, Brandon, MB R7A 4L9"
+                            phone="431 373 3680"
+                            email="info@eyeqsecurity.ca"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <Location
+                            position={3}
+                            city="The Pas, MB"
+                            address="601 Settee Ave #6 The Pas, MB"
+                            phone="204 881 1947"
+                            email="info@eyeqsecurity.ca"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <Location
+                            position={4}
+                            city="Thompson, MB"
+                            address="7-17waterloo Ave Thompson mb R8N 0J6"
+                            phone="204 204 881-1947"
+                            email="info@eyeqsecurity.ca"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <!-- og iframe dim 800x600 -->
+                <iframe
+                    id="map-mb"
+                    class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82345.63809626097!2d-97.2539841!3d49.836798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea7169b40e3fed%3A0x6d81a36c5a258f4f!2sEyeQ%20Security%20Services!5e0!3m2!1sen!2sin!4v1724404906959!5m2!1sen!2sin"
+                    width="800"
+                    height="500"
+                    style="border:0; width:100%; height"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Manitoba End -->
+
+        <!-- Saskatchewan Start -->
+        <h2 class="location-title">Saskatchewan</h2>
+        <div class="row g-5 saskatchewan">
+            <div class="col-lg-6 p-1">
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <Location
+                            position={1}
+                            city="Regina, SK"
+                            address="1102 8th Ave, Unit 325, Regina, SK"
+                            phone="306 999 1947"
+                            email="infosk@eyeqsecurity.ca"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <Location
+                            position={2}
+                            city="Saskatoon, SK"
+                            phone="431 373 3680"
+                            email="infosk@eyeqsecurity.ca"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <Location
+                            position={3}
+                            city="Prince Albert, SK"
+                            phone="306 999 1947"
+                            email="infosk@eyeqsecurity.ca"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <!-- og iframe dim 800x600 -->
+                <iframe
+                    id="map-sk"
+                    class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin"
+                    width="800"
+                    height="400"
+                    style="border:0; width:100%; height"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Saskatchewan End -->
+    </Section>
+
+    <!-- Quote Start -->
+    <Section class="bg-gray">
+        <QuoteLight />
+    </Section>
+    <!-- Quote End -->
 </PageLayout>
+
+<style>
+    .location-title {
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+    .location-title::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Adjust the distance from the bottom */
+        left: 0;
+        right: 0;
+        width: 150px;
+        height: 5px; /* Adjust the thickness of the underline */
+        background-color: #f2c202;
+    }
+
+    iframe {
+        scroll-margin-top: 150px;
+    }
+
+    @media screen and (max-width: 900px) {
+        iframe {
+            height: 300px;
+        }
+    }
+</style>
+
+<script>
+    type LocationLayout = {
+        [key: string]: {
+            [key: string]: string;
+        };
+    };
+
+    const locationSrc: LocationLayout = {
+        MB: {
+            Winnipeg:
+                "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82345.63809626097!2d-97.2539841!3d49.836798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea7169b40e3fed%3A0x6d81a36c5a258f4f!2sEyeQ%20Security%20Services!5e0!3m2!1sen!2sin!4v1724404906959!5m2!1sen!2sin",
+            Brandon:
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2572.8959108443555!2d-99.96650749999999!3d49.8444133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52e79786ba1d7775%3A0xbe5593dd500688dd!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724407385738!5m2!1sen!2sin",
+            "The Pas":
+                "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2355.265078985661!2d-101.2453333!3d53.8203599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52f9ebbb677ce271%3A0x74d611af3dc2228e!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724407452627!5m2!1sen!2sin",
+        },
+        SK: {
+            Regina: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
+            Saskatoon:
+                "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
+            "Prince Albert":
+                "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
+        },
+    };
+
+    const locationBtns =
+        document.querySelectorAll<HTMLAnchorElement>(".location-btn");
+    const mbIframe = document.querySelector<HTMLIFrameElement>("#map-mb")!;
+    const skIframe = document.querySelector<HTMLIFrameElement>("#map-sk")!;
+
+    const setIframe = (frame: HTMLIFrameElement, newLocation: string) => {
+        frame.src = newLocation;
+    };
+
+    locationBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const province = btn.getAttribute("data-province")!;
+            const city = btn.getAttribute("data-city")!;
+            switch (province) {
+                case "MB":
+                    setIframe(mbIframe, locationSrc[province][city]);
+                    break;
+
+                case "SK":
+                    setIframe(skIframe, locationSrc[province][city]);
+                    break;
+
+                default:
+                    break;
+            }
+        });
+    });
+</script>
