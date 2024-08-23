@@ -5,6 +5,13 @@ export type LayoutProps = {
     page_description: string;
 }
 
+export type ServiceBtnProps = {
+    target: string;
+    icon: string;
+    service: string;
+    active?: boolean;
+}
+
 export type Location = {
     position: number;
     city: string;

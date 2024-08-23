@@ -1,10 +1,8 @@
 ---
-interface Props {
-    target: string;
-    icon: string;
-    service: string;
-    active?: boolean;
-}
+// types
+import { type ServiceBtnProps } from "../../types";
+
+interface Props extends ServiceBtnProps {}
 
 const { target, icon, service, active } = Astro.props as Props;
 ---

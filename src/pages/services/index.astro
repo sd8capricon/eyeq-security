@@ -1,4 +1,7 @@
 ---
+// Static Data
+import ServiceBtns from "../../data/serviceBtns";
+
 // Layout
 import PageLayout from "../../layouts/PageLayout.astro";
 
@@ -27,42 +30,11 @@ import TestImage from "../../assets/img/service/719-1280x720.jpg";
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
             <div class="col-6 col-lg-3 order-1 order-lg-1">
                 <div class="nav nav-pills w-100 me-4">
-                    <ServiceButton
-                        target="#general"
-                        icon="fa-shield-alt"
-                        service="General"
-                        active
-                    />
-                    <ServiceButton
-                        target="#high-profile-vip"
-                        icon="fa-user-shield"
-                        service="High Profile VIP"
-                    />
-                    <ServiceButton
-                        target="#hospital-health"
-                        icon="fa-hospital"
-                        service="Hospital & Health Care"
-                    />
-                    <ServiceButton
-                        target="#hotel"
-                        icon="fa-hotel"
-                        service="Hotel"
-                    />
-                    <ServiceButton
-                        target="#event"
-                        icon="fa-calendar-check"
-                        service="Event"
-                    />
-                    <ServiceButton
-                        target="#school"
-                        icon="fa-school"
-                        service="School"
-                    />
-                    <ServiceButton
-                        target="#retail"
-                        icon="fa-store-alt"
-                        service="Retail Shop"
-                    />
+                    {
+                        ServiceBtns.slice(0, 7).map((sbtn) => (
+                            <ServiceButton {...sbtn} />
+                        ))
+                    }
                 </div>
             </div>
             <div class="col-12 col-lg-6 order-3 order-lg-2">
@@ -128,36 +100,11 @@ import TestImage from "../../assets/img/service/719-1280x720.jpg";
             </div>
             <div class="col-6 col-lg-3 order-2 order-lg-3">
                 <div class="nav nav-pills w-100 me-4">
-                    <ServiceButton
-                        target="#mall"
-                        icon="fa-shopping-cart"
-                        service="Mall"
-                    />
-                    <ServiceButton
-                        target="#tab-pane-9"
-                        icon="fa-hard-hat"
-                        service="Construction"
-                    />
-                    <ServiceButton
-                        target="#tab-pane-10"
-                        icon="fa-building"
-                        service="Corporate & Property"
-                    />
-                    <ServiceButton
-                        target="#tab-pane-11"
-                        icon="fa-users"
-                        service="55+ Senior Living Center"
-                    />
-                    <ServiceButton
-                        target="#tab-pane-12"
-                        icon="fa-car-side"
-                        service="Mobile Patrol"
-                    />
-                    <ServiceButton
-                        target="#tab-pane-13"
-                        icon="fa-exclamation-triangle"
-                        service="Crisis and Eviction Mangement"
-                    />
+                    {
+                        ServiceBtns.slice(7, ServiceBtns.length).map((sbtn) => (
+                            <ServiceButton {...sbtn} />
+                        ))
+                    }
                 </div>
             </div>
         </div>
