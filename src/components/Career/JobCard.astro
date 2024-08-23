@@ -1,0 +1,42 @@
+---
+interface Props {
+    position: string;
+    description: string;
+    location: string;
+    department: string;
+}
+
+const { position, description, location, department } = Astro.props as Props;
+---
+
+<style>
+    .job-card {
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    }
+
+    .apply-btn {
+        background-color: #f2c202;
+        border: none;
+        padding: 10px 20px;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+
+    .apply-btn:hover {
+        background-color: #d4a700;
+    }
+</style>
+
+<div class="job-card">
+    <h4>{position}</h4>
+    <p>{description}</p>
+    <p><strong>Location :</strong> {location}</p>
+    <p><strong>Department :</strong> {department}</p>
+    <button class="apply-btn">Apply Now</button>
+</div>
