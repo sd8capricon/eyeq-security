@@ -1,6 +1,7 @@
 ---
 // Static Data
-import ServiceBtns from "../../data/serviceBtns";
+import serviceTitles from "../../data/serviceBtns";
+import serviceBriefs from "../../data/serviceBriefs";
 
 // Layout
 import PageLayout from "../../layouts/PageLayout.astro";
@@ -31,63 +32,27 @@ import TestImage from "../../assets/img/service/719-1280x720.jpg";
             <div class="col-6 col-lg-3 order-1 order-lg-1">
                 <div class="nav nav-pills w-100 me-4">
                     {
-                        ServiceBtns.slice(0, 7).map((sbtn) => (
-                            <ServiceButton {...sbtn} />
-                        ))
+                        serviceTitles
+                            .slice(0, 7)
+                            .map((sbtn) => <ServiceButton {...sbtn} />)
                     }
                 </div>
             </div>
             <div class="col-12 col-lg-6 order-3 order-lg-2">
                 <div class="tab-content w-100">
-                    <ServiceTabPane
-                        active
-                        id="general"
-                        image={TestImage}
-                        service="General Security Services"
-                    />
-                    <ServiceTabPane
-                        id="high-profile-vip"
-                        image={TestImage}
-                        service="High Profile VIP Security Services"
-                    />
-                    <ServiceTabPane
-                        id="hospital-health"
-                        image={TestImage}
-                        service="Hospital and Health Care Secuirty Services"
-                    />
-                    <ServiceTabPane
-                        id="hotel"
-                        image={TestImage}
-                        service="Hotel Security Services"
-                    />
-                    <ServiceTabPane
-                        id="event"
-                        image={TestImage}
-                        service="Event Security Services"
-                    />
-                    <ServiceTabPane
-                        id="school"
-                        image={TestImage}
-                        service="School Security Services"
-                    />
-                    <ServiceTabPane
-                        id="retail"
-                        image={TestImage}
-                        service="Retail Shop Security"
-                    />
-                    <ServiceTabPane
-                        id="mall"
-                        image={TestImage}
-                        service="Mall Security"
-                    />
+                    {
+                        serviceBriefs.map((service) => (
+                            <ServiceTabPane {...service} />
+                        ))
+                    }
                 </div>
             </div>
             <div class="col-6 col-lg-3 order-2 order-lg-3">
                 <div class="nav nav-pills w-100 me-4">
                     {
-                        ServiceBtns.slice(7, ServiceBtns.length).map((sbtn) => (
-                            <ServiceButton {...sbtn} />
-                        ))
+                        serviceTitles
+                            .slice(7, serviceTitles.length)
+                            .map((sbtn) => <ServiceButton {...sbtn} />)
                     }
                 </div>
             </div>

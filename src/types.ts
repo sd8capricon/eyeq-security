@@ -1,3 +1,5 @@
+import type { HTMLAttributes } from "astro/types";
+
 export type Page = "home" | "about" | "services" | "blog" | "contact" | "careers";
 
 export type LayoutProps = {
@@ -9,6 +11,14 @@ export type ServiceBtnProps = {
     target: string;
     icon: string;
     service: string;
+    active?: boolean;
+}
+
+export interface ServiceBreif extends HTMLAttributes<'div'> {
+    id: string;
+    image: ImageMetadata;
+    service: string;
+    description?: string
     active?: boolean;
 }
 

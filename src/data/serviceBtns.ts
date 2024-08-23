@@ -1,6 +1,6 @@
 import { type ServiceBtnProps } from "../types";
 
-const ServiceBtns: ServiceBtnProps[] = [
+const serviceTitles: ServiceBtnProps[] = [
     {
         target: "#general",
         icon: "fa-shield-alt",
@@ -70,4 +70,4 @@ const ServiceBtns: ServiceBtnProps[] = [
     }
 ]
 
-export default ServiceBtns;
+export default serviceTitles;
