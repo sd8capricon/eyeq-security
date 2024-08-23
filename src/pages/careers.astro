@@ -8,9 +8,22 @@ import SectionTitle from "../components/Layout/SectionTitle.astro";
 import StatCard from "../components/contact/StatCard.astro";
 import JobCard from "../components/Career/JobCard.astro";
 
+// types
+import { type Job } from "../types";
+
 // Assets
 import TitleImage from "../assets/img/carousel-1.jpg";
 import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
+
+const job = {
+    position: "Position Name",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    location: "Winnipeg, MB",
+    department: "Name of Department",
+};
+
+const jobs: Job[] = [];
+for (let i = 0; i < 4; i++) jobs.push(job);
 ---
 
 <style>
@@ -133,38 +146,13 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
     <!-- Open Positions Start-->
     <Section title_top="top title" title_main="Open Positions" title_offset>
         <div class="row">
-            <div class="col-md-6">
-                <JobCard
-                    position="Position Name"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    location="Winnipeg, MB"
-                    department="Name of Department"
-                />
-            </div>
-            <div class="col-md-6">
-                <JobCard
-                    position="Position Name"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    location="Winnipeg, MB"
-                    department="Name of Department"
-                />
-            </div>
-            <div class="col-md-6">
-                <JobCard
-                    position="Position Name"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    location="Winnipeg, MB"
-                    department="Name of Department"
-                />
-            </div>
-            <div class="col-md-6">
-                <JobCard
-                    position="Position Name"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-                    location="Winnipeg, MB"
-                    department="Name of Department"
-                />
-            </div>
+            {
+                jobs.map((job) => (
+                    <div class="col-md-6">
+                        <JobCard {...job} />
+                    </div>
+                ))
+            }
         </div>
     </Section>
     <!-- Open Positions End -->

@@ -1,10 +1,7 @@
 ---
-interface Props {
-    position: string;
-    description: string;
-    location: string;
-    department: string;
-}
+// types
+import { type Job } from "../../types";
+interface Props extends Job {}
 
 const { position, description, location, department } = Astro.props as Props;
 ---
