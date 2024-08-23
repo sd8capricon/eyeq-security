@@ -1,0 +1,67 @@
+---
+// Layout
+import PageLayout from "./PageLayout.astro";
+
+// Components
+import SectionTitle from "../components/Layout/SectionTitle.astro";
+
+// Assets
+import TitleImage from "../assets/img/carousel-1.jpg";
+
+interface Props {
+    service_title: string;
+    service_path: string;
+    service_description: string;
+    service_img: ImageMetadata;
+}
+
+const { service_title, service_path, service_description, service_img } =
+    Astro.props as Props;
+---
+
+<style>
+    .highlight-box {
+        background-color: #e9ecef;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    .highlight-box ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .highlight-box ul li::before {
+        content: "✓";
+        color: #f2c202;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+</style>
+
+<PageLayout
+    page_title="services"
+    service_path={service_path}
+    service_title={service_title}
+    page_description={service_description}
+    background_image={TitleImage}
+>
+    <div class="row w-100 intro bg-gray">
+        <div class="col-lg-6 p-5 d-flex align-items-center">
+            <div>
+                <SectionTitle top="Some Title" main={service_title} offset />
+                <slot name="first-paragraph" />
+                <!-- Creative Liberty -->
+                <div class="highlight-box bg-white">
+                    <slot name="highlight-title" />
+                    <slot name="highlight-ul" />
+                </div>
+                <slot name="second-paragraph" />
+            </div>
+        </div>
+        <div class="col-lg-6 p-0">
+            <!-- src="https://picsum.photos/700/600" -->
+            <img src={service_img.src} alt="" class="img-fluid w-100" />
+        </div>
+    </div>
+</PageLayout>

@@ -3,23 +3,36 @@
 import { staticPaths } from "../../data/services";
 
 // Layout
-import ServiceLayout from "../../layouts/ServiceLayout.astro";
-
-// Components
-import SectionFluid from "../../layouts/SectionFluid.astro";
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
 
 export const getStaticPaths = staticPaths;
 
 const { service } = Astro.params;
-const { title } = Astro.props;
+const {
+    title,
+    first_para_italic,
+    first_para,
+    highlight_title,
+    highlight_list,
+    second_para,
+    img,
+} = Astro.props;
 ---
 
-<ServiceLayout
+<ServiceLayoutBase
     service_title={title}
     service_path={service}
     service_description="some description"
+    service_img={img}
 >
-    <SectionFluid>
-        <h1>{title}</h1>
-    </SectionFluid>
-</ServiceLayout>
+    <p class={first_para_italic ? "fst-italic" : ""} slot="first-paragraph">
+        {first_para}
+    </p>
+    <h3 slot="highlight-title">{highlight_title}</h3>
+    <ul slot="highlight-ul">
+        {highlight_list.map((li) => <li>{li}</li>)}
+    </ul>
+    <p slot="second-paragraph">
+        {second_para}
+    </p>
+</ServiceLayoutBase>
