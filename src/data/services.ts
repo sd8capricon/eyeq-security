@@ -33,7 +33,7 @@ export const staticPaths = (() => {
                 title: "Bank Security Services",
                 first_para_italic: false,
                 first_para: "Banks are probably the riskiest and most sensitive businesses. Ensuring Comprehensive Security and Surveillance 24/7",
-                highlight_title: "",
+                highlight_title: "Why Choose Us:",
                 highlight_list: [
                     "Trained personnel for the banking environment",
                     "Comprehensive security and surveillance",
