@@ -1,0 +1,234 @@
+---
+// Layout
+import PageLayout from "../layouts/PageLayout.astro";
+
+// Components
+import Section from "../layouts/Section.astro";
+import SectionTitle from "../components/Layout/SectionTitle.astro";
+import StatCard from "../components/contact/StatCard.astro";
+
+// Assets
+import TitleImage from "../assets/img/carousel-1.jpg";
+import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
+---
+
+<style>
+    .image-container {
+        position: relative;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .overlay-text {
+        position: absolute;
+        bottom: 0px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    .icon-list h6 {
+        margin-bottom: 1.5rem;
+    }
+
+    .icon-list i {
+        color: #00a2a2;
+        margin-right: 10px;
+    }
+</style>
+
+<PageLayout
+    page_title="careers"
+    page_description="some description"
+    background_image={TitleImage}
+>
+    <!-- Intro Start -->
+    <Section>
+        <div class="row">
+            <div class="col-lg-6">
+                <SectionTitle
+                    top="TITLE_TOP"
+                    main="We Are ____ Driven Company"
+                    offset
+                />
+                <p>
+                    Mauris primis ultricies aptent senectus porta leo ridiculus
+                    montes pulvinar facilisi interdum. Habitasse letiua aenean
+                    curae pede erat velit pharetra efficitur phasellus. Eu
+                    habitasse tempus augue nullam pellentesque volutpat.
+                </p>
+                <p>
+                    Porttitor quam nullam justo nisl vehicula conubia parturient
+                    molestie. Venenatis nostra euismod massa dignissim suscipit.
+                </p>
+                <div class="row icon-list">
+                    <div class="col-6">
+                        <h6><i class="fas fa-check"></i> Quality 1</h6>
+                        <h6><i class="fas fa-check"></i> Quality 2</h6>
+                        <h6><i class="fas fa-check"></i> Quality 3</h6>
+                    </div>
+                    <div class="col-6">
+                        <h6><i class="fas fa-check"></i> Quality 4</h6>
+                        <h6><i class="fas fa-check"></i> Quality 5</h6>
+                        <h6><i class="fas fa-check"></i> Quality 6</h6>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="col-lg-6 mt-4 mt-lg-0 d-flex align-items-center justify-content-center"
+            >
+                <div class="image-container">
+                    <img
+                        src="https://via.placeholder.com/600x400"
+                        alt="Industrial Image"
+                    />
+                    <div class="overlay-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Eum, numquam.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Intro End -->
+
+    <!-- Stats Start -->
+    <Section>
+        <div class="row">
+            <div
+                class="col-lg-6 mt-4 mt-lg-0 d-flex align-items-center order-2 order-lg-1"
+            >
+                <img class="img-fluid" src={PixelMap.src} alt="" />
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2">
+                <SectionTitle
+                    top="top-title"
+                    main="We Are Spread Across Canada"
+                    offset
+                />
+                <p class="mb-4">
+                    Laoreet lorem consectetuer hendrerit dictumst curae volutpat
+                    cubilia elit velit natoque. Eleifend diam volutpat lectus
+                    aliquam aenean. Dolor sed orci scelerisque taciti sodales
+                    tortor.
+                </p>
+                <div class="d-flex">
+                    <StatCard stat="Years of Experience" value={10} />
+                    <StatCard stat="Offices in Canada" value={10} />
+                    <StatCard stat="Workers Employed" value={10} />
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Stats End -->
+
+    <!-- Career Form Start -->
+    <Section>
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <SectionTitle
+                    top="Discover Your Potential"
+                    main="Start Your Journey With Us"
+                    offset
+                />
+                <p class="mb-4">
+                    Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing
+                    kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo
+                    ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea
+                    et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr
+                    ut dolores magna sit. Sea dolore sanctus sed et. Takimata
+                    takimata sanctus sed.
+                </p>
+                <div
+                    class="d-flex align-items-center mt-2 wow zoomIn"
+                    data-wow-delay="0.6s"
+                >
+                    <div
+                        class="bg-primary d-flex align-items-center justify-content-center rounded"
+                        style="width: 60px; height: 60px;"
+                    >
+                        <i class="fa fa-phone-alt text-black"></i>
+                    </div>
+                    <div class="ps-4">
+                        <h5 class="mb-2">Call to ask any question</h5>
+                        <h4 class="text-primary mb-0">
+                            +204 202-7287, +204 881-1947
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div
+                    class="form-container bg-primary h-100 d-flex align-items-center p-5 wow zoomIn"
+                    data-wow-delay="0.9s"
+                >
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-xl-12">
+                                <input
+                                    type="text"
+                                    class="form-control bg-cosmic-latte border-0"
+                                    placeholder="Your Name"
+                                    style="height: 55px;"
+                                />
+                            </div>
+                            <div class="col-12">
+                                <input
+                                    type="number"
+                                    class="form-control bg-cosmic-latte border-0"
+                                    placeholder="Your Phone Number"
+                                    style="height: 55px;"
+                                />
+                            </div>
+                            <div class="col-12">
+                                <input
+                                    type="email"
+                                    class="form-control bg-cosmic-latte border-0"
+                                    placeholder="Your Email"
+                                    style="height: 55px;"
+                                />
+                            </div>
+                            <div class="col-12">
+                                <select
+                                    class="form-select bg-cosmic-latte border-0"
+                                    style="height: 55px;"
+                                >
+                                    <option selected>Job Category</option>
+                                    <option value="1">Category 1</option>
+                                    <option value="2">Category 2</option>
+                                    <option value="3">Category 3</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="resume">
+                                    <div class="h6">Upload Resume</div>
+                                    <input type="file" name="resume" />
+                                </label>
+                            </div>
+                            <div class="col-12">
+                                <button
+                                    class="btn btn-dark w-100 py-3"
+                                    type="submit">Submit</button
+                                >
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </Section>
+    <!-- Career Form End -->
+</PageLayout>
+
+<style>
+    .form-container {
+        border-radius: 10px;
+    }
+</style>
