@@ -1,0 +1,25 @@
+---
+// Paths
+import { staticPaths } from "../../data/services";
+
+// Layout
+import ServiceLayout from "../../layouts/ServiceLayout.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+
+export const getStaticPaths = staticPaths;
+
+const { service } = Astro.params;
+const { title } = Astro.props;
+---
+
+<ServiceLayout
+    service_title={title}
+    service_path={service}
+    service_description="some description"
+>
+    <SectionFluid>
+        <h1>{title}</h1>
+    </SectionFluid>
+</ServiceLayout>
