@@ -172,7 +172,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
     <!-- Career Form Start -->
     <Section>
         <div class="row g-5">
-            <div class="col-lg-5">
+            <div class="col-lg-5 order-2 order-lg-1">
                 <div
                     class="form-container bg-primary h-100 d-flex align-items-center p-5 wow zoomIn"
                     data-wow-delay="0.9s"
@@ -184,14 +184,6 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
                                     type="text"
                                     class="form-control bg-cosmic-latte border-0"
                                     placeholder="Your Name"
-                                    style="height: 55px;"
-                                />
-                            </div>
-                            <div class="col-12">
-                                <input
-                                    type="number"
-                                    class="form-control bg-cosmic-latte border-0"
-                                    placeholder="Your Phone Number"
                                     style="height: 55px;"
                                 />
                             </div>
@@ -215,16 +207,18 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
                                 </select>
                             </div>
                             <div class="col-12">
+                                <label for="resume">
+                                    <input
+                                        type="file"
+                                        class="form-control bg-cosmic-latte border-0"
+                                    />
+                                </label>
+                            </div>
+                            <div class="col-12">
                                 <textarea
                                     class="form-control bg-cosmic-latte border-0"
                                     rows="3"
                                     placeholder="Message"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <label for="resume">
-                                    <div class="h6">Upload Resume</div>
-                                    <input type="file" name="resume" />
-                                </label>
                             </div>
                             <div class="col-12">
                                 <button
@@ -236,7 +230,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
                     </form>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 order-1 order-lg-2">
                 <SectionTitle
                     top="Discover Your Potential"
                     main="Start Your Journey With Us"
