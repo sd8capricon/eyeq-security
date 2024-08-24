@@ -32,7 +32,6 @@ const {
     <ul slot="highlight-ul">
         {highlight_list.map((li) => <li>{li}</li>)}
     </ul>
-    <p slot="second-paragraph">
-        {second_para}
-    </p>
+
+    {second_para && <p slot="second-paragraph" set:html={second_para}></p>}
 </ServiceLayoutBase>

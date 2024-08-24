@@ -1,11 +1,13 @@
 // Types
 import type { GetStaticPaths } from "astro";
 
+
 const TempImage: ImageMetadata = {} as ImageMetadata;
 TempImage.src = "https://via.placeholder.com/700x600"
 
+
 export const staticPaths = (() => {
-    return [
+    const paths = [
         {
             params: { service: "general-security" },
             props: {
@@ -43,6 +45,81 @@ export const staticPaths = (() => {
                 second_para: "We have trained and fully equipped our security personnel to match these standards to provide highly proactive security and deliver beyond our clients' expectations for all types of banking institutions.Our security guards will be stationed at highly visible places within the banking premises, which lowers the likelihood of crime.",
                 img: TempImage
             }
+        },
+        {
+            params: { service: "hospital-security" },
+            props: {
+                title: "Hospital & 55+ Seniors living Security Services",
+                first_para_italic: false,
+                first_para: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence. Hospitals also typically maintain large inventories of drugs, some of which may have significant street value.",
+                highlight_title: "Our Security Focuses On:",
+                highlight_list: [
+                    "Protecting vulnerable patients and residents",
+                    "Safeguarding hospital inventories",
+                    "Preventing theft and violence",
+                    "Ensuring safety for healthcare employees",
+                    "Maintaining peace within healthcare facilities"
+                ],
+                second_para: "Healthcare employees are also vulnerable as targets of violence, both from patients and family members alike. A hospital security officer is charged with maintaining the peace in a hospital & seniors living centers and working to safeguard the people and items within its walls",
+                img: TempImage
+            }
+        },
+        {
+            params: { service: "school-security" },
+            props: {
+                title: "School Security Service",
+                first_para_italic: false,
+                first_para: "School Security officers play a critical role by inspecting and patrolling premises regularly, monitoring property entrances, authorizing entrance of people and vehicles, reporting any suspicious behavior and happenings, securing all exit doors and windows, monitoring surveillance cameras, responding to alarms and reacting promptly, assisting people in need, and submitting reports of daily surveillance activities. Trust us for the safety of your employees and property",
+                highlight_title: "Our Key Responsibilities Include: ",
+                highlight_list: [
+                    "Inspecting and patrolling school premises",
+                    "Monitoring property entrances",
+                    "Authorizing entrance of people and vehicles",
+                    "Securing all exits and windows",
+                    "Monitoring surveillance cameras",
+                    "Responding to alarms promptly",
+                    "Assisting people in need",
+                    "Reporting daily surveillance activities"
+                ],
+                img: TempImage
+            }
+        },
+        {
+            params: { service: "mobile-patrol" },
+            props: {
+                title: "Mobile Patrol Security",
+                first_para_italic: false,
+                first_para: "We understand at EyeQ Security Services that since parking lots are usually 24/7 operations, you might not want to invest in having security guards physically present all that time. Not only is that an expensive enterprise, but it's a lot to keep track of.",
+                hightlight_title: "Why Choose Our Mobile Patrol? Service",
+                highlight_list: [
+                    "Regular or random walk-throughs of your business and private property",
+                    "Monitoring of alarm and security systems",
+                    "Immediate response to potential fires, gas leaks, or invasions",
+                    "Ensuring the safety of individuals in your parking lots",
+                    "Cost-effective security solution"
+                ],
+                second_para: "Our mobile patrol security services are designed to provide flexible and effective security coverage for your parking lots. We can station security guards to perform regular or random inspections, ensuring that everything is in order and that any potential threats are addressed promptly.<p>Our personnel are trained to respond swiftly to alarms, potential fires, gas leaks, or any signs of invasion, ensuring the safety of your property and anyone on-site</p>",
+                img: TempImage
+            }
+        },
+        {
+            params: { service: "manpower-solutions" },
+            props: {
+                title: "Manpower Solutions",
+                first_para_italic: false,
+                first_para: "We work to alleviate human resource challenges that your business might be facing while remaining compliant with local labour laws and employment regulations. Our local knowledge, experience, professionalism, and mature processes enable us to deliver solutions quickly and cost-effectively to each of our clients",
+                hightlight_title: "Why Choose Our Manpower Solutions?",
+                highlight_list: [
+                    "Expert consultants in career building and human resources",
+                    "Compliance with local labour laws and employment regulations",
+                    "Cost-effective and timely solutions",
+                    "Tailored candidates who reflect your organization's image and objectives",
+                    " Proven track record of transforming business growth"
+                ],
+                second_para: "Our talented consultants are professionals in building careers, helping employees achieve their career goals, and boosting the human resource infrastructures of businesses of all sizes. The solutions we offer create a win-win situation for all parties involved, phenomenally transforming business growth<p>We owe our success to our competent staff, work culture, and innovative methods. Thanks to their efforts, we have established a name as one of the most trusted services in workforce management solutions.</p>",
+                img: TempImage
+            }
         }
     ];
+    return paths;
 }) satisfies GetStaticPaths;
