@@ -21,10 +21,14 @@
     --bs-jet: #393939;
     --bs-gray: #6c757d;
     --bs-gray-bg: #F7F7F7;
+    --metallic-gray-gradient: linear-gradient(135deg, #f7f7f7, #d7d7d7, #f7f7f7, #c7c7c7, #f7f7f7);
+    /* --metallic-gray-gradient: linear-gradient(135deg, #ffffff, #fcfcfc, #ffffff, #fafafa, #ffffff); */
     --bs-gray-dark: #343a40;
     --bs-primary: #f2c202;
     --bs-primary-contrast: #d4a700;
     --bs-cosmic-latte: #fff7d6;
+    /* --metallic-cosmic-latte: linear-gradient(135deg, #fff7d6, #fef4ce, #fff7d6, #fdefc5, #fff7d6); */
+    --metallic-cosmic-latte: linear-gradient(135deg, #fff7d6, #fdf4c6, #fff7d6, #f9e3b1, #fff7d6);
     --bs-secondary: #34AD54;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -32,8 +36,26 @@
     --bs-danger: #dc3545;
     --bs-light: #EEF9FF;
     --bs-dark: #091E3E;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-font-sans-serif: system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        "Liberation Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
 
@@ -8366,12 +8388,20 @@ fieldset:disabled .btn {
     background-color: var(--bs-cosmic-latte) !important;
 }
 
+.bg-metallic-cosmic-latte {
+    background: var(--metallic-cosmic-latte) !important;
+}
+
 .bg-raisin-black {
     background-color: var(--bs-raisin-black) !important;
 }
 
 .bg-gray {
     background-color: var(--bs-gray-bg) !important;
+}
+
+.bg-metallic-gray-gradient {
+    background: var(--metallic-gray-gradient) !important;
 }
 
 .bg-secondary {
