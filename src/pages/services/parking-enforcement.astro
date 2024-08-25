@@ -1,0 +1,80 @@
+---
+// Layout
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+import SectionTitle from "../../components/Layout/SectionTitle.astro";
+
+const ServiceImg = {} as ImageMetadata;
+ServiceImg.src = "https://via.placeholder.com/300x400";
+---
+
+<ServiceLayoutBase
+    service_title="Parking Enforcement"
+    service_path="/parking-enforcement"
+    service_description="some description"
+    service_img={ServiceImg}
+>
+    <p slot="italic-paragraph">
+        When customers entrust you with their vehicles, they're paying for
+        safety. At EyeQ Security, we provide the best parking lot security
+        available.
+    </p>
+    <p slot="first-paragraph">
+        Maintaining a parking lot can be stressful, as patrons pay you to
+        protect their vehicles. Since cars don't come cheap, it's of the utmost
+        importance that you're able to keep them safe from harm while in your
+        parking garage or parking lot. At EyeQ Security, we recognize that
+        parking lot safety isn't always easy.
+    </p>
+    <h3 slot="highlight-title">Common Parking Lot Security Challenges:</h3>
+    <ul slot="highlight-ul">
+        <li>Petty thefts and vandalism</li>
+        <li>Stick-ups and carjackings</li>
+        <li>Other kinds of crime that occur frequently</li>
+        <li>Ensuring the safety of patrons and their vehicles</li>
+    </ul>
+    <p slot="second-paragraph">
+        Crime in parking lots and parking garages is extremely common, with
+        hundreds of petty thefts, stick-ups, and other kinds of crime occurring
+        monthly around Manitoba. To help you keep your patrons, their vehicles,
+        and your facilities safe, we've developed a range of parking lot
+        security services to ensure you can always provide for your customers.
+    </p>
+    <SectionFluid>
+        <div class="row p-0 m-0">
+            <div class="col-6 p-0">
+                <img
+                    class="img-fluid w-100"
+                    src="https://via.placeholder.com/400x300"
+                    alt=""
+                />
+            </div>
+            <div class="col-6 p-5">
+                <SectionTitle
+                    top="top title"
+                    main="On-Site Parking Lot Security Personnel"
+                    offset
+                />
+                <p>
+                    The first thing you want to establish in your parking lot is
+                    a feeling of safety and security. When people bring you
+                    their vehicles, they want to see professionalism and an air
+                    of safety. That means security personnel, and plenty of
+                    them. Whether you want a single security guard stationed at
+                    the front entrance or a parking enforcement officer manning
+                    every exit, we've got you covered.
+                </p>
+                <p>
+                    Our security team is highly trained, with decades of
+                    experience between them. They'll be able to keep an eye out
+                    for any suspicious activity, theft, or crime in your parking
+                    lot or on your private property. They'll also be physically
+                    there to respond to any kind of criminal activity or
+                    emergency that might take place.
+                </p>
+            </div>
+        </div>
+    </SectionFluid>
+</ServiceLayoutBase>
