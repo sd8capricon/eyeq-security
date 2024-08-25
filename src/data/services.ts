@@ -12,8 +12,7 @@ export const staticPaths = (() => {
             params: { service: "general-security" },
             props: {
                 title: "General Security Services",
-                first_para_italic: true,
-                first_para: "EyeQ Security Services provides comprehensive security services that protect and preserve businesses and properties throughout Manitoba.We take pride in saying our quality security solutions never fail to deliver.Our efficacious security programmes and dedicated team will maximise your coverage and give your site supreme protection.",
+                italic_para: "EyeQ Security Services provides comprehensive security services that protect and preserve businesses and properties throughout Manitoba.We take pride in saying our quality security solutions never fail to deliver.Our efficacious security programmes and dedicated team will maximise your coverage and give your site supreme protection.",
                 highlight_title: "Our Services Include:",
                 highlight_list: [
                     "Unarmed uniform security guards for Private Enterprises",
@@ -33,7 +32,6 @@ export const staticPaths = (() => {
             params: { service: "bank-security" },
             props: {
                 title: "Bank Security Services",
-                first_para_italic: false,
                 first_para: "Banks are probably the riskiest and most sensitive businesses. Ensuring Comprehensive Security and Surveillance 24/7",
                 highlight_title: "Why Choose Us:",
                 highlight_list: [
@@ -50,7 +48,6 @@ export const staticPaths = (() => {
             params: { service: "hospital-security" },
             props: {
                 title: "Hospital & 55+ Seniors living Security Services",
-                first_para_italic: false,
                 first_para: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence. Hospitals also typically maintain large inventories of drugs, some of which may have significant street value.",
                 highlight_title: "Our Security Focuses On:",
                 highlight_list: [
@@ -68,7 +65,6 @@ export const staticPaths = (() => {
             params: { service: "school-security" },
             props: {
                 title: "School Security Service",
-                first_para_italic: false,
                 first_para: "School Security officers play a critical role by inspecting and patrolling premises regularly, monitoring property entrances, authorizing entrance of people and vehicles, reporting any suspicious behavior and happenings, securing all exit doors and windows, monitoring surveillance cameras, responding to alarms and reacting promptly, assisting people in need, and submitting reports of daily surveillance activities. Trust us for the safety of your employees and property",
                 highlight_title: "Our Key Responsibilities Include: ",
                 highlight_list: [
@@ -88,7 +84,6 @@ export const staticPaths = (() => {
             params: { service: "mobile-patrol" },
             props: {
                 title: "Mobile Patrol Security",
-                first_para_italic: false,
                 first_para: "We understand at EyeQ Security Services that since parking lots are usually 24/7 operations, you might not want to invest in having security guards physically present all that time. Not only is that an expensive enterprise, but it's a lot to keep track of.",
                 hightlight_title: "Why Choose Our Mobile Patrol? Service",
                 highlight_list: [
@@ -106,7 +101,6 @@ export const staticPaths = (() => {
             params: { service: "manpower-solutions" },
             props: {
                 title: "Manpower Solutions",
-                first_para_italic: false,
                 first_para: "We work to alleviate human resource challenges that your business might be facing while remaining compliant with local labour laws and employment regulations. Our local knowledge, experience, professionalism, and mature processes enable us to deliver solutions quickly and cost-effectively to each of our clients",
                 hightlight_title: "Why Choose Our Manpower Solutions?",
                 highlight_list: [
@@ -124,7 +118,6 @@ export const staticPaths = (() => {
             params: { service: "hotel-security" },
             props: {
                 title: "Hotel Security",
-                first_para_italic: false,
                 first_para: "With a highly trained, fully licensed team security professionals, EyeQ Security can provide you with manned guarding security for the safety and security of your clients and customers.",
                 img: { ...TempImage, src: "https://via.placeholder.com/1280x720" },
                 feature_title_top: "What's Included",
@@ -151,6 +144,23 @@ export const staticPaths = (() => {
                         description: "Hotel security must be on call anytime during their shift to investigate disturbances reported by hotel staff and guests. This can include things like excess noise coming from a guest's room or reports of suspicious people prowling the parking lot. Count on us in case you are looking to hire the best yet the most affordable security services in the region."
                     }
                 ]
+            }
+        },
+        {
+            params: { service: "event-security" },
+            props: {
+                title: "Event Security",
+                italic_para: "Learn about the best event security services in the industry!",
+                first_para: "Security is an essential part of any event and can mean the difference between success and failure for your special occasion. Ensuring that you hire qualified, professional event security staff is crucial, and this is where we can help you.",
+                highlight_title: "Our Event Security Services Include:",
+                highlight_list: [
+                    "Equipment protection services",
+                    "Crowd control management",
+                    "Ensuring the safety of your guests",
+                    "Highly trained and experienced security personnel"
+                ],
+                second_para: "At EyeQ Security Services, the safety of your guests is our priority. Our highly trained, experienced, and well-equipped security personnel provide equipment protection services and crowd control to ensure the success of your event.<p>EyeQ Security guards protect everything, from your guests to your equipment. Using our event security services at your event gives you peace of mind so that you and your guests can enjoy your event.</p>",
+                img: TempImage,
             }
         }
     ];
