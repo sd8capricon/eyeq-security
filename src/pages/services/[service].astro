@@ -14,7 +14,7 @@ export const getStaticPaths = staticPaths;
 const { service } = Astro.params;
 const {
     title,
-    first_para_italic,
+    italic_para,
     first_para,
     highlight_title,
     highlight_list,
@@ -32,20 +32,25 @@ const {
     service_description="some description"
     service_img={img}
 >
-    <p class={first_para_italic ? "fst-italic" : ""} slot="first-paragraph">
-        {first_para}
-    </p>
+    {
+        italic_para && (
+            <p class="fst-italic" slot="italic-paragraph">
+                {italic_para}
+            </p>
+        )
+    }
 
+    {first_para && <p slot="first-paragraph">{first_para}</p>}
+
+    <!-- Cannot Return element with slot within a fragment -->
+    {highlight_title && <h3 slot="highlight-title">{highlight_title}</h3>}
     {
         highlight_title && (
-            <>
-                <h3 slot="highlight-title">{highlight_title}</h3>
-                <ul slot="highlight-ul">
-                    {highlight_list.map((li) => (
-                        <li>{li}</li>
-                    ))}
-                </ul>
-            </>
+            <ul slot="highlight-ul">
+                {highlight_list.map((li) => (
+                    <li>{li}</li>
+                ))}
+            </ul>
         )
     }
 

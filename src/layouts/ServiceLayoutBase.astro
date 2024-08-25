@@ -17,6 +17,8 @@ interface Props {
 
 const { service_title, service_path, service_description, service_img } =
     Astro.props as Props;
+
+const highlight_box= await Astro.slots.render('highlight-title')
 ---
 
 <style>
@@ -50,16 +52,18 @@ const { service_title, service_path, service_description, service_img } =
         <div class="col-lg-6 p-5 d-flex align-items-center">
             <div>
                 <SectionTitle top="Our Services" main={service_title} offset />
+                <slot name="italic-paragraph"/>
                 <slot name="first-paragraph" />
-                <!-- Creative Liberty -->
                 {
-                    Astro.slots.has("highlight-title") && (
+                    highlight_box && (
                         <div class="highlight-box bg-white">
+                            <!-- Creative Liberty -->
                             <slot name="highlight-title" />
                             <slot name="highlight-ul" />
                         </div>
                     )
                 }
+
                 <slot name="second-paragraph" />
             </div>
         </div>
