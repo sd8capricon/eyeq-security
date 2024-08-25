@@ -8,6 +8,7 @@ import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
 
 // Components
 import ServiceFeatureCard from "../../components/Service/ServiceFeatureCard.astro";
+import type { ServiceFeature } from "../../types";
 
 export const getStaticPaths = staticPaths;
 
@@ -22,8 +23,20 @@ const {
     img,
     feature_title_top,
     feature_title_main,
+    feature_para,
+    feature_height,
     features,
 } = Astro.props;
+
+let serviceFeatures: ServiceFeature[] = [] as ServiceFeature[];
+
+if (features && feature_height)
+    serviceFeatures = features.map((feature) => {
+        return {
+            ...feature,
+            height: feature_height,
+        };
+    });
 ---
 
 <ServiceLayoutBase
@@ -62,8 +75,9 @@ const {
                 title_top={feature_title_top}
                 title_main={feature_title_main}
             >
-                <div class="row">
-                    {features.map((feature) => (
+                <p set:html={feature_para} />
+                <div class="row mt-5">
+                    {serviceFeatures.map((feature) => (
                         <div class="col-md-6">
                             <ServiceFeatureCard {...feature} />
                         </div>

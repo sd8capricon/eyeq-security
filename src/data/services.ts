@@ -143,7 +143,8 @@ export const staticPaths = (() => {
                         feature: "Investigate Disturbances",
                         description: "Hotel security must be on call anytime during their shift to investigate disturbances reported by hotel staff and guests. This can include things like excess noise coming from a guest's room or reports of suspicious people prowling the parking lot. Count on us in case you are looking to hire the best yet the most affordable security services in the region."
                     }
-                ]
+                ],
+                feature_height: 225,
             }
         },
         {
@@ -161,6 +162,25 @@ export const staticPaths = (() => {
                 ],
                 second_para: "At EyeQ Security Services, the safety of your guests is our priority. Our highly trained, experienced, and well-equipped security personnel provide equipment protection services and crowd control to ensure the success of your event.<p>EyeQ Security guards protect everything, from your guests to your equipment. Using our event security services at your event gives you peace of mind so that you and your guests can enjoy your event.</p>",
                 img: TempImage,
+                feature_title_top: "What's Included",
+                feature_title_main: "EyeQ Security Services Can Assist",
+                feature_para: "EyeQ Security Services makes event security a priority for your guests' enjoyment. You can count on us to provide expert security so that you can focus on the guest experience.<p>We have the tools to provide high-end event security services to ensure the success of your event.Our priority list includes the following:</p>",
+                features: [
+                    {
+                        feature: "Crowd control:",
+                        description: "Our security professionals know how to manage large crowds, provide access control, and ensure an orderly entrance and exit for the safety of all of your guests."
+                    },
+                    {
+                        feature: "Health and safety:",
+                        description: "Our security professionals know how to remain calm in an emergency and are skilled at determining the proper steps for every situation, including knowing when to evacuate the premises."
+                    },
+                    {
+
+                        feature: "Threat analysis:",
+                        description: "Our security personnel are capable of assessing threats. Moreover, we conduct location and threat analysis in the background. When necessary, we deploy additional security personnel to provide additional coverage without interfering with your event."
+                    }
+                ],
+                feature_height: 200
             }
         }
     ];

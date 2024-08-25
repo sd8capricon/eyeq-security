@@ -36,3 +36,9 @@ export type Job = {
     location: string;
     department: string;
 };
+
+export type ServiceFeature = {
+    feature: string;
+    description: string;
+    height: number;
+}
