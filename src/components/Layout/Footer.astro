@@ -6,6 +6,117 @@ import { Image } from "astro:assets";
 import Logo from "../../assets/img/logo_png.png";
 ---
 
+<footer class="footer">
+    <div class="container my-5">
+        <div class="row">
+            <!-- Company Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Company</h3>
+                </div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li>
+                        <a
+                            href="/contact"
+                            class="btn btn-primary mt-2"
+                            style="color: black;"
+                        >
+                            Request A Quote
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Services Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Services</h3>
+                </div>
+                <ul>
+                    <li>
+                        <a href="/services/general-security">General Security</a
+                        >
+                    </li>
+                    <li>
+                        <a href="/services/bannk-security">Bank Security</a>
+                    </li>
+                    <li>
+                        <a href="/services/hospital-security"
+                            >Hospital Security</a
+                        >
+                    </li>
+                    <li>
+                        <a href="/services/school-security">School Security</a>
+                    </li>
+                    <li><a href="/services/mobile-patrol">Mobile Patrol</a></li>
+                </ul>
+            </div>
+            <!-- Support Section -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Contact Us</h3>
+                </div>
+                <div class="contact-info">
+                    <p>
+                        <i class="bi bi-geo-alt-fill"></i>1479 Buffalo PI, unit
+                        #105, Winnipeg, MB, R3T 1L7, Canada
+                    </p>
+                    <p>
+                        <i class="bi bi-telephone-fill"></i>
+                        <a href="te:+204 202-7287"> +204 202-7287 </a>,
+                        <a href="te:+204 881-1947">+204 881-1947</a>
+                    </p>
+                    <a href="mailto:nfo@eyeqsecurity.ca">
+                        <i class="bi bi-envelope-fill"></i>info@eyeqsecurity.ca
+                    </a>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <div class="col-lg-5 col-md-6 mb-4 text-center">
+                <h1 class="footer-logo">
+                    <Image src={Logo} alt="company logo" />
+                    EyeQ Security.
+                </h1>
+                <p>
+                    We are a 24-hour security & protection company that strives
+                    to achieve client safety and protection, as well as to
+                    protect your property and lives from threats and dangers.
+                </p>
+                <form class="footer-newsletter" action="">
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            class="form-control border-white p-3"
+                            placeholder="Your Email"
+                        />
+                        <button class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>Copyright © 2023 EyeQ Security, All rights reserved.</p>
+            <p>
+                <a href="#">Term of use</a> |
+                <a href="#">Cookie Policy</a> |
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
 <style>
     .footer {
         background-color: #000;
@@ -20,6 +131,9 @@ import Logo from "../../assets/img/logo_png.png";
     .footer ul {
         list-style: none;
         padding: 0;
+    }
+    .footer ul li {
+        margin-bottom: 0.5rem;
     }
     .footer ul li a {
         color: #b0b0b0;
@@ -59,274 +173,3 @@ import Logo from "../../assets/img/logo_png.png";
         text-align: center;
     }
 </style>
-
-<!-- <div class="section-title section-title-sm position-relative pb-3 mb-4">
-    <h3 class="text-light mb-0">Get In Touch</h3>
-</div> -->
-
-<footer class="footer">
-    <div class="container my-5">
-        <div class="row">
-            <!-- Company Section -->
-            <div class="col-lg-2 col-md-6 mb-4">
-                <div
-                    class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                    <h3 class="text-light mb-0">Company</h3>
-                </div>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Investors</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">News & Update</a></li>
-                    <li><a href="#">Business Ethics</a></li>
-                </ul>
-            </div>
-            <!-- Services Section -->
-            <div class="col-lg-2 col-md-6 mb-4">
-                <div
-                    class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                    <h3 class="text-light mb-0">Services</h3>
-                </div>
-                <ul>
-                    <li><a href="#">Chemical Factory</a></li>
-                    <li><a href="#">Thermal Power</a></li>
-                    <li><a href="#">Gas Flaring</a></li>
-                    <li><a href="#">Petroleum Refinery</a></li>
-                    <li><a href="#">Oil Pump</a></li>
-                </ul>
-            </div>
-            <!-- Support Section -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div
-                    class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                    <h3 class="text-light mb-0">Company</h3>
-                </div>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Ticket System</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            <!-- Contact Section -->
-            <div class="col-lg-5 col-md-6 mb-4 text-center">
-                <h1 class="footer-logo">
-                    <Image src={Logo} alt="company logo" />
-                    EyeQ Security.
-                </h1>
-                <p>
-                    We are a 24-hour security & protection company that strives
-                    to achieve client safety and protection, as well as to
-                    protect your property and lives from threats and dangers.
-                </p>
-                <form class="footer-newsletter" action="">
-                    <div class="input-group">
-                        <input
-                            type="text"
-                            class="form-control border-white p-3"
-                            placeholder="Your Email"
-                        />
-                        <button class="btn btn-primary">Sign Up</button>
-                    </div>
-                </form>
-                <!-- <div class="contact-info">
-                    <p>
-                        <i class="bi bi-geo-alt-fill"></i>Jl Cempaka Wangi No
-                        22, Jakarta - Indonesia
-                    </p>
-                    <p><i class="bi bi-telephone-fill"></i>+6221-2002-2012</p>
-                    <p>
-                        <i class="bi bi-envelope-fill"></i>hello@yourdomain.tld
-                    </p>
-                </div> -->
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <p>
-                Copyright © 2023 Oeelco, All rights reserved. Powered by
-                MoxCreative
-            </p>
-            <p>
-                <a href="#">Term of use</a> |
-                <a href="#">Cookie Policy</a> |
-                <a href="#">Privacy Policy</a>
-            </p>
-        </div>
-    </div>
-</footer>
-
-<!-- <div
-    class="container-fluid bg-black text-light mt-5 wow fadeInUp"
-    data-wow-delay="0.1s"
->
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-lg-4 col-md-6 footer-about text-black">
-                <div
-                    class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4 info"
-                >
-                    <a href="/" class="navbar-brand">
-                        <h1 class="m-0 d-flex align-items-center">
-                            <Image src={Logo} alt="company logo" />
-                            EyeQ Security
-                        </h1>
-                    </a>
-                    <p class="mt-3 mb-4" style="text-align: justify;">
-                        We are a 24-hour security & protection company that
-                        strives to achieve client safety and protection, as well
-                        as to protect your property and lives from threats and
-                        dangers.
-                    </p>
-                    <form action="">
-                        <div class="input-group">
-                            <input
-                                type="text"
-                                class="form-control border-white p-3"
-                                placeholder="Your Email"
-                            />
-                            <button class="btn btn-dark">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-8 col-md-6">
-                <div class="row gx-5">
-                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                        <div
-                            class="section-title section-title-sm position-relative pb-3 mb-4"
-                        >
-                            <h3 class="text-light mb-0">Get In Touch</h3>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-geo-alt text-primary me-2"></i>
-                            <p class="mb-0">
-                                479 Buffalo PI, unit #105, Winnipeg, MB, R3T
-                                1L7, Canada
-                            </p>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-envelope-open text-primary me-2"
-                            ></i>
-                            <p class="mb-0">info@eyeqsecurity.ca</p>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <i class="bi bi-telephone text-primary me-2"></i>
-                            <p class="mb-0">+204 202-7287, +204 881-1947</p>
-                        </div>
-                        <div class="d-flex mt-4">
-                            <a class="btn btn-primary btn-square me-2" href="#"
-                                ><i class="fab fa-twitter fw-normal"></i></a
-                            >
-                            <a class="btn btn-primary btn-square me-2" href="#"
-                                ><i class="fab fa-facebook-f fw-normal"></i></a
-                            >
-                            <a class="btn btn-primary btn-square me-2" href="#"
-                                ><i class="fab fa-linkedin-in fw-normal"></i></a
-                            >
-                            <a class="btn btn-primary btn-square" href="#"
-                                ><i class="fab fa-instagram fw-normal"></i></a
-                            >
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                        <div
-                            class="section-title section-title-sm position-relative pb-3 mb-4"
-                        >
-                            <h3 class="text-light mb-0">Quick Links</h3>
-                        </div>
-                        <div
-                            class="link-animated d-flex flex-column justify-content-start"
-                        >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Home</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>About Us</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Our Services</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Meet The Team</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Latest Blog</a
-                            >
-                            <a class="text-light" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Contact Us</a
-                            >
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                        <div
-                            class="section-title section-title-sm position-relative pb-3 mb-4"
-                        >
-                            <h3 class="text-light mb-0">Our Services</h3>
-                        </div>
-                        <div
-                            class="link-animated d-flex flex-column justify-content-start"
-                        >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Home</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>About Us</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Our Services</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Meet The Team</a
-                            >
-                            <a class="text-light mb-2" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Latest Blog</a
-                            >
-                            <a class="text-light" href="#"
-                                ><i class="bi bi-arrow-right text-primary me-2"
-                                ></i>Contact Us</a
-                            >
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid text-white bg-raisin-black">
-    <div class="container text-center">
-        <div class="row justify-content-end">
-            <div class="col-lg-8 col-md-6">
-                <div
-                    class="d-flex align-items-center justify-content-center"
-                    style="height: 75px;"
-                >
-                    <p class="mb-0">
-                        &copy;
-                        <a class="text-white border-bottom" href="#">
-                            EyeQ Security
-                        </a>. All Rights Reserved. Designed by
-                        <a class="text-white border-bottom" href="/"
-                            >Designer
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
