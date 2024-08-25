@@ -52,10 +52,14 @@ const { service_title, service_path, service_description, service_img } =
                 <SectionTitle top="Our Services" main={service_title} offset />
                 <slot name="first-paragraph" />
                 <!-- Creative Liberty -->
-                <div class="highlight-box bg-white">
-                    <slot name="highlight-title" />
-                    <slot name="highlight-ul" />
-                </div>
+                {
+                    Astro.slots.has("highlight-title") && (
+                        <div class="highlight-box bg-white">
+                            <slot name="highlight-title" />
+                            <slot name="highlight-ul" />
+                        </div>
+                    )
+                }
                 <slot name="second-paragraph" />
             </div>
         </div>
@@ -64,4 +68,5 @@ const { service_title, service_path, service_description, service_img } =
             <img src={service_img.src} alt="" class="img-fluid w-100" />
         </div>
     </div>
+    <slot />
 </PageLayout>
