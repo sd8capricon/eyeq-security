@@ -65,6 +65,15 @@
     box-sizing: border-box
 }
 
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+    font-family: 'Rockwell';
+    src: url('/fonts/Rock.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth
@@ -109,7 +118,7 @@ h6,
 .h6 {
     margin-top: 0;
     margin-bottom: .5rem;
-    font-family: "Roboto", sans-serif;
+    font-family: "Rockwell", "Roboto", sans-serif;
     font-weight: 500;
     line-height: 1.2;
     color: var(--bs-black)
