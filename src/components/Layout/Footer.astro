@@ -1,4 +1,166 @@
-<div
+---
+// Components
+import { Image } from "astro:assets";
+
+// Assets
+import Logo from "../../assets/img/logo_png.png";
+---
+
+<style>
+    .footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 0;
+    }
+    .footer h5 {
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer ul li a {
+        color: #b0b0b0;
+        text-decoration: none;
+    }
+    .footer ul li a:hover {
+        color: #f2c202;
+    }
+    .footer .footer-logo {
+        /* font-size: 24px; */
+        color: var(--primary);
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .footer .footer-logo img {
+        height: 100px;
+        width: auto;
+    }
+
+    .footer .footer-newsletter {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer .contact-info {
+        font-size: 14px;
+    }
+    .footer .contact-info i {
+        color: #f2c202;
+        margin-right: 10px;
+    }
+    .footer-bottom {
+        border-top: 1px solid #444;
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+</style>
+
+<!-- <div class="section-title section-title-sm position-relative pb-3 mb-4">
+    <h3 class="text-light mb-0">Get In Touch</h3>
+</div> -->
+
+<footer class="footer">
+    <div class="container my-5">
+        <div class="row">
+            <!-- Company Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Company</h3>
+                </div>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News & Update</a></li>
+                    <li><a href="#">Business Ethics</a></li>
+                </ul>
+            </div>
+            <!-- Services Section -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Services</h3>
+                </div>
+                <ul>
+                    <li><a href="#">Chemical Factory</a></li>
+                    <li><a href="#">Thermal Power</a></li>
+                    <li><a href="#">Gas Flaring</a></li>
+                    <li><a href="#">Petroleum Refinery</a></li>
+                    <li><a href="#">Oil Pump</a></li>
+                </ul>
+            </div>
+            <!-- Support Section -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div
+                    class="section-title section-title-sm position-relative pb-3 mb-4"
+                >
+                    <h3 class="text-light mb-0">Company</h3>
+                </div>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Ticket System</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- Contact Section -->
+            <div class="col-lg-5 col-md-6 mb-4 text-center">
+                <h1 class="footer-logo">
+                    <Image src={Logo} alt="company logo" />
+                    EyeQ Security.
+                </h1>
+                <p>
+                    We are a 24-hour security & protection company that strives
+                    to achieve client safety and protection, as well as to
+                    protect your property and lives from threats and dangers.
+                </p>
+                <form class="footer-newsletter" action="">
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            class="form-control border-white p-3"
+                            placeholder="Your Email"
+                        />
+                        <button class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+                <!-- <div class="contact-info">
+                    <p>
+                        <i class="bi bi-geo-alt-fill"></i>Jl Cempaka Wangi No
+                        22, Jakarta - Indonesia
+                    </p>
+                    <p><i class="bi bi-telephone-fill"></i>+6221-2002-2012</p>
+                    <p>
+                        <i class="bi bi-envelope-fill"></i>hello@yourdomain.tld
+                    </p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>
+                Copyright © 2023 Oeelco, All rights reserved. Powered by
+                MoxCreative
+            </p>
+            <p>
+                <a href="#">Term of use</a> |
+                <a href="#">Cookie Policy</a> |
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- <div
     class="container-fluid bg-black text-light mt-5 wow fadeInUp"
     data-wow-delay="0.1s"
 >
@@ -6,11 +168,12 @@
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about text-black">
                 <div
-                    class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4"
+                    class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4 info"
                 >
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="m-0">
-                            <i class="fa fa-user-tie me-2"></i>EyeQ Security
+                    <a href="/" class="navbar-brand">
+                        <h1 class="m-0 d-flex align-items-center">
+                            <Image src={Logo} alt="company logo" />
+                            EyeQ Security
                         </h1>
                     </a>
                     <p class="mt-3 mb-4" style="text-align: justify;">
@@ -166,4 +329,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
