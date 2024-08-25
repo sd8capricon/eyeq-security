@@ -126,7 +126,7 @@ export const staticPaths = (() => {
                 title: "Hotel Security",
                 first_para_italic: false,
                 first_para: "With a highly trained, fully licensed team security professionals, EyeQ Security can provide you with manned guarding security for the safety and security of your clients and customers.",
-                img: TempImage,
+                img: { ...TempImage, src: "https://via.placeholder.com/1280x720" },
                 feature_title_top: "What's Included",
                 feature_title_main: "Hotel Security Duties",
                 features: [

@@ -60,10 +60,7 @@ const {
                 <div class="row">
                     {features.map((feature) => (
                         <div class="col-md-6">
-                            <ServiceFeatureCard
-                                feature={feature.feature}
-                                description={feature.description}
-                            />
+                            <ServiceFeatureCard {...feature} />
                         </div>
                     ))}
                 </div>
