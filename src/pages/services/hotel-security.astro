@@ -11,6 +11,8 @@ TempImage.src = "https://via.placeholder.com/1280x720";
 
 <style>
     .feature {
+        position: relative;
+        height: 225px;
         margin-bottom: 20px;
         padding: 15px;
         background-color: #fff;
@@ -18,8 +20,24 @@ TempImage.src = "https://via.placeholder.com/1280x720";
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .feature h2 {
-        margin: 0 0 10px 0;
+    .feature h4 {
+        margin: 5px 0 10px 0;
+    }
+
+    h4.sidebar {
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        position: relative;
+        padding-left: 15px;
+    }
+    h4.sidebar::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 5px;
+        background-color: #f2c202;
     }
 
     .feature p {
@@ -43,7 +61,7 @@ TempImage.src = "https://via.placeholder.com/1280x720";
         <div class="row p-0">
             <div class="col-md-6">
                 <div class="feature">
-                    <h3>Perform Surveillance</h3>
+                    <h4 class="sidebar">Perform Surveillance</h4>
                     <p>
                         The bulk of hotel security's day is filled with
                         patrolling hotel grounds, parking lots, lobbies,
@@ -55,7 +73,9 @@ TempImage.src = "https://via.placeholder.com/1280x720";
                     </p>
                 </div>
                 <div class="feature">
-                    <h3>Escort People In/Out of the Hotel (if needed)</h3>
+                    <h4 class="sidebar">
+                        Escort People In/Out of the Hotel (if needed)
+                    </h4>
                     <p>
                         Hotel security is also responsible for escorting guests
                         and hotel staff to and from the hotel. If valet parking
@@ -66,7 +86,7 @@ TempImage.src = "https://via.placeholder.com/1280x720";
                     </p>
                 </div>
                 <div class="feature">
-                    <h3>Maintain Order</h3>
+                    <h4 class="sidebar">Maintain Order</h4>
                     <p>
                         Hotels that have conference centers or are near
                         conference centers often hold concurrent conferences or
@@ -78,7 +98,9 @@ TempImage.src = "https://via.placeholder.com/1280x720";
             </div>
             <div class="col-md-6">
                 <div class="feature">
-                    <h3>Report to Supervisors and Management</h3>
+                    <h4 class="sidebar">
+                        Report to Supervisors and Management
+                    </h4>
                     <p>
                         Hotel security is responsible for reporting all
                         suspicious activity to their supervisors or hotel
@@ -88,7 +110,7 @@ TempImage.src = "https://via.placeholder.com/1280x720";
                     </p>
                 </div>
                 <div class="feature">
-                    <h3>Investigate Disturbances</h3>
+                    <h4 class="sidebar">Investigate Disturbances</h4>
                     <p>
                         Hotel security must be on call anytime during their
                         shift to investigate disturbances reported by hotel
