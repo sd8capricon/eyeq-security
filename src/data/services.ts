@@ -119,6 +119,39 @@ export const staticPaths = (() => {
                 second_para: "Our talented consultants are professionals in building careers, helping employees achieve their career goals, and boosting the human resource infrastructures of businesses of all sizes. The solutions we offer create a win-win situation for all parties involved, phenomenally transforming business growth<p>We owe our success to our competent staff, work culture, and innovative methods. Thanks to their efforts, we have established a name as one of the most trusted services in workforce management solutions.</p>",
                 img: TempImage
             }
+        },
+        {
+            params: { service: "hotel-security" },
+            props: {
+                title: "Hotel Security",
+                first_para_italic: false,
+                first_para: "With a highly trained, fully licensed team security professionals, EyeQ Security can provide you with manned guarding security for the safety and security of your clients and customers.",
+                img: TempImage,
+                feature_title_top: "What's Included",
+                feature_title_main: "Hotel Security Duties",
+                features: [
+                    {
+                        feature: "Perfom Surveillance",
+                        description: "The bulk of hotel security's day is filled with patrolling hotel grounds, parking lots, lobbies, restaurants, and hallways. They provide a sense of security to both hotel staff and guests simply by being present. Depending on hotel resources and size, some hotel security may be assigned to a surveillance room, where they monitor the hotel via security cameras"
+                    },
+                    {
+                        feature: "Escort People In/Out of the Hotel (if needed)",
+                        description: "Hotel security is also responsible for escorting guests and hotel staff to and from the hotel. If valet parking is unavailable late at night, hotel security may escort guests and staff in order to protect them. Additionally, hotel security may need to escort belligerent guests off hotel property, especially in hotels that have bars."
+                    },
+                    {
+                        feature: "Maintain Order",
+                        description: "Hotels that have conference centers or are near conference centers often hold concurrent conferences or conventions. During these times, the hotel experiences a high volume of guests. Hotel security is often expected to maintain order among the different groups of guests."
+                    },
+                    {
+                        feature: "Report to Supervisors and Management",
+                        description: "Hotel security is responsible for reporting all suspicious activity to their supervisors or hotel management. Usually, hotel security should report current events in real-time through their radio and document events that have already been resolved."
+                    },
+                    {
+                        feature: "Investigate Disturbances",
+                        description: "Hotel security must be on call anytime during their shift to investigate disturbances reported by hotel staff and guests. This can include things like excess noise coming from a guest's room or reports of suspicious people prowling the parking lot. Count on us in case you are looking to hire the best yet the most affordable security services in the region."
+                    }
+                ]
+            }
         }
     ];
     return paths;

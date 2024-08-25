@@ -1,9 +1,13 @@
 ---
 // Paths
 import { staticPaths } from "../../data/services";
+import Section from "../../layouts/Section.astro";
 
 // Layout
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import ServiceFeatureCard from "../../components/Service/ServiceFeatureCard.astro";
 
 export const getStaticPaths = staticPaths;
 
@@ -16,6 +20,9 @@ const {
     highlight_list,
     second_para,
     img,
+    feature_title_top,
+    feature_title_main,
+    features,
 } = Astro.props;
 ---
 
@@ -29,10 +36,38 @@ const {
         {first_para}
     </p>
 
-    <h3 slot="highlight-title">{highlight_title}</h3>
-    <ul slot="highlight-ul">
-        {highlight_list.map((li) => <li>{li}</li>)}
-    </ul>
+    {
+        highlight_title && (
+            <>
+                <h3 slot="highlight-title">{highlight_title}</h3>
+                <ul slot="highlight-ul">
+                    {highlight_list.map((li) => (
+                        <li>{li}</li>
+                    ))}
+                </ul>
+            </>
+        )
+    }
 
     {second_para && <p slot="second-paragraph" set:html={second_para} />}
+
+    {
+        features && (
+            <Section
+                title_top={feature_title_top}
+                title_main={feature_title_main}
+            >
+                <div class="row">
+                    {features.map((feature) => (
+                        <div class="col-md-6">
+                            <ServiceFeatureCard
+                                feature={feature.feature}
+                                description={feature.description}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </Section>
+        )
+    }
 </ServiceLayoutBase>
