@@ -50,4 +50,10 @@ const { feature, description, height } = Astro.props as Props;
         margin: 0;
         line-height: 1.6;
     }
+
+    @media screen and (max-width: 768px) {
+        .feature {
+            height: fit-content !important;
+        }
+    }
 </style>
