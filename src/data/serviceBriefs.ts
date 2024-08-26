@@ -9,7 +9,7 @@ const serviceBriefs: ServiceBreif[] = [
         id: "general",
         image: TestImage,
         service: "General Security Services",
-        link: "/general-security",
+        link: "general-security",
         description: "EyeQ Security Services provides comprehensive security services that protect and preserve businesses and properties throughout Manitoba.We take pride in saying our quality security solutions never fail to deliver.Our efficacious security programmes and dedicated team will maximise your coverage and give your site supreme protection."
     },
     {
