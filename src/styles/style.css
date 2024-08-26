@@ -100,6 +100,7 @@ h4.underline::after {
     right: 0;
     width: 150px;
     height: 5px;
+    background-color: var(--primary);
     /* Adjust the thickness of the underline */
 }
 
