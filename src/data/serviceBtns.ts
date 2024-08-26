@@ -44,27 +44,27 @@ const serviceTitles: ServiceBtnProps[] = [
         service: "Mall"
     },
     {
-        target: "#tab-pane-9",
+        target: "#construction",
         icon: "fa-hard-hat",
         service: "Construction"
     },
     {
-        target: "#tab-pane-10",
+        target: "#corporate-security",
         icon: "fa-building",
         service: "Corporate & Property"
     },
     {
-        target: "#tab-pane-11",
+        target: "#senior-living",
         icon: "fa-users",
         service: "55+ Senior Living Center"
     },
     {
-        target: "#tab-pane-12",
+        target: "#mobile-patrol",
         icon: "fa-car-side",
         service: "Mobile Patrol"
     },
     {
-        target: "#tab-pane-13",
+        target: "#crisis-eviction",
         icon: "fa-exclamation-triangle",
         service: "Crisis and Eviction Mangement"
     }

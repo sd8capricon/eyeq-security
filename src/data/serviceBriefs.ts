@@ -54,6 +54,35 @@ const serviceBriefs: ServiceBreif[] = [
         id: "mall",
         image: TestImage,
         service: "Mall Security"
+    },
+    {
+        id: "construction",
+        image: TestImage,
+        service: "Construction Security"
+    },
+    {
+        id: "corporate-security",
+        image: TestImage,
+        service: "Corporate & Property Security",
+    },
+    {
+        id: "senior-living",
+        image: TestImage,
+        service: "55+ Senior Living Center",
+        link: "hospital-security",
+        description: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence. Hospitals also typically maintain large inventories of drugs, some of which may have significant street value."
+    },
+    {
+        id: "mobile-patrol",
+        image: TestImage,
+        service: "Mobile Patrol",
+        link: "mobile-patrol",
+        description: "We understand at EyeQ Security Services that since parking lots are usually 24/7 operations, you might not want to invest in having security guards physically present all that time. Not only is that an expensive enterprise, but it's a lot to keep track of."
+    },
+    {
+        id: "crisis-eviction",
+        image: TestImage,
+        service: "Crisis and Eviction Mangement"
     }
 ]
 
