@@ -57,7 +57,7 @@
         "Courier New",
         monospace;
     --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-title-font: "Roboto Slab", "Rockwell", "Roboto", sans-serif;
+    --bs-title-font: "Arvo", "Roboto Slab", "Rockwell", "Roboto", sans-serif;
 }
 
 *,
