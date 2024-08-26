@@ -1,0 +1,32 @@
+---
+// Layouts
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+
+const ServiceImg = {} as ImageMetadata;
+ServiceImg.src = "https://via.placeholder.com/400x300";
+---
+
+<ServiceLayoutBase
+    service_title="Threat & Risk Mangement"
+    service_path="/threat-risk-management"
+    service_description="some description"
+    service_img={ServiceImg}
+>
+    <p class="fst-italic" slot="italic-paragraph">
+        Threat and Risk management is a forward-thinking strategy that protects
+        your business. Keep reading to learn more.
+    </p>
+    <p slot="first-paragraph">
+        While knowing how to respond to threats should be a priority, there’s
+        one thing that's more important and effective at protecting your
+        property: prevention.
+    </p>
+    <p slot="second-paragraph">
+        The goal is to never have to put your response plan into action; if you
+        effectively prevent threats, you won't have to. Risk management reduces
+        your organization&#39;s potential exposure to threats.
+    </p>
+</ServiceLayoutBase>
