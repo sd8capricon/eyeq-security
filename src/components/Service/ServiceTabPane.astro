@@ -5,7 +5,8 @@ import type { ServiceBreif } from "../../types";
 interface Props extends ServiceBreif {}
 
 const props = Astro.props as Props;
-const { image, service, description } = props;
+let { image, service, description, link } = props;
+link = link ? "/" + link : "";
 ---
 
 <div class={"tab-pane fade" + (props.active && " show active")} id={props.id}>
@@ -18,9 +19,11 @@ const { image, service, description } = props;
     <div class="border border-dark p-4">
         <h3 class="mb-3">{service}</h3>
         <p class="mb-4">
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+            {
+                description
+                    ? description
+                    : "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet"
+            }
         </p>
         <p>
             <i class="fa fa-check text-success me-3"></i>Quality 1
@@ -31,8 +34,9 @@ const { image, service, description } = props;
         <p>
             <i class="fa fa-check text-success me-3"></i>Quality 1
         </p>
-        <a href="" class="btn btn-primary py-3 px-5 mt-3"
-            >Read More<i class="fa fa-arrow-right ms-3"></i></a
+        <a href={`/services${link}`} class="btn btn-primary py-3 px-5 mt-3">
+            Read More
+            <i class="fa fa-arrow-right ms-3"></i></a
         >
     </div>
 </div>

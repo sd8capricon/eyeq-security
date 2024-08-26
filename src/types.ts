@@ -20,6 +20,7 @@ export interface ServiceBreif extends HTMLAttributes<'div'> {
     service: string;
     description?: string
     active?: boolean;
+    link?: string;
 }
 
 export type Location = {
