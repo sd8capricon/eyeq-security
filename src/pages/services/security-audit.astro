@@ -1,0 +1,81 @@
+---
+// Layouts
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+import Button from "../../components/Layout/Button.astro";
+import SectionTitle from "../../components/Layout/SectionTitle.astro";
+import { Image } from "astro:assets";
+
+const ServiceImg = {} as ImageMetadata;
+ServiceImg.src = "https://via.placeholder.com/400x300";
+---
+
+<style>
+    h4 {
+        position: relative;
+        font-weight: 500 !important;
+        margin-bottom: 2.5rem;
+    }
+    h4::after {
+        content: "";
+        position: absolute;
+        bottom: -15px; /* Adjust the distance from the bottom */
+        left: 0;
+        right: 0;
+        width: 150px;
+        height: 5px; /* Adjust the thickness of the underline */
+        background-color: #f2c202;
+    }
+</style>
+
+<ServiceLayoutBase
+    service_title="Security Audit"
+    service_path="/security-audit"
+    service_description="some description"
+    service_img={ServiceImg}
+>
+    <p class="fst-italic" slot="italic-paragraph">
+        EyeQ Security's trained and certified security consultants offer
+        comprehensive security audit services to help clients improve the
+        physical security of their properties.
+    </p>
+    <p slot="first-paragraph">
+        A security assessment identifies weak points in building security.
+        EyeQ's security consulting team will provide Threat and Risk Assessments
+        (TRAs) to a variety of clients across the Dubai area, enabling EyeQ's
+        clients to take action and protect their properties and communities from
+        liability.
+    </p>
+
+    <SectionFluid class="bg-gray">
+        <div class="row m-0">
+            <div class="col-lg-6 p-0 order-2 order-lg-1">
+                <img
+                    class="img-fluid w-100"
+                    src="https://via.placeholder.com/400x300"
+                />
+            </div>
+            <div class="col-lg-6 p-5 order-1 order-lg-2">
+                <h4>
+                    Security audits are an important part of crime prevention.
+                    <span style="font-weight: 700;">
+                        They help keep residents, employees, and customers safe
+                        and improve the overall security of client properties.
+                    </span>
+                </h4>
+                <p>
+                    EyeQ's team of security consultants can design and tailor a
+                    building security audit based on a client's or community's
+                    unique needs. The security audit will assess vulnerabilities
+                    and then provide clients with detailed recommendations on
+                    how to improve—from overlooked aspects of building security
+                    to local area crime patterns, from existing security systems
+                    testing to staff training and policy compliance.
+                </p>
+                <Button>Book an Appointment Today</Button>
+            </div>
+        </div>
+    </SectionFluid>
+</ServiceLayoutBase>
