@@ -6,6 +6,7 @@
     --raisin-black: #2e2c2f;
     --dark: #000000;
     --metallic-gradient: linear-gradient(135deg, #f7f7f7, #d7d7d7, #f7f7f7, #c7c7c7, #f7f7f7);
+    --title-font: "Roboto Slab", "Rockwell", "Roboto", sans-serif;
 }
 
 
@@ -86,7 +87,7 @@ h6,
 
 /*** Button ***/
 .btn {
-    font-family: 'Rockwell', 'Roboto', sans-serif;
+    font-family: var(--title-font);
     font-weight: 600;
     transition: .5s;
 }
@@ -131,7 +132,7 @@ h6,
 
 /*** Navbar ***/
 .navbar-dark .navbar-nav .nav-link {
-    font-family: 'Rockwell', 'Roboto', sans-serif;
+    font-family: var(--title-font);
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
