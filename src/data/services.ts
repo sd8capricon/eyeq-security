@@ -65,7 +65,7 @@ export const staticPaths = (() => {
             params: { service: "school-security" },
             props: {
                 title: "School Security Service",
-                first_para: "School Security officers play a critical role by inspecting and patrolling premises regularly, monitoring property entrances, authorizing entrance of people and vehicles, reporting any suspicious behavior and happenings, securing all exit doors and windows, monitoring surveillance cameras, responding to alarms and reacting promptly, assisting people in need, and submitting reports of daily surveillance activities. Trust us for the safety of your employees and property",
+                first_para: "School Security officers play a critical role by inspecting and patrolling premises regularly, monitoring property entrances, authorizing entrance of people and vehicles, reporting any suspicious behavior and happenings, securing all exit doors and windows, monitoring surveillance cameras, responding to alarms and reacting promptly, assisting people in need, and submitting reports of daily surveillance activities. Trust us for the safety of your employees and property.",
                 highlight_title: "Our Key Responsibilities Include: ",
                 highlight_list: [
                     "Inspecting and patrolling school premises",
