@@ -85,6 +85,25 @@ h6,
 }
 
 
+h4.underline {
+    position: relative;
+    font-weight: 500 !important;
+    margin-bottom: 2.5rem;
+}
+
+h4.underline::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    /* Adjust the distance from the bottom */
+    left: 0;
+    right: 0;
+    width: 150px;
+    height: 5px;
+    /* Adjust the thickness of the underline */
+}
+
+
 /*** Button ***/
 .btn {
     font-family: var(--title-font);
