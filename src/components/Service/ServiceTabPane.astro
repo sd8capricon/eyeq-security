@@ -34,9 +34,17 @@ link = link ? "/" + link : "";
         <p>
             <i class="fa fa-check text-success me-3"></i>Quality 1
         </p>
-        <a href={`/services${link}`} class="btn btn-primary py-3 px-5 mt-3">
-            Read More
-            <i class="fa fa-arrow-right ms-3"></i></a
-        >
+
+        {
+            link && (
+                <a
+                    href={`/services${link}`}
+                    class="btn btn-primary py-3 px-5 mt-3"
+                >
+                    Read More
+                    <i class="fa fa-arrow-right ms-3" />
+                </a>
+            )
+        }
     </div>
 </div>
