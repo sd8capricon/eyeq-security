@@ -20,17 +20,28 @@ const { active } = Astro.props as Props;
         height: 75px;
         width: auto;
     }
+    @media screen and (max-width: 768px) {
+        .navbar-brand img {
+            margin-right: 0px;
+            height: 50px;
+        }
+    }
 </style>
 
 <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-3 px-md-5 py-3 py-lg-0">
         <a href="/" class="navbar-brand p-0">
             <h1
                 class={"m-0 d-flex align-items-center" +
                     (active === "home" ? " text-primary" : "")}
             >
-                <Image src={Logo} alt="Company Logo" class="me-3" />EyeQ
-                Security
+                <Image
+                    loading="eager"
+                    src={Logo}
+                    alt="Company Logo"
+                    class="me-3"
+                />
+                EyeQ Security
             </h1>
         </a>
         <button
