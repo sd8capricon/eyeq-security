@@ -97,6 +97,25 @@
         }
     });
 
+    // client-carousel
+    $('.client-carousel').owlCarousel({
+        loop: true,
+        loop: true,
+        margin: 45,
+        dots: false,
+        loop: true,
+        autoplay: true,
+        smartSpeed: 1000,
+        responsive: {
+            0: {
+                items: 3
+            },
+            768: {
+                items: 4
+            }
+        }
+    })
+
 
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({

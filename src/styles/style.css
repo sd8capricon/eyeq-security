@@ -85,11 +85,13 @@ h6,
 }
 
 
+h2.underline,
 h4.underline {
     position: relative;
     margin-bottom: 2.5rem;
 }
 
+h2.underline::after,
 h4.underline::after {
     content: "";
     position: absolute;
