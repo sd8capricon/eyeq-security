@@ -57,7 +57,7 @@ export const staticPaths = (() => {
                     "Ensuring safety for healthcare employees",
                     "Maintaining peace within healthcare facilities"
                 ],
-                second_para: "Healthcare employees are also vulnerable as targets of violence, both from patients and family members alike. A hospital security officer is charged with maintaining the peace in a hospital & seniors living centers and working to safeguard the people and items within its walls",
+                second_para: "Healthcare employees are also vulnerable as targets of violence, both from patients and family members alike. A hospital security officer is charged with maintaining the peace in a hospital & seniors living centers and working to safeguard the people and items within its walls.",
                 img: TempImage
             }
         },
