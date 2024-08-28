@@ -26,7 +26,8 @@
     --bs-gray-dark: #343a40;
     --bs-primary: #f2c202;
     --bs-primary-contrast: #d4a700;
-    --bs-cosmic-latte: #fff7d6;
+    /* --bs-connsilk: #fff7d6; */
+    --bs-cosmic-latte: #fffbeb;
     /* --metallic-cosmic-latte: linear-gradient(135deg, #fff7d6, #fef4ce, #fff7d6, #fdefc5, #fff7d6); */
     --metallic-cosmic-latte: linear-gradient(135deg, #fff7d6, #fdf4c6, #fff7d6, #f9e3b1, #fff7d6);
     --bs-secondary: #d73c2f;
