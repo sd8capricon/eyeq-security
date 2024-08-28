@@ -1,6 +1,5 @@
 ---
-// types
-import type { string } from "astro/zod";
+// Types
 import { type LayoutProps } from "../types";
 
 // utils
@@ -11,15 +10,15 @@ import RootLayout from "./RootLayout.astro";
 
 interface Props extends LayoutProps {
     background_image: ImageMetadata;
-    service_title?: string;
-    service_path?: string;
+    headline?: string;
+    headline_path?: string;
 }
 const {
     page_title,
     page_description,
     background_image,
-    service_title,
-    service_path,
+    headline,
+    headline_path,
 } = Astro.props as Props;
 
 const appendUs = () => {
@@ -43,7 +42,7 @@ const bgImage = `url("${background_image.src}")`;
     }
 </style>
 <RootLayout
-    page_title={service_title ? service_title : page_title}
+    page_title={headline ? headline : page_title}
     page_description={page_description}
 >
     <!-- Header Start -->
@@ -53,8 +52,8 @@ const bgImage = `url("${background_image.src}")`;
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="display-4 text-white text-center animated zoomIn">
                     {
-                        service_title
-                            ? capitalizeFirstLetter(service_title)
+                        headline
+                            ? capitalizeFirstLetter(headline)
                             : capitalizeFirstLetter(page_title) + appendUs()
                     }
                 </h1>
@@ -64,14 +63,11 @@ const bgImage = `url("${background_image.src}")`;
                     >{capitalizeFirstLetter(page_title)}</a
                 >
                 {
-                    service_title && (
+                    headline && (
                         <>
                             <i class="far fa-circle text-white px-2" />
-                            <a
-                                href={`/services/${service_path}`}
-                                class="h5 text-white"
-                            >
-                                {capitalizeFirstLetter(service_title)}
+                            <a href={headline_path} class="h5 text-white">
+                                {capitalizeFirstLetter(headline)}
                             </a>
                         </>
                     )

@@ -1,0 +1,25 @@
+---
+// Static Paths
+import { blogStaticPaths } from "../../data/blog";
+
+// Layout
+import PageLayout from "../../layouts/PageLayout.astro";
+
+// Assets
+import TitleImage from "../../assets/img/carousel-1.jpg";
+
+export const getStaticPaths = blogStaticPaths;
+
+const { slug } = Astro.params;
+const { title } = Astro.props;
+---
+
+<PageLayout
+    page_title="blogs"
+    page_description="some description"
+    headline={title}
+    headline_path={`/blog/${slug}`}
+    background_image={TitleImage}
+>
+    <h1>{title}</h1>
+</PageLayout>

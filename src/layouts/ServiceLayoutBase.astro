@@ -43,8 +43,8 @@ const highlight_box= await Astro.slots.render('highlight-title')
 
 <PageLayout
     page_title="services"
-    service_path={service_path}
-    service_title={service_title}
+    headline={service_title}
+    headline_path={`/services/${service_path}`}
     page_description={service_description}
     background_image={TitleImage}
 >
