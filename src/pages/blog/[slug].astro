@@ -28,8 +28,6 @@ const { data: post } = await loadQuery<SanityDocument>({
     query: `*[_type=="post" && slug.current==$slug][0]`,
     params: { slug },
 });
-
-console.log(post);
 ---
 
 <PageLayout
