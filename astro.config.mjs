@@ -8,7 +8,7 @@ import sanity from "@sanity/astro";
 
 // https://astro.build/config
 export default defineConfig({
-  // site: "https://eyeqsceurity.ca"
+  site: "https://eyeqsceurity.ca",
   integrations: [
     sitemap(),
     sanity({
