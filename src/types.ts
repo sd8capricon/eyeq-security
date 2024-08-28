@@ -1,10 +1,11 @@
 import type { HTMLAttributes } from "astro/types";
 
-export type Page = "home" | "about" | "services" | "blog" | "contact" | "careers" | string;
+export type Page = "home" | "about" | "services" | "blogs" | "contact" | "careers";
 
 export type LayoutProps = {
-    page_title: Page;
+    page_title: string;
     page_description: string;
+    nav_active: Page
 }
 
 export type ServiceBtnProps = {

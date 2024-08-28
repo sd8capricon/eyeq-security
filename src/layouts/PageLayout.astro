@@ -14,6 +14,7 @@ interface Props extends LayoutProps {
     headline_path?: string;
 }
 const {
+    nav_active,
     page_title,
     page_description,
     background_image,
@@ -44,6 +45,7 @@ const bgImage = `url("${background_image.src}")`;
 <RootLayout
     page_title={headline ? headline : page_title}
     page_description={page_description}
+    nav_active={nav_active}
 >
     <!-- Header Start -->
     <!-- style="margin-bottom: 90px;" -->
