@@ -1,14 +1,16 @@
 ---
+// Types
+import type { ServiceFeature } from "../../types";
+
 // Paths
 import { staticPaths } from "../../data/services";
-import Section from "../../layouts/Section.astro";
 
 // Layout
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
 
 // Components
 import ServiceFeatureCard from "../../components/Service/ServiceFeatureCard.astro";
-import type { ServiceFeature } from "../../types";
+import Section from "../../layouts/Section.astro";
 
 export const getStaticPaths = staticPaths;
 
