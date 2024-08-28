@@ -7,6 +7,7 @@ import { blogStaticPaths } from "../../data/blog";
 
 // Utils
 import { loadQuery } from "../../sanity/lib/load-query";
+import { urlForImage } from "../../sanity/lib/urlForImage";
 
 // Layout
 import PageLayout from "../../layouts/PageLayout.astro";
@@ -28,6 +29,8 @@ const { data: post } = await loadQuery<SanityDocument>({
     query: `*[_type=="post" && slug.current==$slug][0]`,
     params: { slug },
 });
+
+const mainImage = urlForImage(post.mainImage).format("webp").url();
 ---
 
 <PageLayout
@@ -47,7 +50,7 @@ const { data: post } = await loadQuery<SanityDocument>({
                     <div class="mb-5">
                         <img
                             class="img-fluid w-100 rounded mb-5"
-                            src="https://via.placeholder.com/500x350"
+                            src={mainImage}
                             alt=""
                         />
                         <h1 class="mb-4">{post.title}</h1>
