@@ -35,7 +35,9 @@ const { target, icon, service, active } = Astro.props as Props;
 </button>
 
 <script>
-    const navLinks = document.querySelectorAll<HTMLButtonElement>(".nav-link");
+    const navLinks = document.querySelectorAll<HTMLButtonElement>(
+        ".services .nav-link",
+    );
 
     navLinks.forEach((navLink: HTMLButtonElement) => {
         navLink.addEventListener("click", () => {
