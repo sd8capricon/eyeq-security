@@ -3391,14 +3391,14 @@ fieldset:disabled .btn {
 
 .btn-light {
     color: #000;
-    background-color: #EEF9FF;
-    border-color: #EEF9FF
+    background-color: var(--bs-cosmic-latte);
+    border-color: var(--bs-cosmic-latte);
 }
 
 .btn-light:hover {
     color: #000;
-    background-color: #f1faff;
-    border-color: #f0faff
+    background-color: #f6f3e7;
+    border-color: #f6f3e7
 }
 
 .btn-check:focus+.btn-light,
@@ -5188,7 +5188,7 @@ fieldset:disabled .btn {
 .page-link {
     position: relative;
     display: block;
-    color: #06A3DA;
+    color: var(--bs-primary);
     background-color: #fff;
     border: 1px solid #dee2e6;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
@@ -5202,14 +5202,14 @@ fieldset:disabled .btn {
 
 .page-link:hover {
     z-index: 2;
-    color: #0582ae;
+    color: #b5b5b5;
     background-color: #e9ecef;
-    border-color: #dee2e6
+    border-color: #e5e6de
 }
 
 .page-link:focus {
     z-index: 3;
-    color: #0582ae;
+    color: var(--bs-primary);
     background-color: #e9ecef;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(6, 163, 218, 0.25)
@@ -5222,8 +5222,8 @@ fieldset:disabled .btn {
 .page-item.active .page-link {
     z-index: 3;
     color: #fff;
-    background-color: #06A3DA;
-    border-color: #06A3DA
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
 }
 
 .page-item.disabled .page-link {

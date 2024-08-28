@@ -1,0 +1,22 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<div class="d-flex rounded overflow-hidden mb-3">
+    <img
+        class="img-fluid"
+        src="https://via.placeholder.com/100x100"
+        style="width: 100px; height: 100px; object-fit: cover;"
+        alt=""
+    />
+    <a
+        href="/blog"
+        class="h5 fw-semi-bold d-flex align-items-center bg-cosmic-latte px-3 mb-0"
+    >
+        {title}
+    </a>
+</div>
