@@ -11,6 +11,7 @@ import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
 // Components
 import ServiceFeatureCard from "../../components/Service/ServiceFeatureCard.astro";
 import Section from "../../layouts/Section.astro";
+import Button from "../../components/Layout/Button.astro";
 
 export const getStaticPaths = staticPaths;
 
@@ -84,6 +85,9 @@ if (features && feature_height)
                             <ServiceFeatureCard {...feature} />
                         </div>
                     ))}
+                    <div class="col-12 d-flex justify-content-center">
+                        <Button>Book an Appointment Today</Button>
+                    </div>
                 </div>
             </Section>
         )

@@ -4,6 +4,7 @@ import PageLayout from "./PageLayout.astro";
 
 // Components
 import SectionTitle from "../components/Layout/SectionTitle.astro";
+import CTA from "../components/Layout/CTA.astro";
 
 // Assets
 import TitleImage from "../assets/img/carousel-1.jpg";
@@ -13,9 +14,10 @@ interface Props {
     service_path: string;
     service_description: string;
     service_img: ImageMetadata;
+    cta_text?: string;
 }
 
-const { service_title, service_path, service_description, service_img } =
+const { service_title, service_path, service_description, service_img, cta_text } =
     Astro.props as Props;
 
 const highlight_box= await Astro.slots.render('highlight-title')
@@ -73,5 +75,6 @@ const highlight_box= await Astro.slots.render('highlight-title')
             <img src={service_img.src} alt="" class="img-fluid w-100" />
         </div>
     </div>
+    <CTA text={cta_text}/>
     <slot />
 </PageLayout>

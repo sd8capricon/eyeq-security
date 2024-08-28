@@ -1,0 +1,63 @@
+---
+// Components
+import Button from "./Button.astro";
+
+// Assets
+import TestImage from "../../assets/img/carousel-2.jpg";
+
+interface Props {
+    text?: string;
+}
+let { text } = Astro.props as Props;
+const bgImage = `url("${TestImage.src}")`;
+
+if (!text)
+    text =
+        "Contact Us today and get a customized security program that meets and exceeds your needs.";
+---
+
+<style define:vars={{ bgImage }}>
+    :root {
+        --bg-overlay: rgba(0, 0, 0, 0.65);
+    }
+
+    .cta {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+            var(--bgImage);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .cta h3.underline {
+        position: relative;
+        margin-bottom: 2.5rem;
+    }
+
+    .cta h3.underline::after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        right: 0;
+        width: 150px;
+        transform: translateX(-50%);
+        height: 5px;
+        background-color: var(--primary);
+    }
+</style>
+
+<div class="cta p-5">
+    <div class="text-center w-75">
+        <h3 class="text-white underline">Let's Be Great Together</h3>
+        <p>
+            {text}
+        </p>
+        <Button href="/contact">Contact Us</Button>
+    </div>
+</div>
