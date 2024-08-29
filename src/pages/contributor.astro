@@ -1,0 +1,86 @@
+---
+// Layout
+import PageLayout from "../layouts/PageLayout.astro";
+
+// Components
+import Section from "../layouts/Section.astro";
+import SectionTitle from "../components/Layout/SectionTitle.astro";
+
+// Assets
+import TitleImage from "../assets/img/carousel-1.jpg";
+---
+
+<style>
+    .contributor .contributor-left img {
+        height: 200px;
+        width: 200px;
+        border: 3px solid var(--primary);
+        border-radius: 9999px;
+        align-self: center;
+    }
+    .contributor .contributor-right {
+        border-radius: 20px;
+    }
+    @media screen and (max-width: 768px) {
+        .contributor .contributor-left {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+</style>
+
+<PageLayout
+    nav_active="home"
+    page_title="Contributor"
+    page_description="some description"
+    background_image={TitleImage}
+>
+    <Section>
+        <div class="contributor row px-5">
+            <div class="contributor-left col-lg-4 mb-4 mb-lg-0">
+                <SectionTitle
+                    class="mt-4"
+                    top="Developer"
+                    main="Siddharth Dhaigude"
+                    offset
+                />
+                <img
+                    class="img-fluid"
+                    src="https://via.placeholder.com/384x384"
+                    alt=""
+                />
+            </div>
+            <div class="contributor-right col-lg-8 p-4 bg-cosmic-latte">
+                <h2 class="underline">Enthusiastic, Insightful & Curious</h2>
+                <p>
+                    A resourceful problem solver with adept, swift, and accurate
+                    Googling abilities. Seek and you shall find! An enthusiastic
+                    computer engineering student with a strong passion for
+                    development and programming, specializing predominantly in
+                    web technologies.
+                </p>
+                <ul class="links">
+                    <li>
+                        LinkedIn:
+                        <a
+                            target="_blank"
+                            href="https://www.linkedin.com/in/sdhaigude/"
+                        >
+                            Siddharth Dhaigude
+                        </a>
+                    </li>
+                    <li>
+                        Email:
+                        <a
+                            target="_blank"
+                            href="mailto:siddharthdhaigude@gmail.com"
+                        >
+                            siddharthdhaigude@gmail.com
+                        </a>
+                    </li>
+                    <li>Github: <a target="_blank" href="">sd8capricon</a></li>
+                </ul>
+            </div>
+        </div>
+    </Section>
+</PageLayout>
