@@ -26,7 +26,7 @@ export const getStaticPaths = blogStaticPaths;
 const { slug } = Astro.params;
 
 const { data: post } = await loadQuery<SanityDocument>({
-    query: `*[_type=="post" && slug.current==$slug][0]`,
+    query: `*[_type=="post" && slug.current==$slug][0]{...,author->, categories[]->}`,
     params: { slug },
 });
 
@@ -54,6 +54,18 @@ const mainImage = urlForImage(post.mainImage).format("webp").url();
                             alt=""
                         />
                         <h1 class="mb-4">{post.title}</h1>
+                        <p>
+                            <span class="fw-bold">Written By:&nbsp;</span>
+                            {post.author.name}
+                            <span class="fw-bold">Categories:&nbsp;</span>
+                            {
+                                post.categories.map(
+                                    (category: any) => category.title + ", ",
+                                )
+                            }
+                            <span class="fw-bold">Published On:&nbsp;</span>
+                            {post._createdAt.slice(0, 10)}
+                        </p>
                         <!-- Rich Text Body -->
                         <PortableText portableText={post.body} />
                     </div>
