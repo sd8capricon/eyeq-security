@@ -1,7 +1,28 @@
 ---
+// Utils
+import type { SanityDocument } from "@sanity/client";
+import { loadQuery } from "../../sanity/lib/load-query";
+import { urlForImage, urlForImage100x100 } from "../../sanity/lib/urlForImage";
+
+// Components
 import BlogCategory from "./Sidebar/BlogCategory.astro";
 import BlogRecentItem from "./Sidebar/BlogRecentItem.astro";
 import BlogTag from "./Sidebar/BlogTag.astro";
+
+// Fetch last 6 blogs
+const posts = await loadQuery<SanityDocument[]>({
+    query: `*[_type=="post"] | order(_createdAt desc)[0..5]`,
+});
+
+posts.data.forEach((post) => {
+    post.mainImage = urlForImage(post.mainImage)
+        .format("webp")
+        .width(100)
+        .height(100)
+        .url();
+});
+
+console.log(posts);
 ---
 
 <!-- Search Form Start --><!-- <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
@@ -31,12 +52,11 @@ import BlogTag from "./Sidebar/BlogTag.astro";
     <div class="section-title section-title-sm position-relative pb-3 mb-4">
         <h3 class="mb-0">Recent Post</h3>
     </div>
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
-    <BlogRecentItem title="Lorem ipsum dolor sit amet adipis elit" />
+    {
+        posts.data.map((post) => (
+            <BlogRecentItem src={post.mainImage} title={post.title} />
+        ))
+    }
 </div>
 <!-- Recent Post End -->
 

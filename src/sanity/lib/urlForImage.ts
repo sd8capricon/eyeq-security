@@ -7,3 +7,7 @@ export const imageBuilder = imageUrlBuilder(sanityClient);
 export const urlForImage = (source: SanityAsset) => {
     return imageBuilder.image(source);
 }
+
+export const urlForImage100x100 = (source: SanityAsset) => {
+    return imageBuilder.image(source).width(100).height(100);
+}
