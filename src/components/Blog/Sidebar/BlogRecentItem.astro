@@ -2,9 +2,10 @@
 interface Props {
     title: string;
     src: string;
+    slug: string;
 }
 
-const { title, src } = Astro.props as Props;
+const { title, src, slug } = Astro.props as Props;
 ---
 
 <div class="d-flex rounded overflow-hidden mb-3">
@@ -15,7 +16,7 @@ const { title, src } = Astro.props as Props;
         alt=""
     />
     <a
-        href="/blog"
+        href={`/blog/${slug}`}
         class="h5 fw-semi-bold d-flex align-items-center bg-cosmic-latte px-3 mb-0"
     >
         {title}

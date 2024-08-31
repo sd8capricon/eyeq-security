@@ -52,7 +52,11 @@ posts.data.forEach((post) => {
     </div>
     {
         posts.data.map((post) => (
-            <BlogRecentItem src={post.mainImage} title={post.title} />
+            <BlogRecentItem
+                slug={post.slug.current}
+                src={post.mainImage}
+                title={post.title}
+            />
         ))
     }
 </div>
