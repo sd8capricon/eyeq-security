@@ -9,12 +9,17 @@ import BlogCategory from "./Sidebar/BlogCategory.astro";
 import BlogRecentItem from "./Sidebar/BlogRecentItem.astro";
 import BlogTag from "./Sidebar/BlogTag.astro";
 
+// Get Categories
+const { data: categories } = await loadQuery<SanityDocument[]>({
+    query: `*[_type=="category"]`,
+});
+
 // Fetch last 6 blogs
-const posts = await loadQuery<SanityDocument[]>({
+const { data: posts } = await loadQuery<SanityDocument[]>({
     query: `*[_type=="post"] | order(_createdAt desc)[0..5]`,
 });
 
-posts.data.forEach((post) => {
+posts.forEach((post) => {
     post.mainImage = urlForImage(post.mainImage)
         .format("webp")
         .width(100)
@@ -36,11 +41,14 @@ posts.data.forEach((post) => {
         <h3 class="mb-0">Categories</h3>
     </div>
     <div class="link-animated d-flex flex-column justify-content-start">
-        <BlogCategory category="Web Design" />
-        <BlogCategory category="Web Development" />
-        <BlogCategory category="Category 3" />
-        <BlogCategory category="Category 4" />
-        <BlogCategory category="Category 5" />
+        {
+            categories.map((category) => (
+                <BlogCategory
+                    slug={category.slug.current}
+                    category={category.title}
+                />
+            ))
+        }
     </div>
 </div>
 <!-- Category End -->
@@ -51,11 +59,11 @@ posts.data.forEach((post) => {
         <h3 class="mb-0">Recent Post</h3>
     </div>
     {
-        posts.data.map((post) => (
+        posts.map((post) => (
             <BlogRecentItem
-                slug={post.slug.current}
-                src={post.mainImage}
                 title={post.title}
+                src={post.mainImage}
+                slug={post.slug.current}
             />
         ))
     }
