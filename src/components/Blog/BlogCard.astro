@@ -1,12 +1,8 @@
 ---
-interface Props {
-    topic: string;
-    thumbnail: string;
-    title: string;
-    author: string;
-    date: string;
-    content_preview: string;
-}
+// Types
+import type { BlogCardProps } from "../../types";
+
+interface Props extends BlogCardProps {}
 const { thumbnail, topic, author, title, date, content_preview } =
     Astro.props as Props;
 ---

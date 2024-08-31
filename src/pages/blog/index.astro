@@ -1,13 +1,33 @@
 ---
+// Types
+import type { BlogCardProps } from "../../types";
+
 // Layout
 import PageLayout from "../../layouts/PageLayout.astro";
 
 // Components
-import BlogItem from "../../components/Blog/BlogCard.astro";
+import BlogCard from "../../components/Blog/BlogCard.astro";
 import BlogSidebar from "../../components/Blog/BlogSidebar.astro";
 
 // Assets
 import TitleImage from "../../assets/img/carousel-1.jpg";
+
+// Fetch Blogs in Range
+// *[_type == "post"] | order(_createdAt desc) [startIndex...endIndex]
+
+const TempBlog: BlogCardProps = {
+    thumbnail: "https://picsum.photos/seed/idk/500/350",
+    topic: "Blog Topic",
+    title: "Blog Title",
+    author: "John Doe",
+    date: "01 Jan, 2045",
+    content_preview:
+        "Dolor et eos labore stet justo sed est sed sed sed dolor stet amet",
+};
+
+const blogs: BlogCardProps[] = [];
+
+for (let index = 0; index < 10; index++) blogs.push(TempBlog);
 ---
 
 <PageLayout
@@ -23,136 +43,17 @@ import TitleImage from "../../assets/img/carousel-1.jpg";
                 <!-- Blog list Start -->
                 <div class="col-lg-8">
                     <div class="row g-5">
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.1s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.6s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.1s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.6s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.1s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.6s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.1s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.6s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.1s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
-                        <div
-                            class="col-md-6 wow slideInUp"
-                            data-wow-delay="0.6s"
-                        >
-                            <BlogItem
-                                thumbnail="https://picsum.photos/seed/idk/500/350"
-                                topic="Blog Topic"
-                                title="Blog Title"
-                                author="John Doe"
-                                date="01 Jan, 2045"
-                                content_preview="Dolor et eos labore stet justo sed est sed sed sed dolor stet amet"
-                            />
-                        </div>
+                        {
+                            blogs.map((blog) => (
+                                <div
+                                    class="col-md-6 wow slideInUp"
+                                    data-wow-delay="0.1s"
+                                >
+                                    <BlogCard {...blog} />
+                                </div>
+                            ))
+                        }
+
                         <div class="col-12 wow slideInUp" data-wow-delay="0.1s">
                             <nav aria-label="Page navigation">
                                 <ul class="pagination pagination-lg m-0">

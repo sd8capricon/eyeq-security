@@ -44,3 +44,12 @@ export type ServiceFeature = {
     description: string;
     height: number;
 }
+
+export type BlogCardProps = {
+    topic: string;
+    thumbnail: string;
+    title: string;
+    author: string;
+    date: string;
+    content_preview: string;
+};
