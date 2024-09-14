@@ -1,0 +1,186 @@
+---
+// Layout
+import PageLayout from "../layouts/PageLayout.astro";
+
+// Components
+import Section from "../layouts/Section.astro";
+import TeamCard from "../components/Team/TeamCard.astro";
+
+// Assets
+import TitleImage from "../assets/img/carousel-1.jpg";
+import Member1 from "../assets/img/team-1.jpg";
+import Member2 from "../assets/img/team-2.jpg";
+import Member3 from "../assets/img/team-3.jpg";
+---
+
+<style>
+    .name-title {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 1.5rem;
+    }
+    .name-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 8px;
+        background-color: #f2c202;
+    }
+</style>
+
+<PageLayout
+    nav_active="team"
+    page_title="Team"
+    page_description="some description"
+    background_image={TitleImage}
+>
+    <Section
+        title_top="Meet Our Team"
+        title_main="Passionate People Powering Our Vision"
+    >
+        <div class="container">
+            <!-- CEO Start -->
+            <div class="row mb-5">
+                <div class="col-lg-4 p-0 pe-lg-4">
+                    <TeamCard src={Member1} designation="CEO" />
+                </div>
+                <div class="col-lg-8 bg-cosmic-latte p-4 p-xl-5">
+                    <div class="name-title">
+                        <h2>Muhammed Choloth</h2>
+                        <h6 class="text-body">Chief Executive Officer (CEO)</h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate quisquam, aliquam vero nulla mollitia aperiam
+                        a labore fuga recusandae earum vel quaerat qui, maxime
+                        sed beatae architecto quidem molestias fugit excepturi
+                        repellat, laborum amet suscipit dolor nostrum? Id
+                        soluta, eaque quisquam ex iste consequuntur, dolor
+                        asperiores eum minima excepturi praesentium.
+                    </p>
+                </div>
+            </div>
+            <!-- CEO End -->
+
+            <!-- Regional Managers Start -->
+            <h2 class="underline">Regional Managers</h2>
+            <div class="row mb-4">
+                <div class="col-lg-4 p-0 pe-lg-4">
+                    <TeamCard src={Member2} designation="CEO" />
+                </div>
+                <div class="col-lg-8 bg-cosmic-latte p-4 p-xl-5">
+                    <div class="name-title">
+                        <h2>James Cowan</h2>
+                        <h6 class="text-body">
+                            Regional Manager - Manitoba and Ontario
+                        </h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate quisquam, aliquam vero nulla mollitia aperiam
+                        a labore fuga recusandae earum vel quaerat qui, maxime
+                        sed beatae architecto quidem molestias fugit excepturi
+                        repellat, laborum amet suscipit dolor nostrum? Id
+                        soluta, eaque quisquam ex iste consequuntur, dolor
+                        asperiores eum minima excepturi praesentium.
+                    </p>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div
+                    class="col-lg-8 bg-cosmic-latte p-4 p-xl-5 order-2 order-md-1"
+                >
+                    <div class="name-title">
+                        <h2>Mike McIntyre</h2>
+                        <h6 class="text-body">
+                            Regional Manager - Saskatchewan and Alberta
+                        </h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate quisquam, aliquam vero nulla mollitia aperiam
+                        a labore fuga recusandae earum vel quaerat qui, maxime
+                        sed beatae architecto quidem molestias fugit excepturi
+                        repellat, laborum amet suscipit dolor nostrum? Id
+                        soluta, eaque quisquam ex iste consequuntur, dolor
+                        asperiores eum minima excepturi praesentium.
+                    </p>
+                </div>
+                <div class="col-lg-4 p-0 ps-lg-4 order-1 order-md-2">
+                    <TeamCard src={Member3} designation="CEO" />
+                </div>
+            </div>
+            <!-- Regional Managers End -->
+
+            <!-- Talent & HR Start -->
+            <h2 class="underline">Talent Acquisition & Human Resources</h2>
+            <div class="row">
+                <div class="col-lg-4 p-0 pe-lg-4">
+                    <TeamCard src={Member1} designation="CEO" />
+                </div>
+                <div class="col-lg-8 bg-cosmic-latte p-4 p-xl-5">
+                    <div class="name-title">
+                        <h2>Alex Mathews</h2>
+                        <h6 class="text-body">
+                            Talent Acquisition & Human Resources Manager
+                        </h6>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptate quisquam, aliquam vero nulla mollitia aperiam
+                        a labore fuga recusandae earum vel quaerat qui, maxime
+                        sed beatae architecto quidem molestias fugit excepturi
+                        repellat, laborum amet suscipit dolor nostrum? Id
+                        soluta, eaque quisquam ex iste consequuntur, dolor
+                        asperiores eum minima excepturi praesentium.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Talent & HR End -->
+    </Section>
+    <Section
+        title_top="Team Profiles"
+        title_main="The People Who Make It Happen"
+    >
+        <div class="row g-5">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <TeamCard
+                    src={Member1}
+                    name="Nathanya Taylor"
+                    designation="Designation"
+                />
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <TeamCard
+                    src={Member2}
+                    name="Collin Grey"
+                    designation="Assistant Manager Manitoba"
+                />
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                <TeamCard
+                    src={Member3}
+                    name="Tyler Woznuk"
+                    designation="Assistant Manager Saskatchewan"
+                />
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="1.2s">
+                <TeamCard
+                    src={Member2}
+                    name="Llyod"
+                    designation="Assistant Manager Ontario"
+                />
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="1.5s">
+                <TeamCard
+                    src={Member3}
+                    name="Matthew Merete"
+                    designation="Assistant Manager Alberta"
+                />
+            </div>
+        </div>
+    </Section>
+</PageLayout>

@@ -26,11 +26,29 @@ const { active } = Astro.props as Props;
             height: 50px;
         }
     }
+
+    @media screen and (max-width: 510px) {
+        .navbar-brand-text {
+            text-wrap: wrap;
+        }
+        .navbar-brand {
+            width: min-content;
+        }
+    }
+
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .navbar-brand-text {
+            text-wrap: wrap;
+        }
+        .navbar-brand {
+            width: min-content;
+        }
+    }
 </style>
 
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-dark px-3 px-md-5 py-3 py-lg-0">
-        <a aria-label="link to index page" href="/" class="navbar-brand p-0">
+        <a aria-label="link to home page" href="/" class="navbar-brand p-0">
             <h1
                 class={"m-0 d-flex align-items-center" +
                     (active === "home" ? " text-primary" : "")}
@@ -41,7 +59,10 @@ const { active } = Astro.props as Props;
                     alt="Company Logo"
                     class="me-3"
                 />
-                Eye<span style="color: red;">Q</span>&nbsp;Security Services
+
+                <span class="navbar-brand-text">
+                    Eye<span style="color: red;">Q</span>&nbsp;Security Services
+                </span>
             </h1>
         </a>
         <button
@@ -63,6 +84,11 @@ const { active } = Astro.props as Props;
                     href="/about"
                     class={"nav-item nav-link" +
                         (active === "about" ? " active" : "")}>About</a
+                >
+                <a
+                    href="/team"
+                    class={"nav-item nav-link" +
+                        (active === "team" ? " active" : "")}>Team</a
                 >
                 <a
                     href="/services"

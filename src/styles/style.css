@@ -86,13 +86,17 @@ h6,
 
 
 h2.underline,
-h4.underline {
+h4.underline,
+h5.underline,
+h6.underline {
     position: relative;
     margin-bottom: 2.5rem;
 }
 
 h2.underline::after,
-h4.underline::after {
+h4.underline::after,
+h5.underline::after,
+h6.underline::after {
     content: "";
     position: absolute;
     bottom: -15px;

@@ -1,6 +1,6 @@
 import type { HTMLAttributes } from "astro/types";
 
-export type Page = "home" | "about" | "services" | "blogs" | "contact" | "careers";
+export type Page = "home" | "about" | "services" | "blogs" | "team" | "contact" | "careers";
 
 export type LayoutProps = {
     page_title: string;
