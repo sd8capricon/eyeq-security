@@ -6,20 +6,42 @@ const serviceTitles: ServiceBtnProps[] = [
         icon: "fa-shield-alt",
         service: "General",
         active: true
-    }, {
-        target: "#high-profile-vip",
-        icon: "fa-user-shield",
-        service: "High Profile VIP"
     },
     {
-        target: "#hospital-health",
+        target: "#bank",
+        icon: "fa-university",
+        service: "Bank"
+    },
+    {
+        target: "#hospital-senior-living",
         icon: "fa-hospital",
-        service: "Hospital & Health Care"
+        service: "Hospital & Senior Living"
     },
     {
         target: "#hotel",
         icon: "fa-hotel",
         service: "Hotel"
+    },
+    {
+        target: "#loss",
+        icon: "fa-lock",
+        service: "Loss Prevention"
+    },
+    {
+        target: "#mall-retail",
+        icon: "fa-store-alt",
+        service: "Shopping Mall & Retail"
+    },
+    {
+        target: "#school",
+        icon: "fa-school",
+        service: "School"
+    },
+    // Right Side
+    {
+        target: "#pubs-clubs",
+        icon: "fa-cocktail",
+        service: "Pubs & Clubs"
     },
     {
         target: "#event",
@@ -28,35 +50,14 @@ const serviceTitles: ServiceBtnProps[] = [
 
     },
     {
-        target: "#school",
-        icon: "fa-school",
-        service: "School"
+        target: "#executive",
+        icon: "fa-user-shield",
+        service: "Executive Proctection"
     },
     {
-        target: "#retail",
-        icon: "fa-store-alt",
-        service: "Retail Shop"
-    },
-    // Right Side
-    {
-        target: "#mall",
-        icon: "fa-shopping-cart",
-        service: "Mall"
-    },
-    {
-        target: "#construction",
-        icon: "fa-hard-hat",
-        service: "Construction"
-    },
-    {
-        target: "#corporate-security",
-        icon: "fa-building",
-        service: "Corporate & Property"
-    },
-    {
-        target: "#senior-living",
-        icon: "fa-users",
-        service: "55+ Senior Living Center"
+        target: "#parking",
+        icon: "fa-parking",
+        service: "Parking Enforcement"
     },
     {
         target: "#mobile-patrol",
@@ -64,9 +65,14 @@ const serviceTitles: ServiceBtnProps[] = [
         service: "Mobile Patrol"
     },
     {
-        target: "#crisis-eviction",
+        target: "#security-audit",
+        icon: "fa-search",
+        service: "Security Audit"
+    },
+    {
+        target: "#threat-risk",
         icon: "fa-exclamation-triangle",
-        service: "Crisis and Eviction Mangement"
+        service: "Threat and Risk Mangement"
     }
 ]
 
