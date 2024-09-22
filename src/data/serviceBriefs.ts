@@ -98,6 +98,7 @@ const serviceBriefs: ServiceBreif[] = [
     },
     {
         id: "threat-risk",
+        link: "threat-risk-management",
         image: TestImage,
         service: "Threat and Risk Mangement Services"
     }

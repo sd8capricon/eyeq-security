@@ -16,11 +16,11 @@ import Button from "../../components/Layout/Button.astro";
 export const getStaticPaths = staticPaths;
 
 const { service } = Astro.params;
-const {
+let {
     title,
     italic_para,
     first_para,
-    highlight_title,
+    // highlight_title,
     highlight_list,
     second_para,
     img,
@@ -29,6 +29,7 @@ const {
     feature_para,
     feature_height,
     features,
+    cta_text,
 } = Astro.props;
 
 let serviceFeatures: ServiceFeature[] = [] as ServiceFeature[];
@@ -40,6 +41,10 @@ if (features && feature_height)
             height: feature_height,
         };
     });
+
+if (!cta_text)
+    cta_text =
+        "Contact Us today and get a customized security program that meets and exceeds your needs.";
 ---
 
 <ServiceLayoutBase
@@ -47,6 +52,7 @@ if (features && feature_height)
     service_path={service}
     service_description="some description"
     service_img={img}
+    cta_text={cta_text}
 >
     {
         italic_para && (
@@ -56,19 +62,19 @@ if (features && feature_height)
         )
     }
 
-    {first_para && <p slot="first-paragraph">{first_para}</p>}
+    {first_para && <p slot="first-paragraph" set:html={first_para} />}
 
     <!-- Cannot Return element with slot within a fragment -->
-    {highlight_title && <h3 slot="highlight-title">{highlight_title}</h3>}
+    <!-- {highlight_title && <h3 slot="highlight-title">{highlight_title}</h3>}
     {
-        highlight_title && (
+        highlight_list && (
             <ul slot="highlight-ul">
                 {highlight_list.map((li) => (
                     <li>{li}</li>
                 ))}
             </ul>
         )
-    }
+    } -->
 
     {second_para && <p slot="second-paragraph" set:html={second_para} />}
 
