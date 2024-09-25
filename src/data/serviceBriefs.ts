@@ -56,7 +56,7 @@ const serviceBriefs: ServiceBreif[] = [
     },
     {
         id: "pubs-clubs",
-        link: "pubs-clubs-security",
+        link: "pubs-clubs",
         image: TestImage,
         service: "Pubs & Clubs Security Services",
     },

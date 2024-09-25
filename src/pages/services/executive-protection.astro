@@ -1,0 +1,74 @@
+---
+// Layouts
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+import Button from "../../components/Layout/Button.astro";
+
+const ServiceImg = {} as ImageMetadata;
+ServiceImg.src = "https://via.placeholder.com/400x350";
+---
+
+<ServiceLayoutBase
+    service_title="Executive Protection Service"
+    service_path="/executive-protection"
+    service_description="some description"
+    service_img={ServiceImg}
+    cta_text="Contact us today and get a customized VIP & Executive protection program that meets and exceeds your needs."
+>
+    <p class="fst-italic" slot="italic-paragraph">
+        Security and Risk Mitigation for VIP and High-Net-Worth Individuals
+    </p>
+    <p slot="first-paragraph">
+        Public figures, high-net-worth individuals, and VIPs may be exposed to
+        heightened personal risk due to their status, careers, affiliations,
+        geography, or net worth. With strategic risk assessment and advanced
+        planning, experienced security teams protect these high-risk individuals
+        from physical, financial, and reputational harm.
+    </p>
+
+    <p slot="second-paragraph">
+        EyeQ Security Services provides executive protection services for
+        high-profile individuals to ensure their safety and prevent security
+        issues. Our discreet professionals specialize in helping government and
+        commercial customers protect VIP personnel. With decades of experience,
+        our protective security specialists are continually recognized for their
+        commitment to professionalism and quality service.
+    </p>
+
+    <SectionFluid class="bg-gray">
+        <div class="row m-0">
+            <div class="col-lg-6 p-0 order-2 order-lg-1">
+                <img
+                    class="img-fluid w-100"
+                    src="https://via.placeholder.com/400x300"
+                />
+            </div>
+            <div class="col-lg-6 p-5 order-1 order-lg-2">
+                <h4 class="underline">
+                    Our protective services for VIP and high-net-worth
+                    individuals includes:
+                </h4>
+                <ul>
+                    <li>Protective movements and armed escorts</li>
+                    <li>High-threat protection for dignitaries</li>
+                    <li>
+                        International travel protection for corporate
+                        executives, diplomats, and celebrities
+                    </li>
+                    <li>Escorts</li>
+                    <li>Close personal protection</li>
+                    <li>Celebrity and corporate VIP protection</li>
+                    <li>Armed vehicle transportation</li>
+                    <li>Route and venue reconnaissance and clearance</li>
+                    <li>
+                        Security advance, counter-attack, and
+                        counter-surveillance teams
+                    </li>
+                </ul>
+                <Button>Book an Appointment Today</Button>
+            </div>
+        </div>
+    </SectionFluid>
+</ServiceLayoutBase>

@@ -1,0 +1,82 @@
+---
+// Layouts
+import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
+
+// Components
+import SectionFluid from "../../layouts/SectionFluid.astro";
+import Button from "../../components/Layout/Button.astro";
+
+const ServiceImg = {} as ImageMetadata;
+ServiceImg.src = "https://via.placeholder.com/400x300";
+---
+
+<ServiceLayoutBase
+    service_title="Pubs & Clubs security"
+    service_path="/pubs-clubs"
+    service_description="some description"
+    service_img={ServiceImg}
+    cta_text="Contact us today and get a professional security audit services that meets and exceeds your needs."
+>
+    <p slot="first-paragraph">
+        Pub and club security is essential for maintaining a safe and enjoyable
+        environment for patrons and staff alike. At EyeQ Security Services, we
+        understand the unique challenges faced by establishments in the
+        nightlife industry, and our comprehensive security services are tailored
+        to meet these needs.
+    </p>
+
+    <p slot="second-paragraph">
+        Our approach begins with a thorough assessment of the specific security
+        requirements of your pub or club. We identify potential risks and
+        vulnerabilities, taking into account factors such as crowd size, alcohol
+        consumption, and potential conflicts. Based on this assessment, we
+        develop a customized security plan that addresses all aspects of venue
+        safety.
+    </p>
+
+    <SectionFluid class="bg-gray">
+        <div class="row m-0">
+            <div class="col-lg-6 p-0 order-2 order-lg-1">
+                <img
+                    class="img-fluid w-100"
+                    src="https://via.placeholder.com/400x300"
+                />
+            </div>
+            <div class="col-lg-6 p-5 order-1 order-lg-2">
+                <h4 class="underline">
+                    <span style="font-weight: 500;">
+                        Our trained personnel ensure crowd control and conflict
+                        management.
+                    </span>
+                    They help create a safer environment for patrons by maintaining
+                    order and enforcing venue policies professionally.
+                </h4>
+                <p>
+                    Our team of security personnel is highly trained and
+                    experienced in pub and club security. They are adept at
+                    managing crowd control, diffusing potential conflicts, and
+                    enforcing venue policies with professionalism and tact. With
+                    a visible security presence, our staff helps deter unruly
+                    behavior and maintains order, creating a safer and more
+                    enjoyable environment for patrons.
+                </p>
+                <p>
+                    In addition to trained security personnel, we also utilize
+                    advanced security technologies to enhance venue safety. This
+                    includes surveillance cameras, access control systems, and
+                    alarm systems that provide real-time monitoring and rapid
+                    response capabilities.
+                </p>
+                <p>
+                    At EyeQ Security Services, we prioritize the safety and
+                    well-being of patrons and staff at pubs and clubs. Our
+                    commitment to excellence means that you can trust us to
+                    provide reliable and effective security solutions tailored
+                    to your venue's needs. Partner with us to ensure that your
+                    establishment
+                </p>
+                <Button>Book an Appointment Today</Button>
+            </div>
+        </div>
+    </SectionFluid>
+</ServiceLayoutBase>
