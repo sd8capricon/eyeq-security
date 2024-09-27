@@ -20,7 +20,7 @@
     "@sanity/visual-editing": "^2.1.9",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
-    "astro": "^4.14.3",
+    "astro": "^4.15.9",
     "astro-portabletext": "^0.10.0",
     "counterup2": "^2.0.2",
     "react": "^18.3.1",
