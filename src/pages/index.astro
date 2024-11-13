@@ -1,7 +1,6 @@
 ---
 // Layout
 import RootLayout from "../layouts/RootLayout.astro";
-
 // Components
 import SectionTitle from "../components/Layout/SectionTitle.astro";
 import Section from "../layouts/Section.astro";
@@ -14,6 +13,8 @@ import Testimonial from "../components/Testimonial/Testimonial.astro";
 import QuoteDark from "../components/Layout/QuoteDark.astro";
 import BlogRow from "../components/Layout/BlogRow.astro";
 import ServiceCard from "../components/Home/ServiceCard.astro";
+// Images
+import hero from "../assets/img/hero.jpg";
 ---
 
 <RootLayout
@@ -34,12 +35,9 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
                     <Button href="/contact">Request A Quote</Button>
                 </div>
             </div>
+            <!-- src="https://picsum.photos/seed/idk/800/600" -->
             <div class="col-lg-7 p-0 hero-right">
-                <img
-                    class="w-100"
-                    alt=""
-                    src="https://picsum.photos/seed/idk/800/600"
-                />
+                <img class="w-100" alt="" src={hero.src} />
             </div>
         </div>
     </div>
