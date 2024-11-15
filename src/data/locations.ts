@@ -16,7 +16,7 @@ const locations: LocationLayout = {
             position: 1,
             city: "Winnipeg, MB",
             address:
-                "Corporate Headquarters: 1479 Buffalo Pl, unit 105, Winnipeg, Manitoba",
+                "Corporate Headquarters: 1800 Logan Ave, Unit #2, Winnipeg, Manitoba. R2R 0H3",
             phone: "+204 202-7287, +204 881-1947",
             email: "info@eyeqsecurity.ca",
         },
