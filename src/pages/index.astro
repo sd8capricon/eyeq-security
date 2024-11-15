@@ -15,6 +15,9 @@ import BlogRow from "../components/Layout/BlogRow.astro";
 import ServiceCard from "../components/Home/ServiceCard.astro";
 // Images
 import hero from "../assets/img/hero.jpg";
+import about from "../assets/img/about.jpg";
+import general from "../assets/img/general.jpg";
+import bank from "../assets/img/bank.jpg";
 ---
 
 <RootLayout
@@ -201,10 +204,11 @@ import hero from "../assets/img/hero.jpg";
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
+                    <!-- https://picsum.photos/800/800" -->
                     <img
                         class="position-absolute w-100 h-100 rounded wow zoomIn"
                         data-wow-delay="0.9s"
-                        src="https://picsum.photos/800/800"
+                        src={about.src}
                         style="object-fit: cover;"
                     />
                 </div>
@@ -328,6 +332,7 @@ import hero from "../assets/img/hero.jpg";
                     <div class="col-12 col-md-6">
                         <ServiceCard
                             title="General Guard Security"
+                            img={general}
                             description="EyeQ Security Services provides comprehensive security services that protect and preserve businesses and properties throughout Manitoba."
                             link="general-security"
                         />
@@ -335,6 +340,7 @@ import hero from "../assets/img/hero.jpg";
                     <div class="col-12 col-md-6">
                         <ServiceCard
                             title="Bank security"
+                            img={bank}
                             description="Banks are probably the riskiest and most sensitive businesses. Ensuring Comprehensive Security and Surveillance 24/7"
                             link="bank-security"
                         />
@@ -342,6 +348,7 @@ import hero from "../assets/img/hero.jpg";
                     <div class="col-12 col-md-6">
                         <ServiceCard
                             title="Hospital and Health care security"
+                            img={general}
                             description="Healthcare employees are also vulnerable as targets of violence, both from patients and family members alike. A hospital security officer is charged with maintaining the peace in a hospital & seniors living centers and working to safeguard the people and items within its walls."
                             link="hospital-security"
                         />

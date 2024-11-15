@@ -3,9 +3,10 @@ interface Props {
     title: string;
     description: string;
     link: string;
+    img: ImageMetadata;
 }
 
-const { title, description, link } = Astro.props as Props;
+const { title, description, link, img } = Astro.props as Props;
 ---
 
 <style>
@@ -34,11 +35,7 @@ const { title, description, link } = Astro.props as Props;
 </style>
 
 <div class="service-card w-100">
-    <img
-        class="img-fluid"
-        src="https://picsum.photos/seed/idk/1280/720"
-        alt="Security Service 1"
-    />
+    <img class="img-fluid" src={img.src} alt="Security Service 1" />
     <h4>{title}</h4>
     <p>
         {description}
