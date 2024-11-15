@@ -85,7 +85,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
 
         <!-- Saskatchewan Start -->
         <h2 class="location-title">Saskatchewan</h2>
-        <div class="row g-5 saskatchewan">
+        <div class="row g-5 saskatchewan mb-5">
             <div class="col-lg-6 p-1">
                 <div class="row g-5">
                     {
@@ -112,6 +112,96 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             </div>
         </div>
         <!-- Saskatchewan End -->
+
+        <!-- Ontario Start -->
+        <h2 class="location-title">Ontario</h2>
+        <div class="row g-5 ontario mb-5">
+            <div class="col-lg-6 p-1">
+                <div class="row g-5">
+                    {
+                        locations.on.map((l) => (
+                            <div class="col-md-6">
+                                <LocationCard {...l} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <!-- og iframe dim 800x600 -->
+                <iframe
+                    id="map-on"
+                    class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3474448571287!2d-79.41882337382386!3d43.64093912110267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3502ef7e6a27%3A0xe041d7e1f59812d4!2sToronto%2C%20ON%20M6K%203M9%2C%20Canada!5e0!3m2!1sen!2sin!4v1731698010993!5m2!1sen!2sin"
+                    width="800"
+                    height="500"
+                    style="border:0; width:100%; height"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Ontario End -->
+
+        <!-- Alberta Start -->
+        <h2 class="location-title">Alberta</h2>
+        <div class="row g-5 alberta mb-5">
+            <div class="col-lg-6 p-1">
+                <div class="row g-5">
+                    {
+                        locations.ab.map((l) => (
+                            <div class="col-md-6">
+                                <LocationCard {...l} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <!-- og iframe dim 800x600 -->
+                <iframe
+                    id="map-ab"
+                    class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5007.185474489431!2d-113.9353596522974!3d51.134419786923225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537163efd09c8a1b%3A0x50b448ec49fba91c!2sCalgary%2C%20AB%20T3J%200L5%2C%20Canada!5e0!3m2!1sen!2sin!4v1731698689182!5m2!1sen!2sin"
+                    width="800"
+                    height="500"
+                    style="border:0; width:100%; height"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- Alberta End -->
+
+        <!-- BC Start -->
+        <h2 class="location-title">British Columbia</h2>
+        <div class="row g-5 bc mb-5">
+            <div class="col-lg-6 p-1">
+                <div class="row g-5">
+                    {
+                        locations.bc.map((l) => (
+                            <div class="col-md-6">
+                                <LocationCard {...l} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center">
+                <!-- og iframe dim 800x600 -->
+                <iframe
+                    id="map-ab"
+                    class="w-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5213.157869932919!2d-122.84214350275032!3d49.20854678552681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d796b0d2f123%3A0x370565093f9ce854!2sSurrey%2C%20BC%20V3R%202J6%2C%20Canada!5e0!3m2!1sen!2sin!4v1731699049102!5m2!1sen!2sin"
+                    width="800"
+                    height="500"
+                    style="border:0; width:100%; height"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <!-- BC End -->
     </Section>
 
     <!-- Quote Start -->
@@ -164,18 +254,21 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
         btn.addEventListener("click", () => {
             const province = btn.getAttribute("data-province")!;
             const city = btn.getAttribute("data-city")!;
-            switch (province) {
-                case "MB":
-                    setIframe(mbIframe, locationSrc[province][city]);
-                    break;
+            // switch (province) {
+            //     case "ON":
+            //         setIframe(mbIframe, locationSrc[province][city]);
+            //     case "MB":
+            //         setIframe(mbIframe, locationSrc[province][city]);
+            //         break;
 
-                case "SK":
-                    setIframe(skIframe, locationSrc[province][city]);
-                    break;
+            //     case "SK":
+            //         setIframe(skIframe, locationSrc[province][city]);
+            //         break;
 
-                default:
-                    break;
-            }
+            //     default:
+            //         break;
+            // }
+            setIframe(mbIframe, locationSrc[province][city]);
         });
     });
 </script>
