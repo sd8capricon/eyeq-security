@@ -16,6 +16,7 @@ import ServiceCard from "../components/Home/ServiceCard.astro";
 // Images
 import hero from "../assets/img/hero.jpg";
 import about from "../assets/img/about.jpg";
+import features from "../assets/img/features.jpg";
 import general from "../assets/img/general.jpg";
 import bank from "../assets/img/bank.jpg";
 import hospital from "../assets/img/hospital.jpg";
@@ -255,10 +256,11 @@ import hospital from "../assets/img/hospital.jpg";
             >
                 <div class="position-relative h-100">
                     <!-- Implement srcset for 800x800 -->
+                    <!-- "https://picsum.photos/seed/123/720/1280" -->
                     <img
                         class="position-absolute w-100 h-100 rounded wow zoomIn"
                         data-wow-delay="0.1s"
-                        src="https://picsum.photos/seed/123/720/1280"
+                        src={features.src}
                         style="object-fit: cover;"
                     />
                 </div>
