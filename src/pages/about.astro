@@ -1,16 +1,17 @@
 ---
 // Layout
 import PageLayout from "../layouts/PageLayout.astro";
-
 // Components
 import Section from "../layouts/Section.astro";
 import SectionFluid from "../layouts/SectionFluid.astro";
 import SectionTitle from "../components/Layout/SectionTitle.astro";
 import ValueItem from "../components/Values/ValueItem.astro";
 import Team from "../components/Team/Team.astro";
-
 // Assets
 import TitleImage from "../assets/img/carousel-1.jpg";
+import About1 from "../assets/img/about/about1.jpg";
+import About2 from "../assets/img/about/about2.jpg";
+import GoalImage from "../assets/img/about/goal.jpg";
 import ValuesImage from "../assets/img/about/values.jpg";
 ---
 
@@ -138,13 +139,15 @@ import ValuesImage from "../assets/img/about/values.jpg";
                 class="col-12 col-lg-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-center about-right"
             >
                 <div class="position-relative">
+                    <!-- https://picsum.photos/seed/back/640/400 -->
                     <img
-                        src="https://picsum.photos/seed/back/640/400"
+                        src={About1.src}
                         alt=""
                         class="main-img rounded shadow-lg"
                     />
+                    <!-- https://picsum.photos/seed/bbno$/320/200 -->
                     <img
-                        src="https://picsum.photos/seed/bbno$/320/200"
+                        src={About2.src}
                         alt=""
                         class="inset-img rounded shadow-lg"
                     />
@@ -157,12 +160,9 @@ import ValuesImage from "../assets/img/about/values.jpg";
     <!-- Goal Start -->
     <SectionFluid class="bg-gray">
         <div class="row w-100 m-0 goal">
+            <!-- "https://picsum.photos/seed/idk/800/600" -->
             <div class="col-lg-6 p-0">
-                <img
-                    src="https://picsum.photos/seed/idk/800/600"
-                    alt=""
-                    class="img-fluid w-100"
-                />
+                <img src={GoalImage.src} alt="" class="img-fluid w-100" />
             </div>
             <div
                 class="col-lg-6 px-5 my-5 mb-xl-0 d-flex justify-content-center goal-right"
@@ -268,13 +268,13 @@ import ValuesImage from "../assets/img/about/values.jpg";
     <!-- Values End -->
 
     <!-- Team Start -->
-    <Section
+    <!-- <Section
         class="bg-gray"
         title_top="Our Team"
         title_main="Professional Staff Ready to Help Your Business"
     >
         <Team />
-    </Section>
+    </Section> -->
     <!-- Team End -->
 
     <!-- Expertise Start -->
