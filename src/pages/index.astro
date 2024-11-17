@@ -20,6 +20,7 @@ import features from "../assets/img/features.jpg";
 import general from "../assets/img/general.jpg";
 import bank from "../assets/img/bank.jpg";
 import hospital from "../assets/img/hospital.jpg";
+const clients = await Astro.glob("../assets/img/clients/*");
 ---
 
 <RootLayout
@@ -102,15 +103,12 @@ import hospital from "../assets/img/hospital.jpg";
             </div>
             <div class="col-lg-7">
                 <div class="owl-carousel client-carousel">
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
-                    <img src="https://picsum.photos/seed/idk/150/50" alt="" />
+                    <!-- <img src="https://picsum.photos/seed/idk/150/50" alt="" /> -->
+                    {
+                        clients.map((client) => (
+                            <img class="w-36 h-12" src={client.default.src} />
+                        ))
+                    }
                 </div>
             </div>
         </div>
