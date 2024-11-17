@@ -52,4 +52,5 @@ export type BlogCardProps = {
     author: string;
     date: string;
     content_preview: string;
+    slug: string;
 };

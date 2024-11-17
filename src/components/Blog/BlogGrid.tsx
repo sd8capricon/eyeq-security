@@ -32,6 +32,7 @@ const map2BlogCard = (blog: SanityDocument) => {
         thumbnail: urlForImage(blog.mainImage).format("webp").url(),
         topic: blog.categories[0].title,
         title: blog.title,
+        slug: blog.slug.current,
         author: blog.author.name,
         date: blog.publishedAt,
         content_preview: "",

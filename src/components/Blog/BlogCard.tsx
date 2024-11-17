@@ -1,7 +1,7 @@
 // Types 
 import type { BlogCardProps } from "../../types"
 
-export default function BlogCard({ thumbnail, topic, date, author, title, content_preview }: BlogCardProps) {
+export default function BlogCard({ thumbnail, topic, date, author, title, content_preview, slug }: BlogCardProps) {
     return (
         <div className="blog-item bg-cosmic-latte rounded overflow-hidden">
             <div className="blog-img position-relative overflow-hidden">
@@ -27,7 +27,7 @@ export default function BlogCard({ thumbnail, topic, date, author, title, conten
                 <p>
                     {content_preview}
                 </p>
-                <a className="text-uppercase" href="">
+                <a className="text-uppercase" href={`/blog/${slug}`}>
                     Read More
                     <i className="bi bi-arrow-right"></i>
                 </a>
