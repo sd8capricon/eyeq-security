@@ -30,8 +30,6 @@ const { data: post } = await loadQuery<SanityDocument>({
     params: { slug },
 });
 
-console.log(post);
-
 const mainImage = urlForImage(post.mainImage).format("webp").url();
 ---
 
