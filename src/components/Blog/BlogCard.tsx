@@ -23,7 +23,7 @@ export default function BlogCard({ thumbnail, topic, date, author, title, conten
                         {date}
                     </small>
                 </div>
-                <h4 className="mb-3">React {title}</h4>
+                <h4 className="mb-3">{title}</h4>
                 <p>
                     {content_preview}
                 </p>

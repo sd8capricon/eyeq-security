@@ -1,114 +1,115 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
 // Types
+import type { SanityDocument } from "@sanity/client";
 import type { BlogCardProps } from "../../types";
-
+// Utils
+import { loadQuery } from "../../sanity/lib/load-query";
+import { urlForImage } from "../../sanity/lib/urlForImage";
 // Components
 import BlogCard from "./BlogCard";
 
 // Fetch Blogs in Range
 // *[_type == "post"] | order(_createdAt desc) [startIndex...endIndex]
 
-const TempBlog: BlogCardProps = {
-    thumbnail: "https://picsum.photos/seed/f/500/350",
-    topic: "Blog Topic",
-    title: "Blog Title",
-    author: "John Doe",
-    date: "01 Jan, 2045",
-    content_preview:
-        "Dolor et eos labore stet justo sed est sed sed sed dolor stet amet",
-};
+const blogsPerPage = 1;
 
-const blogs: BlogCardProps[] = [];
+const fetchInRange = async (start: number, end: number) => {
+    const { data } = await loadQuery<SanityDocument>({
+        query: `*[_type == "post"] | order(_createdAt desc) [${start}...${end}] {title, slug, mainImage, publishedAt, categories[]->{title}, author->, bodyPreview}`
+    });
+    return data
+}
 
-for (let index = 0; index < 50; index++)
-    blogs.push({ ...TempBlog, title: `Blog Title ${index}` });
+const fetchBlogCount = async (): Promise<number> => {
+    const { data } = await loadQuery({
+        query: `count(*[_type == "post"])`
+    })
+    return data as number
+}
 
-const blogsPerPage = 10;
-
-const maxPages = Math.floor(blogs.length / blogsPerPage);
+const map2BlogCard = (blog: SanityDocument) => {
+    const blogCard: BlogCardProps = {
+        thumbnail: urlForImage(blog.mainImage).format("webp").url(),
+        topic: blog.categories[0].title,
+        title: blog.title,
+        author: blog.author.name,
+        date: blog.publishedAt,
+        content_preview: "",
+    }
+    return blogCard
+}
 
 export default function BlogGrid() {
     // startIndex and endIndex
     const [currentPage, setCurrentPage] = useState(1)
     const [range, setRange] = useState([0, blogsPerPage])
+    const [blogs, setBlogs] = useState<BlogCardProps[]>([])
+    const [totalPages, setTotalPages] = useState(0)
 
-    const handleNext = () => {
-        if (currentPage >= maxPages) return
-        let newRange = [range[0] + blogsPerPage, range[1] + blogsPerPage]
-        const newPage = currentPage + 1;
-        setRange(newRange)
-        setCurrentPage(newPage)
-    }
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await fetchInRange(range[0], range[1]);
+            const posts = data.map((p: SanityDocument) => map2BlogCard(p));
+            const blogCounts = await fetchBlogCount();
 
-    const handlePrevious = () => {
-        if (currentPage <= 1) return
-        let newRange = [range[0] - blogsPerPage, range[1] - blogsPerPage]
-        const newPage = currentPage - 1;
-        setRange(newRange)
-        setCurrentPage(newPage)
-    }
+            const maxPages = Math.ceil(blogCounts / blogsPerPage);
 
-    const handleN = (N: number) => {
-        const diff = (N - currentPage) * blogsPerPage
-        let newRange = [range[0] + diff, range[1] + diff]
-        setRange(newRange)
-        setCurrentPage(N)
-    }
+            setTotalPages(maxPages);
+            setBlogs(posts);
+        }
+        fetchData();
+    }, [])
+
+    const handlePageChange = async (newPage: number) => {
+        if (newPage >= 1 && newPage <= totalPages) {
+            let newRange = []
+
+            if (newPage - currentPage === 1)
+                newRange = [range[0] + blogsPerPage, range[1] + blogsPerPage];
+            else
+                newRange = [range[0] - blogsPerPage, range[1] - blogsPerPage];
+
+            const newData = await fetchInRange(newRange[0], newRange[1]);
+            const newBlogs = newData.map((p: SanityDocument) => map2BlogCard(p));
+
+            setRange(newRange);
+            setBlogs(newBlogs);
+            setCurrentPage(newPage);
+        }
+    };
 
     return (
         <div className="row g-5">
             {
-                blogs.slice(range[0], range[1]).map((blog, i) =>
+                blogs.map((blog, i) =>
                     <div key={i} className="col-md-6 wow slindeInUp" data-wow-delay="0.1s">
                         <BlogCard {...blog} />
                     </div>
                 )
             }
-            <div className="col-12 wow slideInUp" data-wow-delay="0.1s">
-                <nav aria-label="Page navigation">
-                    <ul className="pagination pagination-lg m-0">
-                        <li className={"page-item" + (currentPage == 1 ? " disabled" : "")}>
-                            <button
-                                className="page-link rounded-0"
-                                aria-label="Previous"
-                                onClick={handlePrevious}
-                            >
-                                <span aria-hidden="true">
-                                    <i className="bi bi-arrow-left"></i>
-                                </span>
-                            </button>
-                        </li>
-                        {
-                            currentPage > 1 &&
-                            <li className="page-item">
-                                <button className="page-link" onClick={handlePrevious}>{currentPage - 1}</button>
-                            </li>
-                        }
-                        <li className="page-item active">
-                            <button className="page-link">{currentPage}</button>
-                        </li>
-                        {
-                            currentPage <= maxPages - 1 &&
-                            <li className="page-item">
-                                <button className="page-link" onClick={handleNext}>{currentPage + 1}</button>
-                            </li>
-                        }
-                        {
-                            currentPage <= maxPages - 2 &&
-                            <li className="page-item">
-                                <button className="page-link" onClick={() => handleN(currentPage + 2)}>{currentPage + 2}</button>
-                            </li>
-                        }
-                        <li className={"page-item" + (currentPage == maxPages ? " disabled" : "")}>
-                            <button className="page-link rounded-0" aria-label="Next" onClick={handleNext}>
-                                <span aria-hidden="true">
-                                    <i className="bi bi-arrow-right"></i>
-                                </span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
+
+            <div className="pagination align-items-center justify-content-center">
+                <div className={"page-item me-4" + (currentPage === 1 ? " disabled" : "")}>
+                    <button
+                        className="page-link rounded-0"
+                        aria-label="previous"
+                        onClick={() => handlePageChange(currentPage - 1)}
+                        disabled={currentPage === 1}
+                    >
+                        Previous
+                    </button>
+                </div>
+                <span className="me-4">Page {currentPage} of {totalPages}</span>
+                <div className={"page-item" + (currentPage === totalPages ? " disabled" : "")}>
+                    <button
+                        className="page-link rounded-0"
+                        aria-label="next"
+                        onClick={() => handlePageChange(currentPage + 1)}
+                        disabled={currentPage === totalPages}
+                    >
+                        Next
+                    </button>
+                </div>
             </div>
         </div>
     )
