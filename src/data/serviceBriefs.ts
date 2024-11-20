@@ -5,11 +5,17 @@ import TestImage from "../assets/img/service/719-1280x720.jpg";
 import General from "../assets/img/service/general.jpg";
 import Bank from "../assets/img/service/bank.jpg";
 import Hospital from "../assets/img/service/hospital.jpg";
+import Hotel from "../assets/img/service/hotel.jpg";
+import LossPrevention from "../assets/img/service/loss_prevention.jpg";
 import Retail from "../assets/img/service/retail.jpg";
 import School from "../assets/img/service/school.jpg";
 import Pubs from "../assets/img/service/pub.jpg";
 import Event from "../assets/img/service/event.jpg";
+import Executive from "../assets/img/service/executive.jpg";
+import Parking from "../assets/img/service/parking.jpg";
 import MobilePatrol from "../assets/img/service/mobile_patrol.jpg";
+import Audit from "../assets/img/service/audit.jpg";
+import Threat from "../assets/img/service/threat.jpg";
 
 const serviceBriefs: ServiceBreif[] = [
     {
@@ -36,14 +42,14 @@ const serviceBriefs: ServiceBreif[] = [
     },
     {
         id: "hotel",
-        image: TestImage,
+        image: Hotel,
         link: "hotel-security",
         service: "Hotel Security Services",
         description: "With a highly trained, fully licensed team security professionals, EyeQ Security can provide you with manned guarding security for the safety and security of your clients and customers."
     },
     {
         id: "loss",
-        image: TestImage,
+        image: LossPrevention,
         service: "Loss Prevenion Security",
         link: "loss-prevention",
         description: "Retail crime costs Canadian firms over $5 billion each year. Independent retailers are a particularly vulnerable target, with 87.5 percent reporting at least one theft every year.When finances are tight, Canadian businesses can protect their earnings by ensuring a substantial loss prevention strategy."
@@ -80,14 +86,14 @@ const serviceBriefs: ServiceBreif[] = [
     {
         id: "executive",
         link: "executive-protection",
-        image: TestImage,
+        image: Executive,
         service: "Executive Proctection Security Services",
         description: "Public figures, high-net-worth individuals, and VIPs may be exposed to heightened personal risk due to their status, careers, affiliations, geography, or net worth. With strategic risk assessment and advanced planning, experienced security teams protect these high-risk individuals from physical, financial, and reputational harm."
     },
     {
         id: "parking",
         link: "parking-enforcement",
-        image: TestImage,
+        image: Parking,
         service: "Parking Enforcement Services",
         description: "Maintaining a parking lot can be stressful, as patrons pay you to protect their vehicles. Since cars don't come cheap, it's of the utmost importance that you're able to keep them safe from harm while in your parking garage or parking lot. At EyeQ Security, we recognise that parking lot safety isn't always easy."
     },
@@ -102,14 +108,14 @@ const serviceBriefs: ServiceBreif[] = [
     {
         id: "security-audit",
         link: "security-audit",
-        image: TestImage,
+        image: Audit,
         service: "Security Audit Services",
         description: "A security assessment identifies weak points in building security. EyeQ's security consulting team will provide Threat and Risk Assessments (TRAs) to a variety of clients across the Dubai area, enabling EyeQ's clients to take action and protect their properties and communities from liability."
     },
     {
         id: "threat-risk",
         link: "threat-risk-management",
-        image: TestImage,
+        image: Threat,
         service: "Threat and Risk Mangement Services",
         description: "While knowing how to respond to threats should be a priority, there's one thing that's more important and effective at protecting your property: prevention."
     }
