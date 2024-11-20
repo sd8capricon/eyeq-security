@@ -9,6 +9,7 @@ import Loss from "../assets/img/service/Loss/loss.jpg";
 import Shopping from "../assets/img/service/Shopping/shopping.jpg";
 import School from "../assets/img/service/School/school.jpg";
 import Event from "../assets/img/service/Event/event.jpg";
+import MobilePatrol from "../assets/img/service/mobile/mobile_patrol.jpg";
 const TempImage: ImageMetadata = {} as ImageMetadata;
 TempImage.src = "https://via.placeholder.com/700x600"
 
@@ -170,7 +171,7 @@ export const staticPaths = (() => {
                 title: "Mobile Patrol Security",
                 first_para: "We understand at EyeQ Security Services that since parking lots are usually 24/7 operations, you might not want to invest in having security guards physically present all that time.Not only is that an expensive enterprise, but it's a lot to keep track of.",
                 second_para: "This is why our mobile patrol security services exist. We can station parking lot security guards to come by at regularly or randomly scheduled intervals to do walk - throughs of your business and private property to ensure everything is in order.We can also have them stay aware of any alarm or security systems you have installed.This will let them know if a potential fire, gas leak, or invasion is taking place and will allow them to contact the relevant authorities, monitor the area, and keep anyone physically in your parking lot safe.",
-                img: TempImage
+                img: MobilePatrol
             },
             cta_text: "Contact us today and get a customized parking lot security program that meets and exceeds your needs."
         },

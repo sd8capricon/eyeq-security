@@ -1,21 +1,23 @@
 ---
 // Layout
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
-
 // Components
 import SectionFluid from "../../layouts/SectionFluid.astro";
 import SectionTitle from "../../components/Layout/SectionTitle.astro";
 import Button from "../../components/Layout/Button.astro";
+// Assets
+import Parking1 from "../../assets/img/service/parking/parking1.jpg";
+import Parking2 from "../../assets/img/service/parking/parking2.jpg";
 
 const ServiceImg = {} as ImageMetadata;
-ServiceImg.src = "https://via.placeholder.com/300x400";
+ServiceImg.src = "https://via.placeholder.com/400x350";
 ---
 
 <ServiceLayoutBase
     service_title="Parking Enforcement"
     service_path="/parking-enforcement"
     service_description="some description"
-    service_img={ServiceImg}
+    service_img={Parking1}
 >
     <p class="fst-italic" slot="italic-paragraph">
         When customers entrust you with their vehicles, they're paying for
@@ -37,12 +39,12 @@ ServiceImg.src = "https://via.placeholder.com/300x400";
         security services to ensure you can always provide for your customers.
     </p>
     <SectionFluid>
-        <div class="row p-0 m-0">
+        <div class="row p-0 m-0 align-items-center">
             <div class="col-lg-6 p-0 order-2 order-lg-1">
                 <img
                     class="img-fluid w-100"
-                    src="https://via.placeholder.com/400x300"
-                    alt=""
+                    src={Parking2.src}
+                    alt="Parking Patrol Image"
                 />
             </div>
             <div class="col-lg-6 p-5 order-1 order-lg-2">
