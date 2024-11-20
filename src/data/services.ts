@@ -1,7 +1,14 @@
 // Types
 import type { GetStaticPaths } from "astro";
 
-
+import General from "../assets/img/service/general/general.jpg";
+import Bank from "../assets/img/service/bank/bank.jpg";
+import Hospital from "../assets/img/service/Hospital/Hospital.jpg";
+import Hotel from "../assets/img/service/Hotel/hotel.jpg";
+import Loss from "../assets/img/service/Loss/loss.jpg";
+import Shopping from "../assets/img/service/Shopping/shopping.jpg";
+import School from "../assets/img/service/School/school.jpg";
+import Event from "../assets/img/service/Event/event.jpg";
 const TempImage: ImageMetadata = {} as ImageMetadata;
 TempImage.src = "https://via.placeholder.com/700x600"
 
@@ -14,7 +21,7 @@ export const staticPaths = (() => {
                 title: "General Security Services",
                 italic_para: "EyeQ Security Services provides comprehensive security services that protect and preserve businesses and properties throughout Manitoba.We take pride in saying our quality security solutions never fail to deliver.Our efficacious security programmes and dedicated team will maximise your coverage and give your site supreme protection.",
                 first_para: "We offer unarmed uniform security guards services to Private Enterprises, Educational Institutions, Retail and shopping malls, Leisure and Amusement Parks, Industrial and Construction projects.Warehouses, Homes and Residential Properties, Labor Camps, etc.We follow highest standards of integrity and excellence at every level.To us, integrity and professionalism are of utmost importance.As an organization committed to excellence, we maintain the highest industry standards for security officer's training, honor, loyalty, and character.All of our security officers will be highly trained and are subject to constant site supervision and random inspections to effectively meet the demands of the market.",
-                img: TempImage
+                img: General
             },
         },
         {
@@ -23,7 +30,7 @@ export const staticPaths = (() => {
                 title: "Bank Security Services",
                 first_para: "Banks are probably the riskiest and most sensitive businesses, and they need 24/7 comprehensive security and surveillance.EyeQ personnel assigned to banks are adequately trained for the banking environment and will ensure that all individuals entering the bank are scanned and have a legitimate reason for being within the banking premises.We have trained and fully equipped our security personnel to match these standards to provide highly proactive security and deliver beyond our clients&#39; expectations for all types of banking institutions.Our security guards will be stationed at highly visible places within the banking premises, which lowers the likelihood of crime.",
                 second_para: "We have trained and fully equipped our security personnel to match these standards to provide highly proactive security and deliver beyond our clients' expectations for all types of banking institutions.Our security guards will be stationed at highly visible places within the banking premises, which lowers the likelihood of crime.",
-                img: TempImage
+                img: Bank
             }
         },
         {
@@ -31,7 +38,7 @@ export const staticPaths = (() => {
             props: {
                 title: "Hospital & 55+ Seniors living Security Services",
                 first_para: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and Seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence.Hospitals also typically maintain large inventories of drugs, some of which may have significant street value.Healthcare employees, likewise, are also vulnerable as targets of violence for both patients and family members alike.A hospital security officer is charged with maintaining the peace in a hospital & amp; seniors living centers and working to safeguard the people and items within its walls.",
-                img: TempImage
+                img: Hospital
             }
         },
         {
@@ -39,7 +46,7 @@ export const staticPaths = (() => {
             props: {
                 title: "Hotel Security",
                 first_para: "With a highly trained, fully licensed team security professionals, EyeQ Security can provide you with manned guarding security for the safety and security of your clients and customers.",
-                img: { ...TempImage, src: "https://via.placeholder.com/1280x720" },
+                img: Hotel,
                 feature_title_top: "What's Included",
                 feature_title_main: "Duties of Hotel Security",
                 features: [
@@ -71,7 +78,7 @@ export const staticPaths = (() => {
             params: { service: "loss-prevention" },
             props: {
                 title: "Loss Prevention Security",
-                img: TempImage,
+                img: Loss,
                 first_para: "Retail crime costs Canadian firms over $5 billion each year. Independent retailers are a particularly vulnerable target, with 87.5 percent reporting at least one theft every year.When finances are tight, Canadian businesses can protect their earnings by ensuring a substantial loss prevention strategy.<p>Loss prevention is top of mind for many Canadian retailers as retail losses due to a rise in crime. But, is your security company meeting your expectations for service and dependability? If not, it's time to enlist the help of Canada's loss prevention experts.</p>",
                 second_para: "Loss prevention professionals at EyeQ Security Services are experts in retail loss prevention and nonviolent crisis intervention. We can create a personalized security strategy that maximizes your coverage while working within your existing security regulations, regardless of the size of your retail store.<p>Loss Prevention security guards are a versatile and dependable crime deterrent. They continually scan their environment for signals of hazards, whether as door greeters, undercover agents, or store patrollers, before dealing with them subtly and professionally.</p>",
                 feature_title_top: "What's Included",
@@ -94,7 +101,7 @@ export const staticPaths = (() => {
             params: { service: "mall-retail" },
             props: {
                 title: "Shopping Mall & Retail Security",
-                img: TempImage,
+                img: Shopping,
                 first_para: "EyeQ Security Services has been a trusted security partner for some of the largest companies in Canadian retail since our debut. We've learned from working with notable companies that no two retail stores or shopping malls are alike and that each requires a custom security solution suited to its specific needs. <p>The Shopping Mall Security Team at EyeQ Security Services has been specially trained to deal with the specific challenges that crowded public places like malls, department stores, and shopping centers present. Our best-in-class program is part of customer service, crowd management, conflict resolution and de-escalation, loss prevention, OFA First Aid, and cultural/social sensitivity training. We believe that by using a multifaceted approach, our mall guards will manage any situation and provide the level of personalized care that our clients need while complying with our stringent security standards.</p>",
                 second_para: "Whether threats occur within the mall, individual businesses, or outside in exposed areas such as parking lots, our customer- oriented approach to shopping mall security strives to defuse and discourage threats. <p><h4>Patrols on Wheels:</h4>Our Mobile Patrol personnel respond to alarms and work on randomized patrol schedules along pre-planned routes. To create a good shopping experience for consumers, our concierge and guest service specialists adopt a courteous customer service- focused approach. They can help with everything from giving directions to dealing with fire and emergency situations.</p>",
                 feature_title_top: "What's Included",
@@ -122,7 +129,7 @@ export const staticPaths = (() => {
             props: {
                 title: "School Security Service",
                 first_para: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and Seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence.Hospitals also typically maintain large inventories of drugs, some of which may have significant street value.Healthcare employees, likewise, are also vulnerable as targets of violence for both patients and family members alike.A hospital security officer is charged with maintaining the peace in a hospital & amp; seniors living centers and working to safeguard the people and items within its walls.",
-                img: TempImage
+                img: School
             }
         },
 
@@ -130,7 +137,7 @@ export const staticPaths = (() => {
             params: { service: "event-security" },
             props: {
                 title: "Event Security",
-                img: TempImage,
+                img: Event,
                 italic_para: "Learn about the best event security services in the industry!",
                 first_para: "Security is an essential part of any event and can mean the difference between success and failure for your special occasion. Ensuring that you hire qualified, professional event security staff is crucial, and this is where we can help you.",
                 second_para: "At EyeQ Security Services, the safety of your guests is our priority. Our highly trained, experienced, and well-equipped security personnel provide equipment protection services and crowd control to ensure the success of your event.<p>EyeQ Security guards protect everything, from your guests to your equipment. Using our event security services at your event gives you peace of mind so that you and your guests can enjoy your event.</p>",

@@ -1,7 +1,6 @@
 // Types
 import type { ServiceBreif } from "../types";
 // Assets
-import TestImage from "../assets/img/service/719-1280x720.jpg";
 import General from "../assets/img/service/general.jpg";
 import Bank from "../assets/img/service/bank.jpg";
 import Hospital from "../assets/img/service/hospital.jpg";
@@ -57,7 +56,7 @@ const serviceBriefs: ServiceBreif[] = [
     },
     {
         id: "mall-retail",
-        link: "mall-security",
+        link: "mall-retail",
         image: Retail,
         service: "Shopping Mall & Retail Security Services",
         description: "EyeQ Security Services has been a trusted security partner for some of the largest companies in Canadian retail since our debut. We've learned from working with notable companies that no two retail stores or shopping malls are alike and that each requires a custom security solution suited to its specific needs."

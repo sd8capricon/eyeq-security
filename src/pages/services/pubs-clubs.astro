@@ -1,10 +1,12 @@
 ---
 // Layouts
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
-
 // Components
 import SectionFluid from "../../layouts/SectionFluid.astro";
 import Button from "../../components/Layout/Button.astro";
+// Assets
+import Pubs1 from "../../assets/img/service/Pubs/pubs1.jpg";
+import Pubs2 from "../../assets/img/service/Pubs/pubs2.jpg";
 
 const ServiceImg = {} as ImageMetadata;
 ServiceImg.src = "https://via.placeholder.com/400x300";
@@ -14,7 +16,7 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
     service_title="Pubs & Clubs security"
     service_path="/pubs-clubs"
     service_description="some description"
-    service_img={ServiceImg}
+    service_img={Pubs1}
     cta_text="Contact us today and get a professional security audit services that meets and exceeds your needs."
 >
     <p slot="first-paragraph">
@@ -35,12 +37,9 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
     </p>
 
     <SectionFluid class="bg-gray">
-        <div class="row m-0">
+        <div class="row m-0 align-items-center">
             <div class="col-lg-6 p-0 order-2 order-lg-1">
-                <img
-                    class="img-fluid w-100"
-                    src="https://via.placeholder.com/400x300"
-                />
+                <img class="img-fluid w-100" src={Pubs2.src} />
             </div>
             <div class="col-lg-6 p-5 order-1 order-lg-2">
                 <h4 class="underline">
