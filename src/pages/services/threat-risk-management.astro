@@ -1,10 +1,11 @@
 ---
 // Layouts
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
-
 // Components
 import SectionFluid from "../../layouts/SectionFluid.astro";
 import Button from "../../components/Layout/Button.astro";
+// Assets
+import Threat1 from "../../assets/img/service/threat/threat1.jpg";
 
 const ServiceImg = {} as ImageMetadata;
 ServiceImg.src = "https://via.placeholder.com/400x300";
@@ -14,7 +15,7 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
     service_title="Threat & Risk Mangement"
     service_path="/threat-risk-management"
     service_description="some description"
-    service_img={ServiceImg}
+    service_img={Threat1}
     cta_text="Contact us today and get a professional threat and risk management services that meets and exceeds your needs."
 >
     <p class="fst-italic" slot="italic-paragraph">
