@@ -6,6 +6,7 @@ import General from "../assets/img/service/general.jpg";
 import Bank from "../assets/img/service/bank.jpg";
 import Hospital from "../assets/img/service/hospital.jpg";
 import Retail from "../assets/img/service/retail.jpg";
+import School from "../assets/img/service/school.jpg";
 import Pubs from "../assets/img/service/pub.jpg";
 import Event from "../assets/img/service/event.jpg";
 import MobilePatrol from "../assets/img/service/mobile_patrol.jpg";
@@ -58,7 +59,7 @@ const serviceBriefs: ServiceBreif[] = [
     {
         id: "school",
         link: "school-security",
-        image: TestImage,
+        image: School,
         service: "School Security Services",
         description: "Hospitals exist to provide care to those who are ill or injured. This means that many people who reside in hospitals and Seniors living centers are vulnerable to exploitation, theft of their belongings, or even violence.Hospitals also typically maintain large inventories of drugs, some of which may have significant street value.Healthcare employees, likewise, are also vulnerable as targets of violence for both patients and family members alike.A hospital security officer is charged with maintaining the peace in a hospital & amp; seniors living centers and working to safeguard the people and items within its walls."
     },
