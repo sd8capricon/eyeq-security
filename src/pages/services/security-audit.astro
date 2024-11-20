@@ -1,20 +1,19 @@
 ---
 // Layouts
 import ServiceLayoutBase from "../../layouts/ServiceLayoutBase.astro";
-
 // Components
 import SectionFluid from "../../layouts/SectionFluid.astro";
 import Button from "../../components/Layout/Button.astro";
-
-const ServiceImg = {} as ImageMetadata;
-ServiceImg.src = "https://via.placeholder.com/400x300";
+// Assets
+import Audit1 from "../../assets/img/service/audit/audit1.jpg";
+import Audit2 from "../../assets/img/service/audit/audit2.jpg";
 ---
 
 <ServiceLayoutBase
     service_title="Security Audit"
     service_path="/security-audit"
     service_description="some description"
-    service_img={ServiceImg}
+    service_img={Audit1}
     cta_text="Contact us today and get a professional security audit services that meets and exceeds your needs."
 >
     <p class="fst-italic" slot="italic-paragraph">
@@ -33,10 +32,7 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
     <SectionFluid class="bg-gray">
         <div class="row m-0">
             <div class="col-lg-6 p-0 order-2 order-lg-1">
-                <img
-                    class="img-fluid w-100"
-                    src="https://via.placeholder.com/400x300"
-                />
+                <img class="img-fluid w-100" src={Audit2.src} />
             </div>
             <div class="col-lg-6 p-5 order-1 order-lg-2">
                 <h4 class="underline">

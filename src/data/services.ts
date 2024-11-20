@@ -10,8 +10,6 @@ import Shopping from "../assets/img/service/Shopping/shopping.jpg";
 import School from "../assets/img/service/School/school.jpg";
 import Event from "../assets/img/service/Event/event.jpg";
 import MobilePatrol from "../assets/img/service/mobile/mobile_patrol.jpg";
-const TempImage: ImageMetadata = {} as ImageMetadata;
-TempImage.src = "https://via.placeholder.com/700x600"
 
 
 export const staticPaths = (() => {
@@ -175,23 +173,6 @@ export const staticPaths = (() => {
             },
             cta_text: "Contact us today and get a customized parking lot security program that meets and exceeds your needs."
         },
-        {
-            params: { service: "manpower-solutions" },
-            props: {
-                title: "Manpower Solutions",
-                first_para: "We work to alleviate human resource challenges that your business might be facing while remaining compliant with local labour laws and employment regulations. Our local knowledge, experience, professionalism, and mature processes enable us to deliver solutions quickly and cost-effectively to each of our clients",
-                // hightlight_title: "Why Choose Our Manpower Solutions?",
-                highlight_list: [
-                    "Expert consultants in career building and human resources",
-                    "Compliance with local labour laws and employment regulations",
-                    "Cost-effective and timely solutions",
-                    "Tailored candidates who reflect your organization's image and objectives",
-                    " Proven track record of transforming business growth"
-                ],
-                second_para: "Our talented consultants are professionals in building careers, helping employees achieve their career goals, and boosting the human resource infrastructures of businesses of all sizes. The solutions we offer create a win-win situation for all parties involved, phenomenally transforming business growth<p>We owe our success to our competent staff, work culture, and innovative methods. Thanks to their efforts, we have established a name as one of the most trusted services in workforce management solutions.</p>",
-                img: TempImage
-            }
-        }
     ];
     return paths;
 }) satisfies GetStaticPaths;

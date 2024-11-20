@@ -6,9 +6,8 @@ import SectionFluid from "../../layouts/SectionFluid.astro";
 import Button from "../../components/Layout/Button.astro";
 // Assets
 import Threat1 from "../../assets/img/service/threat/threat1.jpg";
-
-const ServiceImg = {} as ImageMetadata;
-ServiceImg.src = "https://via.placeholder.com/400x300";
+import Threat2 from "../../assets/img/service/threat/threat2.jpg";
+import Threat3 from "../../assets/img/service/threat/threat3.jpg";
 ---
 
 <ServiceLayoutBase
@@ -35,10 +34,7 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
     <SectionFluid>
         <div class="row m-0">
             <div class="col-lg-6 p-0 order-2 order-lg-1">
-                <img
-                    class="img-fluid w-100"
-                    src="https://via.placeholder.com/400x300"
-                />
+                <img class="img-fluid w-100" src={Threat2.src} />
             </div>
             <div
                 class="col-lg-6 p-5 order-1 order-lg-2 d-flex align-items-center"
@@ -137,10 +133,7 @@ ServiceImg.src = "https://via.placeholder.com/400x300";
             </div>
 
             <div class="col-lg-6 p-0">
-                <img
-                    class="img-fluid h-100 w-100"
-                    src="https://via.placeholder.com/400x300"
-                />
+                <img class="img-fluid h-100 w-100" src={Threat3.src} />
             </div>
         </div>
     </SectionFluid>
