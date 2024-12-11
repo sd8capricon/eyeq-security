@@ -2,7 +2,7 @@
 import SectionTitle from "./SectionTitle.astro";
 ---
 
-<div class="row g-5">
+<div class="row g-5" id="quote-form">
     <div class="col-lg-7">
         <SectionTitle
             top="Request A Quote"
@@ -54,10 +54,23 @@ import SectionTitle from "./SectionTitle.astro";
             data-wow-delay="0.9s"
         >
             <form>
+                <input
+                    type="hidden"
+                    name="redirect"
+                    value="https://eyeqsecurity.ca/"
+                />
+                <input type="hidden" name="from_name" value="Notifications" />
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="9bb84973-dd2a-4b48-99f5-4e9fbld96c93"
+                />
+                <input type="hidden" name="subject" value="Qutation Request" />
                 <div class="row g-3">
                     <div class="col-xl-12">
                         <input
                             type="text"
+                            name="name"
                             class="form-control bg-cosmic-latte border-0"
                             placeholder="Your Name"
                             style="height: 55px;"
@@ -66,6 +79,7 @@ import SectionTitle from "./SectionTitle.astro";
                     <div class="col-12">
                         <input
                             type="email"
+                            name="email"
                             class="form-control bg-cosmic-latte border-0"
                             placeholder="Your Email"
                             style="height: 55px;"
@@ -73,6 +87,7 @@ import SectionTitle from "./SectionTitle.astro";
                     </div>
                     <div class="col-12">
                         <select
+                            name="service"
                             class="form-select bg-cosmic-latte border-0"
                             style="height: 55px;"
                         >
@@ -84,6 +99,7 @@ import SectionTitle from "./SectionTitle.astro";
                     </div>
                     <div class="col-12">
                         <textarea
+                            name="message"
                             class="form-control bg-cosmic-latte border-0"
                             rows="3"
                             placeholder="Message"></textarea>
