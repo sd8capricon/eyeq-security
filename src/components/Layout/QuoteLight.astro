@@ -74,6 +74,7 @@ import SectionTitle from "./SectionTitle.astro";
                             class="form-control bg-cosmic-latte border-0"
                             placeholder="Your Name"
                             style="height: 55px;"
+                            required
                         />
                     </div>
                     <div class="col-12">
@@ -83,18 +84,34 @@ import SectionTitle from "./SectionTitle.astro";
                             class="form-control bg-cosmic-latte border-0"
                             placeholder="Your Email"
                             style="height: 55px;"
+                            required
+                        />
+                    </div>
+                    <div class="col-12">
+                        <input
+                            type="number"
+                            name="phone"
+                            class="form-control bg-cosmic-latte border-0"
+                            placeholder="Your Phone"
+                            style="height: 55px;"
+                            required
                         />
                     </div>
                     <div class="col-12">
                         <select
-                            name="service"
+                            name="location"
                             class="form-select bg-cosmic-latte border-0"
                             style="height: 55px;"
+                            required
                         >
-                            <option selected>Select A Service</option>
-                            <option value="1">Service 1</option>
-                            <option value="2">Service 2</option>
-                            <option value="3">Service 3</option>
+                            <option selected>Location</option>
+                            <option value="Manitoba">Manitoba</option>
+                            <option value="Saskatchewan">Saskatchewan</option>
+                            <option value="Ontario">Ontario</option>
+                            <option value="Alberta">Alberta</option>
+                            <option value="British Columbia"
+                                >British Columbia</option
+                            >
                         </select>
                     </div>
                     <div class="col-12">
@@ -102,7 +119,8 @@ import SectionTitle from "./SectionTitle.astro";
                             name="message"
                             class="form-control bg-cosmic-latte border-0"
                             rows="3"
-                            placeholder="Message"></textarea>
+                            placeholder="Message"
+                            required></textarea>
                     </div>
                     <div class="col-12">
                         <button class="btn btn-dark w-100 py-3" type="submit">
@@ -118,5 +136,16 @@ import SectionTitle from "./SectionTitle.astro";
 <style>
     .form-container {
         border-radius: 10px;
+    }
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+        -moz-appearance: textfield;
     }
 </style>
