@@ -4,10 +4,11 @@ import { type Location } from "../../types";
 
 interface Props extends Location {}
 
-let { position, city, address, phone, email } = Astro.props as Props;
+let { position, city, city_uname, address, phone, email } =
+    Astro.props as Props;
 
 let city_split = city.split(", ");
-let city2 = city_split[0];
+let city2 = city_uname;
 let province = city_split[1];
 ---
 

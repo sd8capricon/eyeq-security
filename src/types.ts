@@ -27,6 +27,7 @@ export interface ServiceBreif extends HTMLAttributes<'div'> {
 export type Location = {
     position: number;
     city: string;
+    city_uname: string;
     address?: string;
     email: string;
     phone: string;

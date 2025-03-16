@@ -70,9 +70,9 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             <div class="col-lg-6 d-flex align-items-center">
                 <!-- og iframe dim 800x600 -->
                 <iframe
-                    id="map-mb"
+                    id="map-MB"
                     class="w-100"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d82345.63809626097!2d-97.2539841!3d49.836798!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea7169b40e3fed%3A0x6d81a36c5a258f4f!2sEyeQ%20Security%20Services!5e0!3m2!1sen!2sin!4v1724404906959!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6109.534040336647!2d-97.19767461195563!3d49.92240515687383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea72528a568b1d%3A0x33d6ef69a8a991e5!2s1800%20Logan%20Ave%2C%20Winnipeg%2C%20MB%20R2R%200H3%2C%20Canada!5e0!3m2!1sen!2sin!4v1742118473643!5m2!1sen!2sin"
                     width="800"
                     height="500"
                     style="border:0; width:100%; height"
@@ -100,7 +100,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             <div class="col-lg-6 d-flex align-items-center">
                 <!-- og iframe dim 800x600 -->
                 <iframe
-                    id="map-sk"
+                    id="map-SK"
                     class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin"
                     width="800"
@@ -130,7 +130,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             <div class="col-lg-6 d-flex align-items-center">
                 <!-- og iframe dim 800x600 -->
                 <iframe
-                    id="map-on"
+                    id="map-ON"
                     class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3474448571287!2d-79.41882337382386!3d43.64093912110267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3502ef7e6a27%3A0xe041d7e1f59812d4!2sToronto%2C%20ON%20M6K%203M9%2C%20Canada!5e0!3m2!1sen!2sin!4v1731698010993!5m2!1sen!2sin"
                     width="800"
@@ -160,7 +160,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             <div class="col-lg-6 d-flex align-items-center">
                 <!-- og iframe dim 800x600 -->
                 <iframe
-                    id="map-ab"
+                    id="map-AB"
                     class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5007.185474489431!2d-113.9353596522974!3d51.134419786923225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537163efd09c8a1b%3A0x50b448ec49fba91c!2sCalgary%2C%20AB%20T3J%200L5%2C%20Canada!5e0!3m2!1sen!2sin!4v1731698689182!5m2!1sen!2sin"
                     width="800"
@@ -190,7 +190,7 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
             <div class="col-lg-6 d-flex align-items-center">
                 <!-- og iframe dim 800x600 -->
                 <iframe
-                    id="map-ab"
+                    id="map-BC"
                     class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5213.157869932919!2d-122.84214350275032!3d49.20854678552681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d796b0d2f123%3A0x370565093f9ce854!2sSurrey%2C%20BC%20V3R%202J6%2C%20Canada!5e0!3m2!1sen!2sin!4v1731699049102!5m2!1sen!2sin"
                     width="800"
@@ -243,8 +243,6 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
 
     const locationBtns =
         document.querySelectorAll<HTMLAnchorElement>(".location-btn");
-    const mbIframe = document.querySelector<HTMLIFrameElement>("#map-mb")!;
-    const skIframe = document.querySelector<HTMLIFrameElement>("#map-sk")!;
 
     const setIframe = (frame: HTMLIFrameElement, newLocation: string) => {
         frame.src = newLocation;
@@ -253,22 +251,12 @@ import PixelMap from "../assets/img/contact/can_pixel_2_720.jpg";
     locationBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
             const province = btn.getAttribute("data-province")!;
-            const city = btn.getAttribute("data-city")!;
-            // switch (province) {
-            //     case "ON":
-            //         setIframe(mbIframe, locationSrc[province][city]);
-            //     case "MB":
-            //         setIframe(mbIframe, locationSrc[province][city]);
-            //         break;
+            const city_uname = btn.getAttribute("data-city")!;
 
-            //     case "SK":
-            //         setIframe(skIframe, locationSrc[province][city]);
-            //         break;
-
-            //     default:
-            //         break;
-            // }
-            setIframe(mbIframe, locationSrc[province][city]);
+            setIframe(
+                document.querySelector<HTMLIFrameElement>(`#map-${province}`)!,
+                locationSrc[province][city_uname],
+            );
         });
     });
 </script>
