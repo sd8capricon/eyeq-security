@@ -23,7 +23,7 @@ const serviceBriefs: ServiceBreif[] = [
         image: General,
         service: "General Security Services",
         link: "general-security",
-        description: "We offer unarmed uniform security guards services to Private Enterprises, Educational Institutions, Retail and shopping malls, Leisure and Amusement Parks, Industrial and Construction projects.Warehouses, Homes and Residential Properties, Labor Camps, etc.We follow highest standards of integrity and excellence at every level.To us, integrity and professionalism are of utmost importance.As an organization committed to excellence, we maintain the highest industry standards for security officer's training, honor, loyalty, and character.All of our security officers will be highly trained and are subject to constant site supervision and random inspections to effectively meet the demands of the market."
+        description: "We offer unarmed uniform security guards services to Private Enterprises, Educational Institutions, Retail and shopping malls, Leisure and Amusement Parks, Industrial and Construction projects, Warehouses, Homes and Residential Properties, and Work Sites, just to name a few. We follow the highest standards of integrity and excellence at every level. To us, integrity and professionalism are of utmost importance. As an organization committed to excellence, we maintain the highest industry standards for security officer's training, honor, loyalty, and character. All of our security officers will be highly trained and are subject to constant site supervision and random inspections to effectively meet the demands of the market and our clients' expectations."
     },
     {
         id: "bank",
