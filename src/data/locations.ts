@@ -38,15 +38,7 @@ const locations: LocationLayout = {
         {
             position: 1,
             city: "Toronto, ON",
-            city_uname: "Toronto1",
-            address: "M6K 3M9",
-            phone: "+1 204 202-7287",
-            email: "info@eyeqsecurity.ca"
-        },
-        {
-            position: 2,
-            city: "Toronto, ON",
-            city_uname: "Toronto2",
+            city_uname: "Toronto",
             address: "7711 Yonge St Markham Unit 201C ON L3T1Z5",
             phone: "+1 647 614-3937",
             email: "info@eyeqsecurity.ca"
@@ -106,17 +98,9 @@ const locations: LocationLayout = {
             email: "info@eyeqsecurity.ca"
         },
         {
-
             position: 2,
             city: "Saskatoon, SK",
             city_uname: "Saskatoon",
-            phone: "+1 431 373 3680",
-            email: "info@eyeqsecurity.ca"
-        },
-        {
-            position: 3,
-            city: "Saskatoon, SK",
-            city_uname: "Saskatoon2",
             address: "130 Idylwyld Dr N Unit 101",
             phone: "+1 647 614-3937",
             email: "info@eyeqsecurity.ca"
@@ -140,8 +124,7 @@ export const locationSrc: LocationSrcLayout = {
         Surrey: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5213.157869932919!2d-122.84214350275032!3d49.20854678552681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d796b0d2f123%3A0x370565093f9ce854!2sSurrey%2C%20BC%20V3R%202J6%2C%20Canada!5e0!3m2!1sen!2sin!4v1731699049102!5m2!1sen!2sin"
     },
     ON: {
-        Toronto1: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3474448571287!2d-79.41882337382386!3d43.64093912110267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3502ef7e6a27%3A0xe041d7e1f59812d4!2sToronto%2C%20ON%20M6K%203M9%2C%20Canada!5e0!3m2!1sen!2sin!4v1731698010993!5m2!1sen!2sin",
-        Toronto2: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4071.402206613385!2d-79.42698004469725!3d43.81609947885458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2c8a9361bcb5%3A0x12fb0662f9c15ee5!2s7711%20Yonge%20St%20%23201c%2C%20Markham%2C%20ON%20L3T%201Z5%2C%20Canada!5e0!3m2!1sen!2sin!4v1742119017532!5m2!1sen!2sin",
+        Toronto: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4071.402206613385!2d-79.42698004469725!3d43.81609947885458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2c8a9361bcb5%3A0x12fb0662f9c15ee5!2s7711%20Yonge%20St%20%23201c%2C%20Markham%2C%20ON%20L3T%201Z5%2C%20Canada!5e0!3m2!1sen!2sin!4v1742119017532!5m2!1sen!2sin",
         Sudbury: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3266.2578585564584!2d-81.0060744373336!3d46.49653877645819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d2faae21a102423%3A0x2c6b362f6c27961c!2s128%20Dufferin%20St%2C%20Greater%20Sudbury%2C%20ON%20P3C%204W6%2C%20Canada!5e0!3m2!1sen!2sin!4v1742118533709!5m2!1sen!2sin"
     },
     MB: {
@@ -156,9 +139,7 @@ export const locationSrc: LocationSrcLayout = {
     },
     SK: {
         Regina: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
-        Saskatoon:
-            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
-        Saskatoon2: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6917.694122938623!2d-106.67921473227211!3d52.192976744123335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f617b4980d69%3A0x1fb0186a0ab96107!2s130%20Idylwyld%20Dr%20N%20%23101%2C%20Saskatoon%2C%20SK%20S7R%201C9%2C%20Canada!5e0!3m2!1sen!2sin!4v1742118308340!5m2!1sen!2sin",
+        Saskatoon: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6917.694122938623!2d-106.67921473227211!3d52.192976744123335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5304f617b4980d69%3A0x1fb0186a0ab96107!2s130%20Idylwyld%20Dr%20N%20%23101%2C%20Saskatoon%2C%20SK%20S7R%201C9%2C%20Canada!5e0!3m2!1sen!2sin!4v1742118308340!5m2!1sen!2sin",
         "Prince Albert":
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13823.277804995025!2d-104.60743422049124!3d50.45881711970631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x531c1f141de8de75%3A0x596cab01873e08df!2sEyeQ%20Security%20Services%20Inc.!5e0!3m2!1sen!2sin!4v1724408929505!5m2!1sen!2sin",
     }
