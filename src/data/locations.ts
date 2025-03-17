@@ -39,7 +39,7 @@ const locations: LocationLayout = {
             position: 1,
             city: "Toronto, ON",
             city_uname: "Toronto",
-            address: "7711 Yonge St Markham Unit 201C ON L3T1Z5",
+            address: "7711 Yonge St #201c, Markham, ON L3T 1Z5, Canada",
             phone: "+1 647 614-3937",
             email: "info@eyeqsecurity.ca"
         },
@@ -47,7 +47,7 @@ const locations: LocationLayout = {
             position: 3,
             city: "Sudbury, ON",
             city_uname: "Sudbury",
-            address: "128 Dufferin St Greater Sudbury ON P3C4W6",
+            address: "128 Dufferin St, Greater Sudbury, ON P3C 4W6, Canada",
             phone: "+1 647 614-3937",
             email: "info@eyeqsecurity.ca"
         }
@@ -75,7 +75,7 @@ const locations: LocationLayout = {
             position: 3,
             city: "The Pas, MB",
             city_uname: "The Pas",
-            address: "601 Settee Ave #6 The Pas, MB",
+            address: "601 Settee Ave, #6, The Pas, MB",
             phone: "+1 204 881 1947",
             email: "info@eyeqsecurity.ca"
         },
@@ -83,7 +83,7 @@ const locations: LocationLayout = {
             position: 4,
             city: "Thompson, MB",
             city_uname: "Thompson",
-            address: "7-17waterloo Ave Thompson mb R8N 0J6",
+            address: "7-17 Waterloo Ave #7, Thompson, MB R8N 0J6, Canada",
             phone: "+1 204 204 881-1947",
             email: "info@eyeqsecurity.ca",
         }
@@ -101,7 +101,7 @@ const locations: LocationLayout = {
             position: 2,
             city: "Saskatoon, SK",
             city_uname: "Saskatoon",
-            address: "130 Idylwyld Dr N Unit 101",
+            address: "130 Idylwyld Dr N, Unit 101",
             phone: "+1 647 614-3937",
             email: "info@eyeqsecurity.ca"
         },
